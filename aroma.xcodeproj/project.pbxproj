@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48861BE0E29B009E3410 /* AppDelegate.swift */; };
+		B80D48891BE0E29B009E3410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48881BE0E29B009E3410 /* ViewController.swift */; };
+		B80D488C1BE0E29B009E3410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80D488A1BE0E29B009E3410 /* Main.storyboard */; };
+		B80D488F1BE0E29B009E3410 /* aroma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B80D488D1BE0E29B009E3410 /* aroma.xcdatamodeld */; };
+		B80D48911BE0E29B009E3410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80D48901BE0E29B009E3410 /* Assets.xcassets */; };
+		B80D48941BE0E29B009E3410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80D48921BE0E29B009E3410 /* LaunchScreen.storyboard */; };
+		B80D489F1BE0E29B009E3410 /* aromaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D489E1BE0E29B009E3410 /* aromaTests.swift */; };
+		B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48A91BE0E29B009E3410 /* aromaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80D489B1BE0E29B009E3410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B80D487B1BE0E29B009E3410 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B80D48821BE0E29B009E3410;
+			remoteInfo = aroma;
+		};
+		B80D48A61BE0E29B009E3410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B80D487B1BE0E29B009E3410 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B80D48821BE0E29B009E3410;
+			remoteInfo = aroma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B80D48831BE0E29B009E3410 /* aroma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aroma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80D48861BE0E29B009E3410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B80D48881BE0E29B009E3410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B80D488B1BE0E29B009E3410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B80D488E1BE0E29B009E3410 /* aroma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aroma.xcdatamodel; sourceTree = "<group>"; };
+		B80D48901BE0E29B009E3410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B80D48931BE0E29B009E3410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B80D48951BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80D489A1BE0E29B009E3410 /* aromaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aromaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80D489E1BE0E29B009E3410 /* aromaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aromaTests.swift; sourceTree = "<group>"; };
+		B80D48A01BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80D48A51BE0E29B009E3410 /* aromaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aromaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80D48A91BE0E29B009E3410 /* aromaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aromaUITests.swift; sourceTree = "<group>"; };
+		B80D48AB1BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B80D48801BE0E29B009E3410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48971BE0E29B009E3410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48A21BE0E29B009E3410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B80D487A1BE0E29B009E3410 = {
+			isa = PBXGroup;
+			children = (
+				B80D48851BE0E29B009E3410 /* aroma */,
+				B80D489D1BE0E29B009E3410 /* aromaTests */,
+				B80D48A81BE0E29B009E3410 /* aromaUITests */,
+				B80D48841BE0E29B009E3410 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B80D48841BE0E29B009E3410 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B80D48831BE0E29B009E3410 /* aroma.app */,
+				B80D489A1BE0E29B009E3410 /* aromaTests.xctest */,
+				B80D48A51BE0E29B009E3410 /* aromaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B80D48851BE0E29B009E3410 /* aroma */ = {
+			isa = PBXGroup;
+			children = (
+				B80D48861BE0E29B009E3410 /* AppDelegate.swift */,
+				B80D48881BE0E29B009E3410 /* ViewController.swift */,
+				B80D488A1BE0E29B009E3410 /* Main.storyboard */,
+				B80D48901BE0E29B009E3410 /* Assets.xcassets */,
+				B80D48921BE0E29B009E3410 /* LaunchScreen.storyboard */,
+				B80D48951BE0E29B009E3410 /* Info.plist */,
+				B80D488D1BE0E29B009E3410 /* aroma.xcdatamodeld */,
+			);
+			path = aroma;
+			sourceTree = "<group>";
+		};
+		B80D489D1BE0E29B009E3410 /* aromaTests */ = {
+			isa = PBXGroup;
+			children = (
+				B80D489E1BE0E29B009E3410 /* aromaTests.swift */,
+				B80D48A01BE0E29B009E3410 /* Info.plist */,
+			);
+			path = aromaTests;
+			sourceTree = "<group>";
+		};
+		B80D48A81BE0E29B009E3410 /* aromaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B80D48A91BE0E29B009E3410 /* aromaUITests.swift */,
+				B80D48AB1BE0E29B009E3410 /* Info.plist */,
+			);
+			path = aromaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B80D48821BE0E29B009E3410 /* aroma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80D48AE1BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aroma" */;
+			buildPhases = (
+				B80D487F1BE0E29B009E3410 /* Sources */,
+				B80D48801BE0E29B009E3410 /* Frameworks */,
+				B80D48811BE0E29B009E3410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aroma;
+			productName = aroma;
+			productReference = B80D48831BE0E29B009E3410 /* aroma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B80D48991BE0E29B009E3410 /* aromaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80D48B11BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aromaTests" */;
+			buildPhases = (
+				B80D48961BE0E29B009E3410 /* Sources */,
+				B80D48971BE0E29B009E3410 /* Frameworks */,
+				B80D48981BE0E29B009E3410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B80D489C1BE0E29B009E3410 /* PBXTargetDependency */,
+			);
+			name = aromaTests;
+			productName = aromaTests;
+			productReference = B80D489A1BE0E29B009E3410 /* aromaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B80D48A41BE0E29B009E3410 /* aromaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B80D48B41BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aromaUITests" */;
+			buildPhases = (
+				B80D48A11BE0E29B009E3410 /* Sources */,
+				B80D48A21BE0E29B009E3410 /* Frameworks */,
+				B80D48A31BE0E29B009E3410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B80D48A71BE0E29B009E3410 /* PBXTargetDependency */,
+			);
+			name = aromaUITests;
+			productName = aromaUITests;
+			productReference = B80D48A51BE0E29B009E3410 /* aromaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B80D487B1BE0E29B009E3410 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Yoshikazu Oda";
+				TargetAttributes = {
+					B80D48821BE0E29B009E3410 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					B80D48991BE0E29B009E3410 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = B80D48821BE0E29B009E3410;
+					};
+					B80D48A41BE0E29B009E3410 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = B80D48821BE0E29B009E3410;
+					};
+				};
+			};
+			buildConfigurationList = B80D487E1BE0E29B009E3410 /* Build configuration list for PBXProject "aroma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B80D487A1BE0E29B009E3410;
+			productRefGroup = B80D48841BE0E29B009E3410 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B80D48821BE0E29B009E3410 /* aroma */,
+				B80D48991BE0E29B009E3410 /* aromaTests */,
+				B80D48A41BE0E29B009E3410 /* aromaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B80D48811BE0E29B009E3410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80D48941BE0E29B009E3410 /* LaunchScreen.storyboard in Resources */,
+				B80D48911BE0E29B009E3410 /* Assets.xcassets in Resources */,
+				B80D488C1BE0E29B009E3410 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48981BE0E29B009E3410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48A31BE0E29B009E3410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B80D487F1BE0E29B009E3410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80D48891BE0E29B009E3410 /* ViewController.swift in Sources */,
+				B80D488F1BE0E29B009E3410 /* aroma.xcdatamodeld in Sources */,
+				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48961BE0E29B009E3410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80D489F1BE0E29B009E3410 /* aromaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B80D48A11BE0E29B009E3410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80D489C1BE0E29B009E3410 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B80D48821BE0E29B009E3410 /* aroma */;
+			targetProxy = B80D489B1BE0E29B009E3410 /* PBXContainerItemProxy */;
+		};
+		B80D48A71BE0E29B009E3410 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B80D48821BE0E29B009E3410 /* aroma */;
+			targetProxy = B80D48A61BE0E29B009E3410 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B80D488A1BE0E29B009E3410 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B80D488B1BE0E29B009E3410 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B80D48921BE0E29B009E3410 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B80D48931BE0E29B009E3410 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B80D48AC1BE0E29B009E3410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B80D48AD1BE0E29B009E3410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B80D48AF1BE0E29B009E3410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = aroma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B80D48B01BE0E29B009E3410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = aroma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aroma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B80D48B21BE0E29B009E3410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = aromaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aromaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aroma.app/aroma";
+			};
+			name = Debug;
+		};
+		B80D48B31BE0E29B009E3410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = aromaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aromaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aroma.app/aroma";
+			};
+			name = Release;
+		};
+		B80D48B51BE0E29B009E3410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = aromaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aromaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = aroma;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B80D48B61BE0E29B009E3410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = aromaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinbo.app.aromaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = aroma;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B80D487E1BE0E29B009E3410 /* Build configuration list for PBXProject "aroma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80D48AC1BE0E29B009E3410 /* Debug */,
+				B80D48AD1BE0E29B009E3410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B80D48AE1BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aroma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80D48AF1BE0E29B009E3410 /* Debug */,
+				B80D48B01BE0E29B009E3410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B80D48B11BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aromaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80D48B21BE0E29B009E3410 /* Debug */,
+				B80D48B31BE0E29B009E3410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B80D48B41BE0E29B009E3410 /* Build configuration list for PBXNativeTarget "aromaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B80D48B51BE0E29B009E3410 /* Debug */,
+				B80D48B61BE0E29B009E3410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B80D488D1BE0E29B009E3410 /* aroma.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B80D488E1BE0E29B009E3410 /* aroma.xcdatamodel */,
+			);
+			currentVersion = B80D488E1BE0E29B009E3410 /* aroma.xcdatamodel */;
+			path = aroma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B80D487B1BE0E29B009E3410 /* Project object */;
+}
