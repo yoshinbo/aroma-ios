@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4me-h6-UkN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="D8B-li-19v">
+            <objects>
+                <viewController id="aDv-5S-9DR" customClass="PostViewController" customModule="aroma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sek-0j-2Vp"/>
+                        <viewControllerLayoutGuide type="bottom" id="WnF-sX-iFI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TYu-W7-VOE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tse-NB-VgN">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="I61-22-PFI">
+                            <connections>
+                                <action selector="onTapCloseButton:" destination="aDv-5S-9DR" id="jhw-pt-Ft2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shv-vc-kQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="326"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WSA-G7-mCE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4me-h6-UkN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z8l-kN-1D7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aDv-5S-9DR" kind="relationship" relationship="rootViewController" id="RCW-I2-9Kd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQM-qc-BVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="326"/>
+        </scene>
+    </scenes>
+</document>
