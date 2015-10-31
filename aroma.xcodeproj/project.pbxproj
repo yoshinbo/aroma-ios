@@ -13,19 +13,21 @@
 		B80D48941BE0E29B009E3410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80D48921BE0E29B009E3410 /* LaunchScreen.storyboard */; };
 		B80D489F1BE0E29B009E3410 /* aromaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D489E1BE0E29B009E3410 /* aromaTests.swift */; };
 		B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48A91BE0E29B009E3410 /* aromaUITests.swift */; };
-		B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66AF1BE0F13900729DBB /* aroma.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66B71BE0F29600729DBB /* TabBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66BC1BE0F59700729DBB /* TimeLine.storyboard */; settings = {ASSET_TAGS = (); }; };
-		B8DF66C01BE0FA3400729DBB /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66BF1BE0FA3400729DBB /* Search.storyboard */; settings = {ASSET_TAGS = (); }; };
-		B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66C11BE0FA4C00729DBB /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66C51BE0FAD000729DBB /* NoticeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66C71BE0FADD00729DBB /* Notice.storyboard */; settings = {ASSET_TAGS = (); }; };
-		B8DF66CA1BE0FB0600729DBB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66C91BE0FB0600729DBB /* MyPage.storyboard */; settings = {ASSET_TAGS = (); }; };
-		B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66CB1BE0FB1500729DBB /* MyPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66CF1BE0FEDB00729DBB /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66CE1BE0FEDB00729DBB /* Post.storyboard */; settings = {ASSET_TAGS = (); }; };
-		B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66D01BE0FEF000729DBB /* PostViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66D31BE1017800729DBB /* UIViewController+Extension.swift */; settings = {ASSET_TAGS = (); }; };
+		B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825997C1BE43A790054EF5E /* HomeViewController.swift */; };
+		B825997F1BE43A870054EF5E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825997E1BE43A870054EF5E /* Home.storyboard */; };
+		B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66AF1BE0F13900729DBB /* aroma.xcdatamodeld */; };
+		B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66B71BE0F29600729DBB /* TabBarController.swift */; };
+		B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */; };
+		B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66BC1BE0F59700729DBB /* TimeLine.storyboard */; };
+		B8DF66C01BE0FA3400729DBB /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66BF1BE0FA3400729DBB /* Search.storyboard */; };
+		B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66C11BE0FA4C00729DBB /* SearchViewController.swift */; };
+		B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66C51BE0FAD000729DBB /* NoticeViewController.swift */; };
+		B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66C71BE0FADD00729DBB /* Notice.storyboard */; };
+		B8DF66CA1BE0FB0600729DBB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66C91BE0FB0600729DBB /* MyPage.storyboard */; };
+		B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66CB1BE0FB1500729DBB /* MyPageViewController.swift */; };
+		B8DF66CF1BE0FEDB00729DBB /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DF66CE1BE0FEDB00729DBB /* Post.storyboard */; };
+		B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66D01BE0FEF000729DBB /* PostViewController.swift */; };
+		B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66D31BE1017800729DBB /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B80D48A51BE0E29B009E3410 /* aromaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aromaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80D48A91BE0E29B009E3410 /* aromaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aromaUITests.swift; sourceTree = "<group>"; };
 		B80D48AB1BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B825997C1BE43A790054EF5E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B825997E1BE43A870054EF5E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B8DF66B01BE0F13900729DBB /* aroma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aroma.xcdatamodel; sourceTree = "<group>"; };
 		B8DF66B71BE0F29600729DBB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,15 @@
 			path = aromaUITests;
 			sourceTree = "<group>";
 		};
+		B825997B1BE43A2D0054EF5E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B825997C1BE43A790054EF5E /* HomeViewController.swift */,
+				B825997E1BE43A870054EF5E /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B8DF66AB1BE0F03300729DBB /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,11 +180,12 @@
 			children = (
 				B8DF66D21BE1014D00729DBB /* Extensions */,
 				B8DF66B21BE0F17200729DBB /* TabBar */,
-				B8DF66B91BE0F4F700729DBB /* TimeLine */,
+				B825997B1BE43A2D0054EF5E /* Home */,
 				B8DF66BE1BE0F94300729DBB /* Search */,
 				B8DF66CD1BE0FE3400729DBB /* Post */,
 				B8DF66C31BE0FA5700729DBB /* Notice */,
 				B8DF66C41BE0FA7700729DBB /* MyPage */,
+				B8DF66B91BE0F4F700729DBB /* TimeLine */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -383,6 +397,7 @@
 				B8DF66C01BE0FA3400729DBB /* Search.storyboard in Resources */,
 				B8DF66CF1BE0FEDB00729DBB /* Post.storyboard in Resources */,
 				B80D48911BE0E29B009E3410 /* Assets.xcassets in Resources */,
+				B825997F1BE43A870054EF5E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +475,7 @@
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
+				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,

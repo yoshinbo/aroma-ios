@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjA-L1-N3s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjA-L1-N3s">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--My Page View Controller-->
+        <!--MY PAGE-->
         <scene sceneID="s81-BX-wLG">
             <objects>
                 <viewController id="nne-2M-rFe" customClass="MyPageViewController" customModule="aroma" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eK2-Gp-kUc"/>
+                    <navigationItem key="navigationItem" title="MY PAGE" id="eK2-Gp-kUc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkR-9n-Daf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
