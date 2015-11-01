@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YDi-sg-rLJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AR0-NM-RAS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -15,19 +15,19 @@
                         <viewControllerLayoutGuide type="bottom" id="eqB-KY-7ZJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gzV-Lg-Laz">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-h9-bam">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-h9-bam">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="280" id="AzC-x7-65l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeLineCell" rowHeight="280" id="AzC-x7-65l" customClass="TimeLineCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AzC-x7-65l" id="KgQ-yW-EVl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="279.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-ak-N5j">
@@ -44,7 +44,7 @@
                                                                         <constraint firstAttribute="height" constant="1" id="f9f-hD-rGx"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArO-6e-Pw6">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArO-6e-Pw6" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="16" y="9" width="32" height="32"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +64,7 @@
                                                                     <rect key="frame" x="56" y="14" width="78" height="20.5"/>
                                                                     <animations/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -112,7 +112,7 @@
                                                                     <rect key="frame" x="16" y="10" width="486" height="20.5"/>
                                                                     <animations/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -128,11 +128,11 @@
                                                             </constraints>
                                                         </view>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-hh-Tcd">
-                                                            <rect key="frame" x="16" y="100" width="552" height="68"/>
+                                                            <rect key="frame" x="16" y="100" width="552" height="75"/>
                                                             <animations/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="ra5-0H-YEE">
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" rowHeight="30" id="ra5-0H-YEE" customClass="IngredientCell" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="28" width="552" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ra5-0H-YEE" id="3sz-Ml-8LF">
@@ -177,6 +177,11 @@
                                                                         </constraints>
                                                                     </tableViewCellContentView>
                                                                     <animations/>
+                                                                    <connections>
+                                                                        <outlet property="amountLabel" destination="Dw6-Gs-7eh" id="LUe-RF-JpB"/>
+                                                                        <outlet property="headingImageView" destination="2Ih-jh-LZV" id="vcW-xy-Dzm"/>
+                                                                        <outlet property="nameLabel" destination="kVg-2k-0SK" id="ojv-04-LX4"/>
+                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                         </tableView>
@@ -191,29 +196,38 @@
                                                                         <constraint firstAttribute="height" constant="1" id="KVw-C8-nux"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-U9-Q7x">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-U9-Q7x" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="72" y="10" width="46" height="30"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="SFP-TW-Cy7"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="touchUpInsideCommentButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Wyq-jU-O0K"/>
+                                                                    </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-pO-Qhi">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-pO-Qhi" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="522" y="10" width="46" height="30"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="3GJ-DW-Gg4"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="touchUpInsideClipButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Y1c-We-Vbs"/>
+                                                                    </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-UW-1UD">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-UW-1UD" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="16" y="10" width="46" height="30"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="ill-0M-N6Z"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="touchUpInsideLikeButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="vhN-tD-oET"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <animations/>
@@ -231,15 +245,14 @@
                                                                 <constraint firstItem="xqk-U9-Q7x" firstAttribute="leading" secondItem="cK4-UW-1UD" secondAttribute="trailing" constant="10" id="lXP-6j-tDb"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVY-Fk-EAr">
-                                                            <rect key="frame" x="16" y="178" width="552" height="33"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAm-WN-Lk6" customClass="SETextView">
+                                                            <rect key="frame" x="16" y="183" width="552" height="30"/>
                                                             <animations/>
-                                                            <string key="text">こどもにも安心して使えるブレンドです(*^ ^*)
-アウトドアには虫よけスプレーをつくってかならず</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="RBC-K3-nvd"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,18 +261,18 @@
                                                         <constraint firstAttribute="trailing" secondItem="wwF-hh-Tcd" secondAttribute="trailing" constant="16" id="EJI-Jq-Jxd"/>
                                                         <constraint firstItem="YxO-Kz-WcZ" firstAttribute="top" secondItem="wYb-ak-N5j" secondAttribute="top" id="HhL-HN-7do"/>
                                                         <constraint firstItem="seI-eo-nf7" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="IPo-pe-z5D"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SVY-Fk-EAr" secondAttribute="trailing" constant="16" id="VYF-im-x14"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yAm-WN-Lk6" secondAttribute="trailing" constant="16" id="LWS-QC-Gxq"/>
+                                                        <constraint firstItem="seI-eo-nf7" firstAttribute="top" secondItem="yAm-WN-Lk6" secondAttribute="bottom" constant="8" id="Map-KR-fWx"/>
                                                         <constraint firstItem="YxO-Kz-WcZ" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="aFd-pp-jTG"/>
+                                                        <constraint firstItem="yAm-WN-Lk6" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="bzk-K2-WzF"/>
                                                         <constraint firstAttribute="trailing" secondItem="YxO-Kz-WcZ" secondAttribute="trailing" id="c3w-ZG-upX"/>
                                                         <constraint firstItem="wwF-hh-Tcd" firstAttribute="top" secondItem="LTH-o3-Zi2" secondAttribute="bottom" id="c5p-2d-qVr"/>
-                                                        <constraint firstItem="seI-eo-nf7" firstAttribute="top" secondItem="SVY-Fk-EAr" secondAttribute="bottom" constant="10" id="gIf-BM-9ft"/>
-                                                        <constraint firstItem="SVY-Fk-EAr" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="gNV-Gs-HVJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="seI-eo-nf7" secondAttribute="trailing" id="iGY-Ww-Z9S"/>
+                                                        <constraint firstItem="yAm-WN-Lk6" firstAttribute="top" secondItem="wwF-hh-Tcd" secondAttribute="bottom" constant="8" id="jGX-5h-9D5"/>
                                                         <constraint firstItem="LTH-o3-Zi2" firstAttribute="top" secondItem="YxO-Kz-WcZ" secondAttribute="bottom" id="jWQ-5F-P1m"/>
                                                         <constraint firstItem="LTH-o3-Zi2" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="jlh-VT-05u"/>
                                                         <constraint firstAttribute="trailing" secondItem="LTH-o3-Zi2" secondAttribute="trailing" id="rbB-RZ-Ir0"/>
                                                         <constraint firstItem="wwF-hh-Tcd" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="sa7-v4-d4z"/>
-                                                        <constraint firstItem="SVY-Fk-EAr" firstAttribute="top" secondItem="wwF-hh-Tcd" secondAttribute="bottom" constant="10" id="z3e-iv-TTF"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -273,12 +286,24 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="clipButton" destination="rBw-pO-Qhi" id="vRf-L3-oF7"/>
+                                            <outlet property="commentButton" destination="xqk-U9-Q7x" id="D8D-fq-cAj"/>
+                                            <outlet property="createTimeLabel" destination="sxR-w2-l6z" id="R5a-km-KoZ"/>
+                                            <outlet property="descriptionTextHeightConstraint" destination="RBC-K3-nvd" id="qiK-WA-ahH"/>
+                                            <outlet property="descriptionTextView" destination="yAm-WN-Lk6" id="Ru0-hq-Ea6"/>
+                                            <outlet property="ingredientTableView" destination="wwF-hh-Tcd" id="t9i-vH-reA"/>
+                                            <outlet property="likeButton" destination="cK4-UW-1UD" id="bdd-st-cdN"/>
+                                            <outlet property="profileImageView" destination="ArO-6e-Pw6" id="NuJ-ZM-o3X"/>
+                                            <outlet property="recipeTitleLabel" destination="Gga-f4-0rJ" id="uSl-Y6-dng"/>
+                                            <outlet property="userNameLabel" destination="6iF-Kb-t99" id="K2Z-6L-aU4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MtA-h9-bam" firstAttribute="leading" secondItem="gzV-Lg-Laz" secondAttribute="leading" id="4bX-ZC-Bes"/>
                             <constraint firstAttribute="trailing" secondItem="MtA-h9-bam" secondAttribute="trailing" id="Bbd-3k-MUD"/>
@@ -288,29 +313,13 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="IgD-qK-cLZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="MtA-h9-bam" id="bnc-vk-8KO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpd-qo-0Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1372" y="384"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="d60-ro-zUb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YDi-sg-rLJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jlL-Ta-PXX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AR0-NM-RAS" kind="relationship" relationship="rootViewController" id="WWg-VF-J2y"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zt-oh-jr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="560" y="384"/>
         </scene>
     </scenes>
 </document>

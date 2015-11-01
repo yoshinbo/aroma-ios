@@ -15,6 +15,16 @@
 		B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48A91BE0E29B009E3410 /* aromaUITests.swift */; };
 		B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825997C1BE43A790054EF5E /* HomeViewController.swift */; };
 		B825997F1BE43A870054EF5E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825997E1BE43A870054EF5E /* Home.storyboard */; };
+		B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */; };
+		B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */; };
+		B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */; };
+		B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3AC1BE5B76E000E7D3A /* IngredientCell.swift */; };
+		B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3AF1BE5C0B7000E7D3A /* LikeButton.swift */; };
+		B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B11BE5C10B000E7D3A /* CommentButton.swift */; };
+		B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */; };
+		B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B51BE5C1E4000E7D3A /* ClipButton.swift */; };
+		B8D4F3B81BE5D19C000E7D3A /* SETextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */; };
+		B8D4F3BA1BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */; };
 		B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66AF1BE0F13900729DBB /* aroma.xcdatamodeld */; };
 		B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66B71BE0F29600729DBB /* TabBarController.swift */; };
 		B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */; };
@@ -63,6 +73,16 @@
 		B80D48AB1BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B825997C1BE43A790054EF5E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B825997E1BE43A870054EF5E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineDataHandler.swift; sourceTree = "<group>"; };
+		B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
+		B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientDataHandler.swift; sourceTree = "<group>"; };
+		B8D4F3AC1BE5B76E000E7D3A /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		B8D4F3AF1BE5C0B7000E7D3A /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		B8D4F3B11BE5C10B000E7D3A /* CommentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
+		B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		B8D4F3B51BE5C1E4000E7D3A /* ClipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipButton.swift; sourceTree = "<group>"; };
+		B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SETextView+Extension.swift"; sourceTree = "<group>"; };
+		B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		B8DF66B01BE0F13900729DBB /* aroma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aroma.xcdatamodel; sourceTree = "<group>"; };
 		B8DF66B71BE0F29600729DBB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +185,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */,
+				B8D4F3AF1BE5C0B7000E7D3A /* LikeButton.swift */,
+				B8D4F3B11BE5C10B000E7D3A /* CommentButton.swift */,
+				B8D4F3B51BE5C1E4000E7D3A /* ClipButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B8DF66AB1BE0F03300729DBB /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B8DF66D21BE1014D00729DBB /* Extensions */,
+				B8D4F3AE1BE5C056000E7D3A /* Common */,
 				B8DF66B21BE0F17200729DBB /* TabBar */,
 				B825997B1BE43A2D0054EF5E /* Home */,
 				B8DF66BE1BE0F94300729DBB /* Search */,
@@ -217,8 +249,12 @@
 		B8DF66B91BE0F4F700729DBB /* TimeLine */ = {
 			isa = PBXGroup;
 			children = (
-				B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */,
 				B8DF66BC1BE0F59700729DBB /* TimeLine.storyboard */,
+				B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */,
+				B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */,
+				B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */,
+				B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */,
+				B8D4F3AC1BE5B76E000E7D3A /* IngredientCell.swift */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -263,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				B8DF66D31BE1017800729DBB /* UIViewController+Extension.swift */,
+				B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */,
+				B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -470,15 +508,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
+				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
+				B8D4F3BA1BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
+				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
+				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
+				B8D4F3B81BE5D19C000E7D3A /* SETextView+Extension.swift in Sources */,
+				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
+				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
+				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
+				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +576,7 @@
 /* Begin XCBuildConfiguration section */
 		B80D48AC1BE0E29B009E3410 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C8AD235F9BB6C70F48CF74 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -573,6 +622,7 @@
 		};
 		B80D48AD1BE0E29B009E3410 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2E1F4DFF18D580EC23A23C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -635,6 +685,7 @@
 		};
 		B80D48B21BE0E29B009E3410 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C8AD235F9BB6C70F48CF74 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = aromaTests/Info.plist;
@@ -647,6 +698,7 @@
 		};
 		B80D48B31BE0E29B009E3410 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2E1F4DFF18D580EC23A23C /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = aromaTests/Info.plist;
@@ -659,6 +711,7 @@
 		};
 		B80D48B51BE0E29B009E3410 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C8AD235F9BB6C70F48CF74 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = aromaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -671,6 +724,7 @@
 		};
 		B80D48B61BE0E29B009E3410 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2E1F4DFF18D580EC23A23C /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = aromaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

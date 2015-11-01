@@ -16,26 +16,47 @@ class HomeViewController: UIViewController {
         return (navigationController, viewController)
     }
 
+    @IBOutlet weak var wrapView: UIView!
+    var timeLineViewController: TimeLineViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        timeLineViewController = TimeLineViewController.build()
+        addChildViewController(timeLineViewController)
+        timeLineViewController.beginAppearanceTransition(true, animated: false)
+        timeLineViewController.didMoveToParentViewController(self)
+        timeLineViewController.endAppearanceTransition()
+
+        aduptTimeLine()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.layoutIfNeeded()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension HomeViewController {
+    func aduptTimeLine() {
+        let vc = timeLineViewController
+        vc.view.frame = CGRectMake(0, 0, wrapView.frame.width, wrapView.frame.height)
+        vc.view.autoresizingMask = [
+            .FlexibleWidth,
+            .FlexibleHeight,
+            .FlexibleRightMargin,
+            .FlexibleLeftMargin,
+            .FlexibleTopMargin,
+            .FlexibleBottomMargin
+        ]
+        wrapView.addSubview(vc.view)
     }
-    */
-
 }
