@@ -12,7 +12,7 @@ import UIKit
 class IngredientDataHandler: NSObject {
 
     private struct Const{
-        static let tempCellNum: Int = 3 // TODO
+        static let tempCellNum: Int = 10 // TODO
         static let height: CGFloat = 30
     }
 
@@ -22,6 +22,7 @@ class IngredientDataHandler: NSObject {
         self.tableView = tableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.contentInset = UIEdgeInsetsMake(-1.0, 0.0, 0.0, 0.0);
     }
 
     class func height() -> CGFloat {
@@ -32,6 +33,14 @@ class IngredientDataHandler: NSObject {
 extension IngredientDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return Const.height
+    }
+
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1.0
+    }
+
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
     }
 }
 

@@ -15,13 +15,15 @@ class TimeLineCell: UITableViewCell {
         static let headerHeight: CGFloat = 50
         static let titleHeight: CGFloat = 50
         static let footerHeight: CGFloat = 50
-        static let widthMargin: CGFloat = 8
-        static let heightMargin: CGFloat = 8
+        static let horizontalMargin: CGFloat = 8
+        static let verticalMargin: CGFloat = 8
         static let font: UIFont = UIFont.systemFontOfSize(12)
         static let lineSpacing: CGFloat = 5
-        static let horizontalMargin: CGFloat = widthMargin * 6
+        static let horizontalTotalMargin: CGFloat = horizontalMargin * 6
+        static let wrapViewCornerRadius: CGFloat = 4
     }
 
+    @IBOutlet weak var wrapView: UIView!
     @IBOutlet weak var profileImageView: ProfileImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var createTimeLabel: UILabel!
@@ -59,11 +61,22 @@ class TimeLineCell: UITableViewCell {
         recipeTitleLabel.text = "心安らかブレンド"
         let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
         descriptionTextView.setBasicAttributedString(description)
-        descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description, margin: Const.horizontalMargin)
+        descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description, margin: Const.horizontalTotalMargin)
+
+        wrapView.layer.cornerRadius = Const.wrapViewCornerRadius
+        wrapView.layer.masksToBounds = true
     }
 
     class func height(description: String) -> CGFloat {
-        return Const.headerHeight + Const.titleHeight + IngredientDataHandler.height() + textViewHegiht(description, margin: Const.horizontalMargin) + Const.footerHeight
+        return Const.verticalMargin
+            + Const.headerHeight
+            + Const.titleHeight
+            + IngredientDataHandler.height()
+            + Const.verticalMargin
+            + textViewHegiht(description, margin: Const.horizontalTotalMargin)
+            + Const.verticalMargin
+            + Const.footerHeight
+            + Const.verticalMargin
     }
 
     class func textViewHegiht(string: String, margin: CGFloat) -> CGFloat {
