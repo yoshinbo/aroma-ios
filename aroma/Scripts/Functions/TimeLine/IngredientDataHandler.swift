@@ -12,7 +12,7 @@ import UIKit
 class IngredientDataHandler: NSObject {
 
     private struct Const{
-        static let tempCellNum: Int = 10 // TODO
+        static let tempCellNum: Int = 3 // TODO
         static let height: CGFloat = 30
     }
 

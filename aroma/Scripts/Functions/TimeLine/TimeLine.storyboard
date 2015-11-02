@@ -139,16 +139,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="552" height="29.5"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-jh-LZV">
-                                                                                <rect key="frame" x="4" y="2" width="25" height="25"/>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aromabottle" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-jh-LZV">
+                                                                                <rect key="frame" x="4" y="7.5" width="14" height="14"/>
                                                                                 <animations/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="25" id="5n9-gm-Fju"/>
+                                                                                    <constraint firstAttribute="width" constant="14" id="5n9-gm-Fju"/>
                                                                                     <constraint firstAttribute="width" secondItem="2Ih-jh-LZV" secondAttribute="height" multiplier="1:1" id="xEK-32-bYH"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラベンダー・アングスティフォリア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kVg-2k-0SK">
-                                                                                <rect key="frame" x="33" y="8" width="469" height="14.5"/>
+                                                                                <rect key="frame" x="22" y="8" width="480" height="14.5"/>
                                                                                 <animations/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -322,4 +322,7 @@
             <point key="canvasLocation" x="1372" y="384"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="aromabottle" width="60" height="65"/>
+    </resources>
 </document>
