@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol TimeLineViewControllerDelegate {
+    func showProfileView()
+    func showRecipeDetailView()
+    func showRecipeCommentView()
+    func like()
+    func clip()
+}
+
 class TimeLineViewController: UIViewController {
     
     class func build() -> TimeLineViewController {
@@ -15,6 +23,7 @@ class TimeLineViewController: UIViewController {
     }
 
     @IBOutlet weak var tableView: UITableView!
+
     private var dataHandler: TimeLineDataHandler!
 
     override func viewDidLoad() {
@@ -22,6 +31,7 @@ class TimeLineViewController: UIViewController {
 
         dataHandler = TimeLineDataHandler()
         dataHandler.setup(tableView)
+        dataHandler.delegate = self
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -31,5 +41,28 @@ class TimeLineViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension TimeLineViewController: TimeLineViewControllerDelegate {
+    func showProfileView() {
+        let (_, viewController) = MyPageViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func showRecipeDetailView() {
+        print("showRecipeDetailView")
+    }
+
+    func showRecipeCommentView() {
+        print("showRecipeCommentView")
+    }
+
+    func like() {
+        print("like")
+    }
+
+    func clip() {
+        print("clip")
     }
 }

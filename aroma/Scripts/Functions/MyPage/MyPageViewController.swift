@@ -43,6 +43,10 @@ class MyPageViewController: SwitchingTabViewController {
         locationImageView.tintColor = AppColorRed
         let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。"
         descriptionTextView.text = description
+
+        if !isMine {
+           title = nameLabel.text
+        }
     }
 
     override func viewDidAppear(animated: Bool) {

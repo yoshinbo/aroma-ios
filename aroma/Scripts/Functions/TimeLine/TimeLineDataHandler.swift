@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class TimeLineDataHandler: NSObject {
+
+    var delegate: TimeLineViewControllerDelegate?
+
     private weak var tableView: UITableView!
 
     func setup(tableView: UITableView) {
@@ -33,6 +36,7 @@ extension TimeLineDataHandler {
 // MARK: - UITableViewDelegate
 extension TimeLineDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        delegate?.showRecipeDetailView()
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -49,6 +53,29 @@ extension TimeLineDataHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("timeLineCell") as! TimeLineCell
         cell.configure()
+        cell.delegate = self
         return cell
+    }
+}
+
+extension TimeLineDataHandler: TimeLineViewControllerDelegate {
+    func showProfileView() {
+        delegate?.showProfileView()
+    }
+
+    func showRecipeDetailView() {
+        delegate?.showRecipeDetailView()
+    }
+
+    func showRecipeCommentView() {
+        delegate?.showRecipeCommentView()
+    }
+
+    func like() {
+        delegate?.like()
+    }
+
+    func clip() {
+        delegate?.clip()
     }
 }

@@ -36,6 +36,9 @@ class TabBarController: UITabBarController {
         noticeViewController.tabBarItem = UITabBarItem(title: localizedString("notice"), image: UIImage(named: "notice-icon"), tag: 0)
         myPageViewController.tabBarItem = UITabBarItem(title: localizedString("myPage"), image: UIImage(named: "mypage-icon"), tag: 0)
         
+
+        myPageViewController.isMine = true
+
         self.setViewControllers([
             self.homeNavigationController,
             self.searchNavigationController,
