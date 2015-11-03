@@ -29,13 +29,37 @@
                                             <constraint firstAttribute="width" constant="64" id="Z7T-sS-CEh"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUKI ODA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-8p-evl">
+                                        <rect key="frame" x="104" y="37" width="480" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="cOO-Uo-F7d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z8-XY-mqE">
+                                        <rect key="frame" x="16" y="88" width="568" height="54"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hsT-8p-evl" firstAttribute="leading" secondItem="Tcx-mY-2EA" secondAttribute="trailing" constant="16" id="0af-nC-Hde"/>
                                     <constraint firstItem="Tcx-mY-2EA" firstAttribute="top" secondItem="3nB-Sy-eUG" secondAttribute="top" constant="16" id="I3u-3t-L9f"/>
                                     <constraint firstAttribute="height" constant="150" id="Iqg-Aw-y8i"/>
                                     <constraint firstItem="Tcx-mY-2EA" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="24" id="MKf-ZE-hAv"/>
+                                    <constraint firstItem="5z8-XY-mqE" firstAttribute="top" secondItem="Tcx-mY-2EA" secondAttribute="bottom" constant="8" id="RfR-RK-YQZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5z8-XY-mqE" secondAttribute="trailing" constant="16" id="bGY-Mo-480"/>
+                                    <constraint firstAttribute="bottom" secondItem="5z8-XY-mqE" secondAttribute="bottom" constant="8" id="dDd-c1-CEP"/>
+                                    <constraint firstItem="5z8-XY-mqE" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="16" id="ecG-Cd-oin"/>
+                                    <constraint firstItem="hsT-8p-evl" firstAttribute="centerY" secondItem="Tcx-mY-2EA" secondAttribute="centerY" id="hnB-9m-Sqv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hsT-8p-evl" secondAttribute="trailing" constant="16" id="qbF-Kl-IEU"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-kc-TNi" customClass="SwitchingTagHeaderView" customModule="aroma" customModuleProvider="target">
@@ -68,7 +92,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="MY PAGE" id="eK2-Gp-kUc"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="5z8-XY-mqE" id="Zw3-yn-aWu"/>
                         <outlet property="headerView" destination="SJx-kc-TNi" id="5k7-0A-8Jl"/>
+                        <outlet property="nameLabel" destination="hsT-8p-evl" id="Zie-Gj-p7j"/>
                         <outlet property="profileImageView" destination="Tcx-mY-2EA" id="Rnz-rP-XlU"/>
                         <outlet property="scrollView" destination="ULk-gZ-ntu" id="U7V-ry-8qc"/>
                     </connections>

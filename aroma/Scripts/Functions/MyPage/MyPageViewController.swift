@@ -17,6 +17,8 @@ class MyPageViewController: SwitchingTabViewController {
     }
 
     @IBOutlet weak var profileImageView: ProfileImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
 
     private var timeLineViewControllerCache = [Int: TimeLineViewController]()
 
@@ -31,6 +33,13 @@ class MyPageViewController: SwitchingTabViewController {
 
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
         profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        nameLabel.text = "YUKI ODA"
+        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。"
+        descriptionTextView.text = description
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
