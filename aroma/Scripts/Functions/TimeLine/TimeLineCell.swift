@@ -42,6 +42,8 @@ class TimeLineCell: UITableViewCell {
 
         dataHandler = IngredientDataHandler()
 
+        // NOTE : - SETextViewで以下のエラーがでるので置き換えようかな.
+        // <Error>: CGImageMaskCreate: invalid image size: 0 x 0.
         descriptionTextView.delegate = self
         descriptionTextView.lineSpacing = Const.lineSpacing
         descriptionTextView.font = Const.font
@@ -57,14 +59,14 @@ class TimeLineCell: UITableViewCell {
         dataHandler.setup(ingredientTableView)
 
         let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
-        let imageURL = NSURL(fileURLWithPath: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
+        let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
 
         userNameLabel.text = "YUKI ODA"
         createTimeLabel.text = "11.1 12:00"
         recipeTitleLabel.text = "心安らかブレンド"
 
         descriptionTextView.setBasicAttributedString(description)
-        //profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
         descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description, margin: Const.horizontalTotalMargin)
 
         wrapView.layer.cornerRadius = Const.wrapViewCornerRadius
