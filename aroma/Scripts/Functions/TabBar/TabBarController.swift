@@ -34,7 +34,7 @@ class TabBarController: UITabBarController {
         searchViewController.tabBarItem = UITabBarItem(title: localizedString("search"), image: UIImage(named: "search-icon"), tag: 0)
         postViewController.tabBarItem = UITabBarItem(title: localizedString("post"), image: UIImage(named: "create-icon"), tag: 0)
         noticeViewController.tabBarItem = UITabBarItem(title: localizedString("notice"), image: UIImage(named: "notice-icon"), tag: 0)
-        myPageViewController.tabBarItem = UITabBarItem(title: localizedString("mypage"), image: UIImage(named: "mypage-icon"), tag: 0)
+        myPageViewController.tabBarItem = UITabBarItem(title: localizedString("myPage"), image: UIImage(named: "mypage-icon"), tag: 0)
         
         self.setViewControllers([
             self.homeNavigationController,

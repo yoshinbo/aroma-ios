@@ -10,3 +10,4 @@ import Foundation
 import UIKit
 
 let AppColorRed = UIColor.color(0xA22041FF)
+let AppColorLightGray = UIColor.color(0xD8D8D8FF)
