@@ -22,6 +22,8 @@
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
 		B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */; };
 		B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */; };
+		B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B412381BE8F8920094A152 /* NoticeDataHandler.swift */; };
+		B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4123A1BE8F8A70094A152 /* NoticeCell.swift */; };
 		B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */; };
 		B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */; };
 		B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */; };
@@ -89,6 +91,8 @@
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTabViewController.swift; sourceTree = "<group>"; };
 		B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTagHeaderView.swift; sourceTree = "<group>"; };
+		B8B412381BE8F8920094A152 /* NoticeDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeDataHandler.swift; sourceTree = "<group>"; };
+		B8B4123A1BE8F8A70094A152 /* NoticeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
 		B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineDataHandler.swift; sourceTree = "<group>"; };
 		B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientDataHandler.swift; sourceTree = "<group>"; };
@@ -300,8 +304,10 @@
 		B8DF66C31BE0FA5700729DBB /* Notice */ = {
 			isa = PBXGroup;
 			children = (
-				B8DF66C51BE0FAD000729DBB /* NoticeViewController.swift */,
 				B8DF66C71BE0FADD00729DBB /* Notice.storyboard */,
+				B8DF66C51BE0FAD000729DBB /* NoticeViewController.swift */,
+				B8B412381BE8F8920094A152 /* NoticeDataHandler.swift */,
+				B8B4123A1BE8F8A70094A152 /* NoticeCell.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
+				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8D4F3B81BE5D19C000E7D3A /* SETextView+Extension.swift in Sources */,
@@ -563,6 +570,7 @@
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
+				B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */,
 				B809A9BB1BE61A07000D0D8A /* GlobalFunction.swift in Sources */,
 				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
