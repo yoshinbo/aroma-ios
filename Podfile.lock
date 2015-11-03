@@ -20,12 +20,23 @@ PODS:
   - AFNetworking/UIKit (2.6.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bolts (1.1.5):
+    - Bolts/AppLinks (= 1.1.5)
+    - Bolts/Tasks (= 1.1.5)
+  - Bolts/AppLinks (1.1.5):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.1.5)
   - ISAlternativeRefreshControl (0.0.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - SECoreTextView (0.8.5)
 
 DEPENDENCIES:
   - AFNetworking
+  - Bolts (~> 1.1.4)
   - ISAlternativeRefreshControl
+  - SDWebImage
   - SECoreTextView (from `https://github.com/yoshinbo/SECoreTextView`, commit `41108de5d6d9afe3b4353c9daebdee0b9c8cd1fc`)
 
 EXTERNAL SOURCES:
@@ -40,7 +51,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
   ISAlternativeRefreshControl: 4f1b470bffe951e0b616d5302e866a76d462fcca
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SECoreTextView: 5f3bedc0c9ffc2f4c109c37142f25c12f37368dd
 
 COCOAPODS: 0.39.0

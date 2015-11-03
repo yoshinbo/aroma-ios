@@ -9,3 +9,5 @@ use_frameworks!
 pod 'AFNetworking'
 pod 'ISAlternativeRefreshControl'
 pod 'SECoreTextView', :git => 'https://github.com/yoshinbo/SECoreTextView', :commit => ‘41108de5d6d9afe3b4353c9daebdee0b9c8cd1fc’
+pod 'Bolts', '~> 1.1.4'
+pod 'SDWebImage'

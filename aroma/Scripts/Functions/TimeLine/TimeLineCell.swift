@@ -56,11 +56,15 @@ class TimeLineCell: UITableViewCell {
     func configure() {
         dataHandler.setup(ingredientTableView)
 
+        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
+        let imageURL = NSURL(fileURLWithPath: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
+
         userNameLabel.text = "YUKI ODA"
         createTimeLabel.text = "11.1 12:00"
         recipeTitleLabel.text = "心安らかブレンド"
-        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
+
         descriptionTextView.setBasicAttributedString(description)
+        //profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
         descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description, margin: Const.horizontalTotalMargin)
 
         wrapView.layer.cornerRadius = Const.wrapViewCornerRadius
