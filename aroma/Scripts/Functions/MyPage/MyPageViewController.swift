@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPageViewController: UIViewController {
+class MyPageViewController: SwitchingTabViewController {
     
     class func build() -> (UINavigationController, MyPageViewController) {
         let navigationController = UIStoryboard(name: "MyPage", bundle: nil).instantiateInitialViewController() as! UINavigationController
@@ -16,10 +16,41 @@ class MyPageViewController: UIViewController {
         return (navigationController, viewController)
     }
 
+    @IBOutlet weak var profileImageView: ProfileImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+
+    var isMine = false
+    private var timeLineViewControllerCache = [Int: TimeLineViewController]()
+    private var locationImage = UIImage(named: "location-icon")?.imageWithRenderingMode(.AlwaysTemplate)
+
     override func viewDidLoad() {
+        let viewControllers = [
+            mineTimeLineViewController(),
+            clipTimeLineViewController()
+        ]
+        setSwitchingTabViewControllers(viewControllers)
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        nameLabel.text = "YUKI ODA"
+        locationLabel.text = "東京都"
+        locationImageView.image = locationImage
+        locationImageView.tintColor = AppColorRed
+        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。"
+        descriptionTextView.text = description
+
+        if !isMine {
+           title = nameLabel.text
+        }
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,15 +58,32 @@ class MyPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension MyPageViewController {
+    private func mineTimeLineViewController() -> TimeLineViewController {
+        return timeLineViewController(0)
     }
-    */
 
+    private func clipTimeLineViewController() -> TimeLineViewController {
+        return timeLineViewController(1)
+    }
+
+    private func timeLineViewController(type: Int) -> TimeLineViewController {
+        if timeLineViewControllerCache[type] == nil {
+            let vc = TimeLineViewController.build()
+
+            switch type {
+            case 0:
+                vc.title = localizedString("myRecipe")
+            case 1:
+                vc.title = localizedString("clip")
+            default:
+                vc.title = ""
+            }
+            timeLineViewControllerCache[type] = vc
+        }
+
+        return timeLineViewControllerCache[type]!
+    }
 }

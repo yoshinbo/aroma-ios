@@ -9,6 +9,7 @@
 import UIKit
 import SECoreTextView
 
+
 class TimeLineCell: UITableViewCell {
 
     private struct Const {
@@ -35,6 +36,7 @@ class TimeLineCell: UITableViewCell {
     @IBOutlet weak var commentButton: CommentButton!
     @IBOutlet weak var clipButton: ClipButton!
 
+    var delegate: TimeLineViewControllerDelegate?
     private var dataHandler: IngredientDataHandler!
 
     override func awakeFromNib() {
@@ -90,13 +92,20 @@ class TimeLineCell: UITableViewCell {
         return frame.size.height
     }
 
+    @IBAction func touchUpInsideProfileButton(sender: UIButton) {
+        delegate?.showProfileView()
+    }
+
     @IBAction func touchUpInsideLikeButton(sender: LikeButton) {
+        delegate?.like()
     }
 
     @IBAction func touchUpInsideCommentButton(sender: CommentButton) {
+        delegate?.showRecipeCommentView()
     }
 
     @IBAction func touchUpInsideClipButton(sender: ClipButton) {
+        delegate?.clip()
     }
 }
 

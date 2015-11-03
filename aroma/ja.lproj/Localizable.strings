@@ -10,4 +10,6 @@
 "search" = "検索";
 "post" = "投稿";
 "notice" = "お知らせ";
-"mypage" = "マイページ";
+"myPage" = "マイページ";
+"myRecipe" = "マイレシピ";
+"clip" = "クリップ";

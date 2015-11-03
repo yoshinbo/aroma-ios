@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjA-L1-N3s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjA-L1-N3s">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--MY PAGE-->
@@ -15,10 +17,108 @@
                     <view key="view" contentMode="scaleToFill" id="1V4-p7-fyE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nB-Sy-eUG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-mY-2EA" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="16" width="64" height="64"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Tcx-mY-2EA" secondAttribute="height" multiplier="1:1" id="H8w-3B-7FO"/>
+                                            <constraint firstAttribute="width" constant="64" id="Z7T-sS-CEh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUKI ODA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-8p-evl">
+                                        <rect key="frame" x="104" y="25.5" width="480" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="cOO-Uo-F7d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z8-XY-mqE">
+                                        <rect key="frame" x="16" y="88" width="568" height="54"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-oD-FbR">
+                                        <rect key="frame" x="121" y="49.5" width="36" height="14.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="6xf-U1-XZn">
+                                        <rect key="frame" x="104" y="50.5" width="16" height="16"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="UWn-ph-e5d"/>
+                                            <constraint firstAttribute="width" secondItem="6xf-U1-XZn" secondAttribute="height" multiplier="1:1" id="pXz-LA-ukW"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hsT-8p-evl" firstAttribute="leading" secondItem="Tcx-mY-2EA" secondAttribute="trailing" constant="16" id="0af-nC-Hde"/>
+                                    <constraint firstItem="6xf-U1-XZn" firstAttribute="leading" secondItem="hsT-8p-evl" secondAttribute="leading" id="0se-1P-GwR"/>
+                                    <constraint firstItem="Tcx-mY-2EA" firstAttribute="top" secondItem="3nB-Sy-eUG" secondAttribute="top" constant="16" id="I3u-3t-L9f"/>
+                                    <constraint firstAttribute="height" constant="150" id="Iqg-Aw-y8i"/>
+                                    <constraint firstItem="Tcx-mY-2EA" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="24" id="MKf-ZE-hAv"/>
+                                    <constraint firstItem="5z8-XY-mqE" firstAttribute="top" secondItem="Tcx-mY-2EA" secondAttribute="bottom" constant="8" id="RfR-RK-YQZ"/>
+                                    <constraint firstItem="6xf-U1-XZn" firstAttribute="top" secondItem="hsT-8p-evl" secondAttribute="bottom" constant="4" id="VjZ-5j-CeV"/>
+                                    <constraint firstItem="lRi-oD-FbR" firstAttribute="leading" secondItem="6xf-U1-XZn" secondAttribute="trailing" constant="1" id="XRD-nR-y2k"/>
+                                    <constraint firstAttribute="trailing" secondItem="5z8-XY-mqE" secondAttribute="trailing" constant="16" id="bGY-Mo-480"/>
+                                    <constraint firstAttribute="bottom" secondItem="5z8-XY-mqE" secondAttribute="bottom" constant="8" id="dDd-c1-CEP"/>
+                                    <constraint firstItem="5z8-XY-mqE" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="16" id="ecG-Cd-oin"/>
+                                    <constraint firstItem="hsT-8p-evl" firstAttribute="centerY" secondItem="Tcx-mY-2EA" secondAttribute="centerY" constant="-12" id="hnB-9m-Sqv"/>
+                                    <constraint firstItem="lRi-oD-FbR" firstAttribute="centerY" secondItem="6xf-U1-XZn" secondAttribute="centerY" constant="-1" id="pi5-lQ-Fvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="hsT-8p-evl" secondAttribute="trailing" constant="16" id="qbF-Kl-IEU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJx-kc-TNi" customClass="SwitchingTagHeaderView" customModule="aroma" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="214" width="600" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pjW-YB-Tcl"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-gZ-ntu">
+                                <rect key="frame" x="0.0" y="262" width="600" height="338"/>
+                                <animations/>
+                            </scrollView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3nB-Sy-eUG" secondAttribute="trailing" id="BAd-7p-JEa"/>
+                            <constraint firstItem="OBP-Mx-LC4" firstAttribute="top" secondItem="ULk-gZ-ntu" secondAttribute="bottom" id="JBp-ZH-fPf"/>
+                            <constraint firstItem="ULk-gZ-ntu" firstAttribute="leading" secondItem="1V4-p7-fyE" secondAttribute="leading" id="KPF-1r-EkY"/>
+                            <constraint firstAttribute="trailing" secondItem="ULk-gZ-ntu" secondAttribute="trailing" id="LdT-sY-ACm"/>
+                            <constraint firstItem="SJx-kc-TNi" firstAttribute="leading" secondItem="1V4-p7-fyE" secondAttribute="leading" id="Olk-ji-jec"/>
+                            <constraint firstItem="ULk-gZ-ntu" firstAttribute="top" secondItem="SJx-kc-TNi" secondAttribute="bottom" id="Ya7-kC-hNN"/>
+                            <constraint firstItem="3nB-Sy-eUG" firstAttribute="top" secondItem="l74-bN-AvW" secondAttribute="bottom" id="Z4B-6C-vH7"/>
+                            <constraint firstItem="SJx-kc-TNi" firstAttribute="top" secondItem="3nB-Sy-eUG" secondAttribute="bottom" id="g4s-Qz-obC"/>
+                            <constraint firstItem="3nB-Sy-eUG" firstAttribute="leading" secondItem="1V4-p7-fyE" secondAttribute="leading" id="lD6-2b-9dY"/>
+                            <constraint firstAttribute="trailing" secondItem="SJx-kc-TNi" secondAttribute="trailing" id="uzz-7q-0yX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MY PAGE" id="eK2-Gp-kUc"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="5z8-XY-mqE" id="Zw3-yn-aWu"/>
+                        <outlet property="headerView" destination="SJx-kc-TNi" id="5k7-0A-8Jl"/>
+                        <outlet property="locationImageView" destination="6xf-U1-XZn" id="j2Q-OT-uhj"/>
+                        <outlet property="locationLabel" destination="lRi-oD-FbR" id="rEA-x5-MKX"/>
+                        <outlet property="nameLabel" destination="hsT-8p-evl" id="Zie-Gj-p7j"/>
+                        <outlet property="profileImageView" destination="Tcx-mY-2EA" id="Rnz-rP-XlU"/>
+                        <outlet property="scrollView" destination="ULk-gZ-ntu" id="U7V-ry-8qc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkR-9n-Daf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,4 +144,8 @@
             <point key="canvasLocation" x="248" y="340"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location-icon" width="17" height="25"/>
+        <image name="mypage-icon" width="25" height="25"/>
+    </resources>
 </document>
