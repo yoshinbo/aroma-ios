@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwitchingHeaderView: UIView {
+class SwitchingTagHeaderView: UIView {
 
     private struct Const {
         static let margin: CGFloat = 1

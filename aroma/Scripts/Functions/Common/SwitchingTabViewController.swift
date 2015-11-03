@@ -15,7 +15,7 @@ class SwitchingTabViewController: UIViewController {
         static let font = UIFont.systemFontOfSize(14)
         static let boldFont = UIFont.boldSystemFontOfSize(14)
     }
-    @IBOutlet weak var headerView: SwitchingHeaderView!
+    @IBOutlet weak var headerView: SwitchingTagHeaderView!
     @IBOutlet weak var scrollView: UIScrollView!
 
     var viewControllers: [UIViewController]!
