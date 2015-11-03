@@ -18,9 +18,13 @@ class MyPageViewController: SwitchingTabViewController {
 
     @IBOutlet weak var profileImageView: ProfileImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
 
+    var isMine = false
     private var timeLineViewControllerCache = [Int: TimeLineViewController]()
+    private var locationImage = UIImage(named: "location-icon")?.imageWithRenderingMode(.AlwaysTemplate)
 
     override func viewDidLoad() {
         let viewControllers = [
@@ -34,6 +38,9 @@ class MyPageViewController: SwitchingTabViewController {
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
         profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
         nameLabel.text = "YUKI ODA"
+        locationLabel.text = "東京都"
+        locationImageView.image = locationImage
+        locationImageView.tintColor = AppColorRed
         let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。"
         descriptionTextView.text = description
     }

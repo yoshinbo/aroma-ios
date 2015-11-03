@@ -30,7 +30,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUKI ODA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsT-8p-evl">
-                                        <rect key="frame" x="104" y="37" width="480" height="21"/>
+                                        <rect key="frame" x="104" y="25.5" width="480" height="21"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="cOO-Uo-F7d"/>
@@ -46,19 +46,38 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRi-oD-FbR">
+                                        <rect key="frame" x="121" y="49.5" width="36" height="14.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="6xf-U1-XZn">
+                                        <rect key="frame" x="104" y="50.5" width="16" height="16"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="UWn-ph-e5d"/>
+                                            <constraint firstAttribute="width" secondItem="6xf-U1-XZn" secondAttribute="height" multiplier="1:1" id="pXz-LA-ukW"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="hsT-8p-evl" firstAttribute="leading" secondItem="Tcx-mY-2EA" secondAttribute="trailing" constant="16" id="0af-nC-Hde"/>
+                                    <constraint firstItem="6xf-U1-XZn" firstAttribute="leading" secondItem="hsT-8p-evl" secondAttribute="leading" id="0se-1P-GwR"/>
                                     <constraint firstItem="Tcx-mY-2EA" firstAttribute="top" secondItem="3nB-Sy-eUG" secondAttribute="top" constant="16" id="I3u-3t-L9f"/>
                                     <constraint firstAttribute="height" constant="150" id="Iqg-Aw-y8i"/>
                                     <constraint firstItem="Tcx-mY-2EA" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="24" id="MKf-ZE-hAv"/>
                                     <constraint firstItem="5z8-XY-mqE" firstAttribute="top" secondItem="Tcx-mY-2EA" secondAttribute="bottom" constant="8" id="RfR-RK-YQZ"/>
+                                    <constraint firstItem="6xf-U1-XZn" firstAttribute="top" secondItem="hsT-8p-evl" secondAttribute="bottom" constant="4" id="VjZ-5j-CeV"/>
+                                    <constraint firstItem="lRi-oD-FbR" firstAttribute="leading" secondItem="6xf-U1-XZn" secondAttribute="trailing" constant="1" id="XRD-nR-y2k"/>
                                     <constraint firstAttribute="trailing" secondItem="5z8-XY-mqE" secondAttribute="trailing" constant="16" id="bGY-Mo-480"/>
                                     <constraint firstAttribute="bottom" secondItem="5z8-XY-mqE" secondAttribute="bottom" constant="8" id="dDd-c1-CEP"/>
                                     <constraint firstItem="5z8-XY-mqE" firstAttribute="leading" secondItem="3nB-Sy-eUG" secondAttribute="leading" constant="16" id="ecG-Cd-oin"/>
-                                    <constraint firstItem="hsT-8p-evl" firstAttribute="centerY" secondItem="Tcx-mY-2EA" secondAttribute="centerY" id="hnB-9m-Sqv"/>
+                                    <constraint firstItem="hsT-8p-evl" firstAttribute="centerY" secondItem="Tcx-mY-2EA" secondAttribute="centerY" constant="-12" id="hnB-9m-Sqv"/>
+                                    <constraint firstItem="lRi-oD-FbR" firstAttribute="centerY" secondItem="6xf-U1-XZn" secondAttribute="centerY" constant="-1" id="pi5-lQ-Fvd"/>
                                     <constraint firstAttribute="trailing" secondItem="hsT-8p-evl" secondAttribute="trailing" constant="16" id="qbF-Kl-IEU"/>
                                 </constraints>
                             </view>
@@ -94,6 +113,8 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="5z8-XY-mqE" id="Zw3-yn-aWu"/>
                         <outlet property="headerView" destination="SJx-kc-TNi" id="5k7-0A-8Jl"/>
+                        <outlet property="locationImageView" destination="6xf-U1-XZn" id="j2Q-OT-uhj"/>
+                        <outlet property="locationLabel" destination="lRi-oD-FbR" id="rEA-x5-MKX"/>
                         <outlet property="nameLabel" destination="hsT-8p-evl" id="Zie-Gj-p7j"/>
                         <outlet property="profileImageView" destination="Tcx-mY-2EA" id="Rnz-rP-XlU"/>
                         <outlet property="scrollView" destination="ULk-gZ-ntu" id="U7V-ry-8qc"/>
@@ -124,6 +145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location-icon" width="17" height="25"/>
         <image name="mypage-icon" width="25" height="25"/>
     </resources>
 </document>
