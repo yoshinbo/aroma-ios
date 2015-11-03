@@ -10,7 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    var timeLineNavigationController: UINavigationController!
+    var homeNavigationController: UINavigationController!
     var searchNavigationController: UINavigationController!
     var noticeNavigationController: UINavigationController!
     var myPageNavigationController: UINavigationController!
@@ -19,32 +19,33 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (timeLineNavigationController, timeLineViewController) = TimeLineViewController.build()
+        let (homeNavigationController, homeViewController) = HomeViewController.build()
         let (searchNavigationController, searchViewController) = SearchViewController.build()
         let (noticeNavigationController, noticeViewController) = NoticeViewController.build()
         let (myPageNavigationController, myPageViewController) = MyPageViewController.build()
         
-        self.timeLineNavigationController = timeLineNavigationController
+        self.homeNavigationController = homeNavigationController
         self.searchNavigationController = searchNavigationController
         postViewController = UIViewController()
         self.noticeNavigationController = noticeNavigationController
         self.myPageNavigationController = myPageNavigationController
         
-        
-        timeLineViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Bookmarks, tag: 0)
-        searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Contacts, tag: 0)
-        postViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Downloads, tag: 0)
-        noticeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Favorites, tag: 0)
-        myPageViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Featured, tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(title: localizedString("home"), image: UIImage(named: "home-icon"), tag: 0)
+        searchViewController.tabBarItem = UITabBarItem(title: localizedString("search"), image: UIImage(named: "search-icon"), tag: 0)
+        postViewController.tabBarItem = UITabBarItem(title: localizedString("post"), image: UIImage(named: "create-icon"), tag: 0)
+        noticeViewController.tabBarItem = UITabBarItem(title: localizedString("notice"), image: UIImage(named: "notice-icon"), tag: 0)
+        myPageViewController.tabBarItem = UITabBarItem(title: localizedString("mypage"), image: UIImage(named: "mypage-icon"), tag: 0)
         
         self.setViewControllers([
-            self.timeLineNavigationController,
+            self.homeNavigationController,
             self.searchNavigationController,
             postViewController,
             self.noticeNavigationController,
             self.myPageNavigationController
         ], animated: false)
         
+        UITabBar.appearance().tintColor = AppColorRed
+
         delegate = self
     }
 
