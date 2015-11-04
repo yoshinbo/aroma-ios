@@ -1,17 +1,17 @@
 //
-//  TimeLineDataHandler.swift
+//  NoticeDataHandler.swift
 //  aroma
 //
-//  Created by Yoshikazu Oda on 2015/11/01.
+//  Created by Yoshikazu Oda on 2015/11/03.
 //  Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class TimeLineDataHandler: NSObject {
+class NoticeDataHandler: NSObject {
 
-    var delegate: TimeLineViewControllerDelegate?
+    var delegate: NoticeViewControllerDelegate?
 
     private weak var tableView: UITableView!
 
@@ -29,53 +29,37 @@ class TimeLineDataHandler: NSObject {
     }
 }
 
-extension TimeLineDataHandler {
-
-}
-
 // MARK: - UITableViewDelegate
-extension TimeLineDataHandler: UITableViewDelegate {
+extension NoticeDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         delegate?.showRecipeDetailView()
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return TimeLineCell.height("子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。")
+        return NoticeCell.height("子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。")
     }
 }
 
 // MARK: - UITableViewDataSource
-extension TimeLineDataHandler: UITableViewDataSource {
+extension NoticeDataHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("timeLineCell") as! TimeLineCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("noticeCell") as! NoticeCell
         cell.configure()
         cell.delegate = self
         return cell
     }
 }
 
-extension TimeLineDataHandler: TimeLineViewControllerDelegate {
+extension NoticeDataHandler: NoticeViewControllerDelegate {
     func showProfileView() {
         delegate?.showProfileView()
     }
 
     func showRecipeDetailView() {
         delegate?.showRecipeDetailView()
-    }
-
-    func showRecipeCommentView() {
-        delegate?.showRecipeCommentView()
-    }
-
-    func like() {
-        delegate?.like()
-    }
-
-    func clip() {
-        delegate?.clip()
     }
 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol NoticeViewControllerDelegate {
+    func showProfileView()
+    func showRecipeDetailView()
+}
+
 class NoticeViewController: UIViewController {
     
     class func build() -> (UINavigationController, NoticeViewController) {
@@ -16,26 +21,36 @@ class NoticeViewController: UIViewController {
         return (navigationController, viewController)
     }
 
+    @IBOutlet weak var tableView: UITableView!
+
+    private var dataHandler: NoticeDataHandler!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataHandler = NoticeDataHandler()
+        dataHandler.setup(tableView)
+        dataHandler.delegate = self
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dataHandler.loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension NoticeViewController: NoticeViewControllerDelegate {
+    func showProfileView() {
+        let (_, viewController) = MyPageViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
-    */
 
+    func showRecipeDetailView() {
+        print("showRecipeDetailView")
+    }
 }
