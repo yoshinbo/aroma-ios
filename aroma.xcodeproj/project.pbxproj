@@ -32,8 +32,6 @@
 		B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B11BE5C10B000E7D3A /* CommentButton.swift */; };
 		B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */; };
 		B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B51BE5C1E4000E7D3A /* ClipButton.swift */; };
-		B8D4F3B81BE5D19C000E7D3A /* SETextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */; };
-		B8D4F3BA1BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */; };
 		B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66AF1BE0F13900729DBB /* aroma.xcdatamodeld */; };
 		B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66B71BE0F29600729DBB /* TabBarController.swift */; };
 		B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */; };
@@ -101,8 +99,6 @@
 		B8D4F3B11BE5C10B000E7D3A /* CommentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentButton.swift; sourceTree = "<group>"; };
 		B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		B8D4F3B51BE5C1E4000E7D3A /* ClipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipButton.swift; sourceTree = "<group>"; };
-		B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SETextView+Extension.swift"; sourceTree = "<group>"; };
-		B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		B8DF66B01BE0F13900729DBB /* aroma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = aroma.xcdatamodel; sourceTree = "<group>"; };
 		B8DF66B71BE0F29600729DBB /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B8DF66BA1BE0F54D00729DBB /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
@@ -334,8 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				B8DF66D31BE1017800729DBB /* UIViewController+Extension.swift */,
-				B8D4F3B71BE5D19C000E7D3A /* SETextView+Extension.swift */,
-				B8D4F3B91BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift */,
 				B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */,
 				B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */,
 			);
@@ -550,7 +544,6 @@
 			files = (
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
-				B8D4F3BA1BE5D448000E7D3A /* NSMutableAttributedString+Extension.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
@@ -564,7 +557,6 @@
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
-				B8D4F3B81BE5D19C000E7D3A /* SETextView+Extension.swift in Sources */,
 				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,

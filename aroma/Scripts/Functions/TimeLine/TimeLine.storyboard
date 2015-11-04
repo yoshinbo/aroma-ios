@@ -79,7 +79,7 @@
                                                             </constraints>
                                                         </view>
                                                         <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-hh-Tcd">
-                                                            <rect key="frame" x="16" y="100" width="552" height="68"/>
+                                                            <rect key="frame" x="16" y="100" width="552" height="77.5"/>
                                                             <animations/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <prototypes>
@@ -147,35 +147,37 @@
                                                                         <constraint firstAttribute="height" constant="1" id="KVw-C8-nux"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-U9-Q7x" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="72" y="10" width="46" height="30"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-U9-Q7x" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="72" y="13" width="46" height="23"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="SFP-TW-Cy7"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
+                                                                    <state key="normal" title="3" image="comment-icon"/>
                                                                     <connections>
                                                                         <action selector="touchUpInsideCommentButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Wyq-jU-O0K"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-pO-Qhi" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="522" y="10" width="46" height="30"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-pO-Qhi" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="522" y="12" width="46" height="25"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="3GJ-DW-Gg4"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
+                                                                    <state key="normal" title="Button" image="pin-icon"/>
                                                                     <connections>
                                                                         <action selector="touchUpInsideClipButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Y1c-We-Vbs"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-UW-1UD" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="16" y="10" width="46" height="30"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-UW-1UD" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="16" y="13" width="46" height="23"/>
                                                                     <animations/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="46" id="ill-0M-N6Z"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
+                                                                    <state key="normal" image="heart-icon">
+                                                                        <color key="titleColor" red="1" green="0.69803921570000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
                                                                     <connections>
                                                                         <action selector="touchUpInsideLikeButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="vhN-tD-oET"/>
                                                                     </connections>
@@ -194,14 +196,6 @@
                                                                 <constraint firstItem="cK4-UW-1UD" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="YuI-2S-dY0"/>
                                                                 <constraint firstAttribute="trailing" secondItem="SIs-4G-r0Z" secondAttribute="trailing" id="asA-Wd-cSq"/>
                                                                 <constraint firstItem="xqk-U9-Q7x" firstAttribute="leading" secondItem="cK4-UW-1UD" secondAttribute="trailing" constant="10" id="lXP-6j-tDb"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAm-WN-Lk6" customClass="SETextView">
-                                                            <rect key="frame" x="16" y="176" width="552" height="30"/>
-                                                            <animations/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="RBC-K3-nvd"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxO-Kz-WcZ">
@@ -264,26 +258,36 @@
                                                                 <constraint firstItem="6iF-Kb-t99" firstAttribute="centerY" secondItem="YxO-Kz-WcZ" secondAttribute="centerY" id="zUS-uP-fTi"/>
                                                             </constraints>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uY-Ld-bSp">
+                                                            <rect key="frame" x="16" y="185.5" width="552" height="20.5"/>
+                                                            <animations/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="lo3-9a-IDq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="seI-eo-nf7" firstAttribute="top" secondItem="2uY-Ld-bSp" secondAttribute="bottom" constant="8" id="1Tt-bf-4Ii"/>
                                                         <constraint firstAttribute="bottom" secondItem="seI-eo-nf7" secondAttribute="bottom" priority="100" id="7fC-5h-3aX"/>
+                                                        <constraint firstItem="2uY-Ld-bSp" firstAttribute="top" secondItem="wwF-hh-Tcd" secondAttribute="bottom" constant="8" id="9OY-O3-isM"/>
                                                         <constraint firstAttribute="trailing" secondItem="wwF-hh-Tcd" secondAttribute="trailing" constant="16" id="EJI-Jq-Jxd"/>
                                                         <constraint firstItem="YxO-Kz-WcZ" firstAttribute="top" secondItem="wYb-ak-N5j" secondAttribute="top" id="HhL-HN-7do"/>
                                                         <constraint firstItem="seI-eo-nf7" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="IPo-pe-z5D"/>
-                                                        <constraint firstAttribute="trailing" secondItem="yAm-WN-Lk6" secondAttribute="trailing" constant="16" id="LWS-QC-Gxq"/>
-                                                        <constraint firstItem="seI-eo-nf7" firstAttribute="top" secondItem="yAm-WN-Lk6" secondAttribute="bottom" constant="8" id="Map-KR-fWx"/>
                                                         <constraint firstItem="YxO-Kz-WcZ" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="aFd-pp-jTG"/>
-                                                        <constraint firstItem="yAm-WN-Lk6" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="bzk-K2-WzF"/>
                                                         <constraint firstAttribute="trailing" secondItem="YxO-Kz-WcZ" secondAttribute="trailing" id="c3w-ZG-upX"/>
                                                         <constraint firstItem="wwF-hh-Tcd" firstAttribute="top" secondItem="LTH-o3-Zi2" secondAttribute="bottom" id="c5p-2d-qVr"/>
                                                         <constraint firstAttribute="trailing" secondItem="seI-eo-nf7" secondAttribute="trailing" id="iGY-Ww-Z9S"/>
-                                                        <constraint firstItem="yAm-WN-Lk6" firstAttribute="top" secondItem="wwF-hh-Tcd" secondAttribute="bottom" constant="8" id="jGX-5h-9D5"/>
                                                         <constraint firstItem="LTH-o3-Zi2" firstAttribute="top" secondItem="YxO-Kz-WcZ" secondAttribute="bottom" id="jWQ-5F-P1m"/>
                                                         <constraint firstItem="LTH-o3-Zi2" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" id="jlh-VT-05u"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2uY-Ld-bSp" secondAttribute="trailing" constant="16" id="kuw-vb-OZB"/>
                                                         <constraint firstAttribute="trailing" secondItem="LTH-o3-Zi2" secondAttribute="trailing" id="rbB-RZ-Ir0"/>
                                                         <constraint firstItem="wwF-hh-Tcd" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="sa7-v4-d4z"/>
+                                                        <constraint firstItem="2uY-Ld-bSp" firstAttribute="leading" secondItem="wYb-ak-N5j" secondAttribute="leading" constant="16" id="zcb-T2-iWG"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -301,8 +305,8 @@
                                             <outlet property="clipButton" destination="rBw-pO-Qhi" id="vRf-L3-oF7"/>
                                             <outlet property="commentButton" destination="xqk-U9-Q7x" id="D8D-fq-cAj"/>
                                             <outlet property="createTimeLabel" destination="sxR-w2-l6z" id="R5a-km-KoZ"/>
-                                            <outlet property="descriptionTextHeightConstraint" destination="RBC-K3-nvd" id="qiK-WA-ahH"/>
-                                            <outlet property="descriptionTextView" destination="yAm-WN-Lk6" id="Ru0-hq-Ea6"/>
+                                            <outlet property="descriptionLabel" destination="2uY-Ld-bSp" id="9wN-gs-TbY"/>
+                                            <outlet property="descriptionTextHeightConstraint" destination="lo3-9a-IDq" id="tUC-L9-hpf"/>
                                             <outlet property="ingredientTableView" destination="wwF-hh-Tcd" id="t9i-vH-reA"/>
                                             <outlet property="likeButton" destination="cK4-UW-1UD" id="bdd-st-cdN"/>
                                             <outlet property="profileImageView" destination="jk3-Qy-Lft" id="pof-yN-S9Z"/>
@@ -335,6 +339,9 @@
     </scenes>
     <resources>
         <image name="aromabottle" width="60" height="65"/>
+        <image name="comment-icon" width="25" height="23"/>
+        <image name="heart-icon" width="25" height="23"/>
         <image name="mypage-icon" width="25" height="25"/>
+        <image name="pin-icon" width="25" height="25"/>
     </resources>
 </document>

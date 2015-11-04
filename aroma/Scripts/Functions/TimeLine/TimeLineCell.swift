@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SECoreTextView
-
 
 class TimeLineCell: UITableViewCell {
 
@@ -19,9 +17,9 @@ class TimeLineCell: UITableViewCell {
         static let horizontalMargin: CGFloat = 8
         static let verticalMargin: CGFloat = 8
         static let font: UIFont = UIFont.systemFontOfSize(12)
-        static let lineSpacing: CGFloat = 5
+        static let numberOfLines: Int = 3
         static let horizontalTotalMargin: CGFloat = horizontalMargin * 6
-        static let wrapViewCornerRadius: CGFloat = 4
+        static let wrapViewCornerRadius: CGFloat = 0
     }
 
     @IBOutlet weak var wrapView: UIView!
@@ -30,7 +28,7 @@ class TimeLineCell: UITableViewCell {
     @IBOutlet weak var createTimeLabel: UILabel!
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var ingredientTableView: UITableView!
-    @IBOutlet weak var descriptionTextView: SETextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var descriptionTextHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var likeButton: LikeButton!
     @IBOutlet weak var commentButton: CommentButton!
@@ -43,12 +41,7 @@ class TimeLineCell: UITableViewCell {
         super.awakeFromNib()
 
         dataHandler = IngredientDataHandler()
-
-        // NOTE : - SETextViewで以下のエラーがでるので置き換えようかな.
-        // <Error>: CGImageMaskCreate: invalid image size: 0 x 0.
-        descriptionTextView.delegate = self
-        descriptionTextView.lineSpacing = Const.lineSpacing
-        descriptionTextView.font = Const.font
+        descriptionLabel.font = Const.font
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -60,19 +53,22 @@ class TimeLineCell: UITableViewCell {
     func configure() {
         dataHandler.setup(ingredientTableView)
 
-        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
+        let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。 子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。 子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
 
         userNameLabel.text = "YUKI ODA"
         createTimeLabel.text = "11.1 12:00"
         recipeTitleLabel.text = "心安らかブレンド"
 
-        descriptionTextView.setBasicAttributedString(description)
+        descriptionLabel.text = description
         profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
-        descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description, margin: Const.horizontalTotalMargin)
+        descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description)
 
         wrapView.layer.cornerRadius = Const.wrapViewCornerRadius
         wrapView.layer.masksToBounds = true
+        wrapView.layer.borderWidth = 2.0
+        wrapView.layer.borderColor = UIColor.darkGrayColor().CGColor
+
     }
 
     class func height(description: String) -> CGFloat {
@@ -81,15 +77,19 @@ class TimeLineCell: UITableViewCell {
             + Const.titleHeight
             + IngredientDataHandler.height()
             + Const.verticalMargin
-            + textViewHegiht(description, margin: Const.horizontalTotalMargin)
+            + textViewHegiht(description)
             + Const.verticalMargin
             + Const.footerHeight
             + Const.verticalMargin
     }
 
-    class func textViewHegiht(string: String, margin: CGFloat) -> CGFloat {
-        let frame = SETextView.frameRectWithAttributtedString(NSAttributedString(string: string), constraintSize: CGSize(width: UIScreen.mainScreen().bounds.width - margin, height: 10000), lineSpacing: Const.lineSpacing, font: Const.font)
-        return frame.size.height
+    class func textViewHegiht(string: String) -> CGFloat {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width - Const.horizontalTotalMargin, height: 0))
+        label.text = string
+        label.font = Const.font
+        label.numberOfLines = Const.numberOfLines
+        label.sizeToFit()
+        return label.frame.height
     }
 
     @IBAction func touchUpInsideProfileButton(sender: UIButton) {
@@ -110,7 +110,4 @@ class TimeLineCell: UITableViewCell {
 }
 
 extension TimeLineCell {
-}
-
-extension TimeLineCell: SETextViewDelegate {
 }

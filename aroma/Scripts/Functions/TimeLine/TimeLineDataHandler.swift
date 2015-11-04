@@ -40,7 +40,7 @@ extension TimeLineDataHandler: UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return TimeLineCell.height("子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。")
+        return TimeLineCell.height("子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。")
     }
 }
 
