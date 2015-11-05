@@ -14,4 +14,9 @@ extension UIView {
         layer.cornerRadius = frame.size.width * 0.5
         layer.masksToBounds = true
     }
+
+    func connerLittleRound() {
+        layer.cornerRadius = 3
+        layer.masksToBounds = true
+    }
 }

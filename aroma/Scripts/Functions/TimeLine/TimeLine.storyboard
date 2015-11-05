@@ -148,7 +148,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-Fn-Wyk" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="15" y="12.5" width="64" height="25"/>
+                                                                    <rect key="frame" x="16" y="12.5" width="64" height="25"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -157,7 +157,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZf-Fd-qIA" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="94" y="12" width="64" height="25"/>
+                                                                    <rect key="frame" x="88" y="12" width="64" height="25"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -166,7 +166,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSg-c5-FdB" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="505" y="12.5" width="64" height="25"/>
+                                                                    <rect key="frame" x="504" y="12.5" width="64" height="25"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -179,11 +179,11 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="6cp-yI-r1u"/>
-                                                                <constraint firstAttribute="trailing" secondItem="nSg-c5-FdB" secondAttribute="trailing" constant="15" id="GFb-Ny-ITu"/>
+                                                                <constraint firstAttribute="trailing" secondItem="nSg-c5-FdB" secondAttribute="trailing" constant="16" id="GFb-Ny-ITu"/>
                                                                 <constraint firstItem="SIs-4G-r0Z" firstAttribute="top" secondItem="seI-eo-nf7" secondAttribute="top" id="Lqd-sp-Qxc"/>
-                                                                <constraint firstItem="fL4-Fn-Wyk" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" constant="15" id="RjG-0f-Ylm"/>
+                                                                <constraint firstItem="fL4-Fn-Wyk" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" constant="16" id="RjG-0f-Ylm"/>
                                                                 <constraint firstItem="SIs-4G-r0Z" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" id="RvO-SA-RQC"/>
-                                                                <constraint firstItem="wZf-Fd-qIA" firstAttribute="leading" secondItem="fL4-Fn-Wyk" secondAttribute="trailing" constant="15" id="Tcm-94-Qrz"/>
+                                                                <constraint firstItem="wZf-Fd-qIA" firstAttribute="leading" secondItem="fL4-Fn-Wyk" secondAttribute="trailing" constant="8" id="Tcm-94-Qrz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="SIs-4G-r0Z" secondAttribute="trailing" id="asA-Wd-cSq"/>
                                                                 <constraint firstItem="nSg-c5-FdB" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="d5l-Dk-orD"/>
                                                                 <constraint firstItem="wZf-Fd-qIA" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="kxb-do-2wP"/>

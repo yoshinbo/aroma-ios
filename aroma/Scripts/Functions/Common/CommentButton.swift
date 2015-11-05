@@ -48,5 +48,7 @@ extension CommentButton {
             options:NSLayoutFormatOptions(rawValue: 0),
             metrics:nil,
             views: bindings))
+
+        connerLittleRound()
     }
 }

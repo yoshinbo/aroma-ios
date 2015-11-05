@@ -47,5 +47,7 @@ extension LikeButton {
             options:NSLayoutFormatOptions(rawValue: 0),
             metrics:nil,
             views: bindings))
+
+        connerLittleRound()
     }
 }
