@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="iks-Ds-HB3" id="ug1-mn-Ptt"/>
+                <outlet property="label" destination="aEq-WA-9eK" id="79V-dp-GEa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9dK-mT-bBP">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83S-oW-MSJ">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="25"/>
+                    <animations/>
+                    <connections>
+                        <action selector="touchUpInside:" destination="-1" eventType="touchUpInside" id="VKV-Si-UfE"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-icon" translatesAutoresizingMaskIntoConstraints="NO" id="iks-Ds-HB3">
+                    <rect key="frame" x="8" y="5" width="15" height="15"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iks-Ds-HB3" secondAttribute="height" multiplier="1:1" id="M7T-Vq-wm4"/>
+                        <constraint firstAttribute="width" constant="15" id="eks-VK-tir"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEq-WA-9eK">
+                    <rect key="frame" x="23" y="5.5" width="33" height="14.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.96862745100000003" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="aEq-WA-9eK" firstAttribute="leading" secondItem="iks-Ds-HB3" secondAttribute="trailing" id="C6f-7a-7Ji"/>
+                <constraint firstItem="iks-Ds-HB3" firstAttribute="leading" secondItem="9dK-mT-bBP" secondAttribute="leading" constant="8" id="OMu-By-bu3"/>
+                <constraint firstAttribute="trailing" secondItem="aEq-WA-9eK" secondAttribute="trailing" constant="8" id="Sbf-Qw-PSH"/>
+                <constraint firstItem="iks-Ds-HB3" firstAttribute="centerY" secondItem="9dK-mT-bBP" secondAttribute="centerY" id="TDS-ai-Jbg"/>
+                <constraint firstAttribute="bottom" secondItem="83S-oW-MSJ" secondAttribute="bottom" id="XH2-yW-9Yb"/>
+                <constraint firstItem="83S-oW-MSJ" firstAttribute="top" secondItem="9dK-mT-bBP" secondAttribute="top" id="Xgm-EE-Gej"/>
+                <constraint firstItem="aEq-WA-9eK" firstAttribute="centerY" secondItem="9dK-mT-bBP" secondAttribute="centerY" id="i6i-sr-cca"/>
+                <constraint firstAttribute="trailing" secondItem="83S-oW-MSJ" secondAttribute="trailing" id="qV2-MJ-N60"/>
+                <constraint firstItem="83S-oW-MSJ" firstAttribute="leading" secondItem="9dK-mT-bBP" secondAttribute="leading" id="wtq-Kg-yPK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-142" y="-849.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart-icon" width="25" height="23"/>
+    </resources>
+</document>

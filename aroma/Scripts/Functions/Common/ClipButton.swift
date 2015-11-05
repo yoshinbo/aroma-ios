@@ -8,14 +8,44 @@
 
 import UIKit
 
-class ClipButton: UIButton {
+@IBDesignable
+class ClipButton: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        build()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        build()
+    }
+
+    @IBAction func touchUpInside(sender: UIButton) {
+        print("clip")
+    }
+
+}
+
+extension ClipButton {
+    private func build() {
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: "ClipButton", bundle: bundle)
+        let view = nib.instantiateWithOwner(self, options: nil).first as! UIView
+        addSubview(view)
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let bindings = ["view": view]
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|",
+            options:NSLayoutFormatOptions(rawValue: 0),
+            metrics:nil,
+            views: bindings))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|",
+            options:NSLayoutFormatOptions(rawValue: 0),
+            metrics:nil,
+            views: bindings))
+    }
 }

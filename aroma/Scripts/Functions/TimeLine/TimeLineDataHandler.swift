@@ -54,6 +54,7 @@ extension TimeLineDataHandler: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("timeLineCell") as! TimeLineCell
         cell.configure()
         cell.delegate = self
+        cell.commentButton.delegate = self
         return cell
     }
 }
@@ -69,13 +70,5 @@ extension TimeLineDataHandler: TimeLineViewControllerDelegate {
 
     func showRecipeCommentView() {
         delegate?.showRecipeCommentView()
-    }
-
-    func like() {
-        delegate?.like()
-    }
-
-    func clip() {
-        delegate?.clip()
     }
 }

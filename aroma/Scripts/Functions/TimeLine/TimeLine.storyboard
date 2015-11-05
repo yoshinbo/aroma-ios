@@ -22,7 +22,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-h9-bam">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96730981689999995" green="0.96730981689999995" blue="0.96730981689999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="timeLineCell" rowHeight="280" id="AzC-x7-65l" customClass="TimeLineCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="280"/>
@@ -147,55 +147,47 @@
                                                                         <constraint firstAttribute="height" constant="1" id="KVw-C8-nux"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqk-U9-Q7x" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="72" y="13" width="46" height="23"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-Fn-Wyk" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="15" y="12.5" width="64" height="25"/>
                                                                     <animations/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="46" id="SFP-TW-Cy7"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="ERK-s0-OhM"/>
+                                                                        <constraint firstAttribute="width" constant="64" id="wQ0-9m-BrN"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="3" image="comment-icon"/>
-                                                                    <connections>
-                                                                        <action selector="touchUpInsideCommentButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Wyq-jU-O0K"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-pO-Qhi" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="522" y="12" width="46" height="25"/>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZf-Fd-qIA" customClass="CommentButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="94" y="12" width="64" height="25"/>
                                                                     <animations/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="46" id="3GJ-DW-Gg4"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="Ayh-TQ-8go"/>
+                                                                        <constraint firstAttribute="width" constant="64" id="IT6-Ze-KDL"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button" image="pin-icon"/>
-                                                                    <connections>
-                                                                        <action selector="touchUpInsideClipButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="Y1c-We-Vbs"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-UW-1UD" customClass="LikeButton" customModule="aroma" customModuleProvider="target">
-                                                                    <rect key="frame" x="16" y="13" width="46" height="23"/>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSg-c5-FdB" customClass="ClipButton" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="505" y="12.5" width="64" height="25"/>
                                                                     <animations/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="46" id="ill-0M-N6Z"/>
+                                                                        <constraint firstAttribute="height" constant="25" id="Rmq-4e-STr"/>
+                                                                        <constraint firstAttribute="width" constant="64" id="lxV-LI-sFL"/>
                                                                     </constraints>
-                                                                    <state key="normal" image="heart-icon">
-                                                                        <color key="titleColor" red="1" green="0.69803921570000005" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </state>
-                                                                    <connections>
-                                                                        <action selector="touchUpInsideLikeButton:" destination="AzC-x7-65l" eventType="touchUpInside" id="vhN-tD-oET"/>
-                                                                    </connections>
-                                                                </button>
+                                                                </view>
                                                             </subviews>
                                                             <animations/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="6cp-yI-r1u"/>
+                                                                <constraint firstAttribute="trailing" secondItem="nSg-c5-FdB" secondAttribute="trailing" constant="15" id="GFb-Ny-ITu"/>
                                                                 <constraint firstItem="SIs-4G-r0Z" firstAttribute="top" secondItem="seI-eo-nf7" secondAttribute="top" id="Lqd-sp-Qxc"/>
+                                                                <constraint firstItem="fL4-Fn-Wyk" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" constant="15" id="RjG-0f-Ylm"/>
                                                                 <constraint firstItem="SIs-4G-r0Z" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" id="RvO-SA-RQC"/>
-                                                                <constraint firstItem="cK4-UW-1UD" firstAttribute="leading" secondItem="seI-eo-nf7" secondAttribute="leading" constant="16" id="SUP-Q9-VYG"/>
-                                                                <constraint firstAttribute="trailing" secondItem="rBw-pO-Qhi" secondAttribute="trailing" constant="16" id="TzR-ey-d2b"/>
-                                                                <constraint firstItem="xqk-U9-Q7x" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="VUa-BU-Van"/>
-                                                                <constraint firstItem="rBw-pO-Qhi" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="WQF-i2-RWF"/>
-                                                                <constraint firstItem="cK4-UW-1UD" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="YuI-2S-dY0"/>
+                                                                <constraint firstItem="wZf-Fd-qIA" firstAttribute="leading" secondItem="fL4-Fn-Wyk" secondAttribute="trailing" constant="15" id="Tcm-94-Qrz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="SIs-4G-r0Z" secondAttribute="trailing" id="asA-Wd-cSq"/>
-                                                                <constraint firstItem="xqk-U9-Q7x" firstAttribute="leading" secondItem="cK4-UW-1UD" secondAttribute="trailing" constant="10" id="lXP-6j-tDb"/>
+                                                                <constraint firstItem="nSg-c5-FdB" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="d5l-Dk-orD"/>
+                                                                <constraint firstItem="wZf-Fd-qIA" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="kxb-do-2wP"/>
+                                                                <constraint firstItem="fL4-Fn-Wyk" firstAttribute="centerY" secondItem="seI-eo-nf7" secondAttribute="centerY" id="xiV-Da-GeH"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxO-Kz-WcZ">
@@ -259,7 +251,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uY-Ld-bSp">
-                                                            <rect key="frame" x="16" y="185.5" width="552" height="20.5"/>
+                                                            <rect key="frame" x="16" y="185" width="552" height="20.5"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="lo3-9a-IDq"/>
@@ -302,13 +294,13 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="clipButton" destination="rBw-pO-Qhi" id="vRf-L3-oF7"/>
-                                            <outlet property="commentButton" destination="xqk-U9-Q7x" id="D8D-fq-cAj"/>
+                                            <outlet property="clipButton" destination="nSg-c5-FdB" id="adL-Db-RsT"/>
+                                            <outlet property="commentButton" destination="wZf-Fd-qIA" id="0cq-30-8Kp"/>
                                             <outlet property="createTimeLabel" destination="sxR-w2-l6z" id="R5a-km-KoZ"/>
                                             <outlet property="descriptionLabel" destination="2uY-Ld-bSp" id="9wN-gs-TbY"/>
                                             <outlet property="descriptionTextHeightConstraint" destination="lo3-9a-IDq" id="tUC-L9-hpf"/>
                                             <outlet property="ingredientTableView" destination="wwF-hh-Tcd" id="t9i-vH-reA"/>
-                                            <outlet property="likeButton" destination="cK4-UW-1UD" id="bdd-st-cdN"/>
+                                            <outlet property="likeButton" destination="fL4-Fn-Wyk" id="Txg-rd-YzQ"/>
                                             <outlet property="profileImageView" destination="jk3-Qy-Lft" id="pof-yN-S9Z"/>
                                             <outlet property="recipeTitleLabel" destination="Gga-f4-0rJ" id="uSl-Y6-dng"/>
                                             <outlet property="userNameLabel" destination="6iF-Kb-t99" id="K2Z-6L-aU4"/>
@@ -339,9 +331,6 @@
     </scenes>
     <resources>
         <image name="aromabottle" width="60" height="65"/>
-        <image name="comment-icon" width="25" height="23"/>
-        <image name="heart-icon" width="25" height="23"/>
         <image name="mypage-icon" width="25" height="25"/>
-        <image name="pin-icon" width="25" height="25"/>
     </resources>
 </document>

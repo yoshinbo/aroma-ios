@@ -12,8 +12,6 @@ protocol TimeLineViewControllerDelegate {
     func showProfileView()
     func showRecipeDetailView()
     func showRecipeCommentView()
-    func like()
-    func clip()
 }
 
 class TimeLineViewController: UIViewController {
@@ -56,13 +54,5 @@ extension TimeLineViewController: TimeLineViewControllerDelegate {
 
     func showRecipeCommentView() {
         print("showRecipeCommentView")
-    }
-
-    func like() {
-        print("like")
-    }
-
-    func clip() {
-        print("clip")
     }
 }

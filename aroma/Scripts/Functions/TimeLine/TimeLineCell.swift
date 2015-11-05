@@ -68,7 +68,6 @@ class TimeLineCell: UITableViewCell {
         wrapView.layer.masksToBounds = true
         wrapView.layer.borderWidth = 2.0
         wrapView.layer.borderColor = UIColor.darkGrayColor().CGColor
-
     }
 
     class func height(description: String) -> CGFloat {
@@ -94,18 +93,6 @@ class TimeLineCell: UITableViewCell {
 
     @IBAction func touchUpInsideProfileButton(sender: UIButton) {
         delegate?.showProfileView()
-    }
-
-    @IBAction func touchUpInsideLikeButton(sender: LikeButton) {
-        delegate?.like()
-    }
-
-    @IBAction func touchUpInsideCommentButton(sender: CommentButton) {
-        delegate?.showRecipeCommentView()
-    }
-
-    @IBAction func touchUpInsideClipButton(sender: ClipButton) {
-        delegate?.clip()
     }
 }
 
