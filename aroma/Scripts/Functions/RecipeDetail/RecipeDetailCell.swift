@@ -1,32 +1,34 @@
 //
-//  TimeLineCell.swift
+//  RecipeDetailCell.swift
 //  aroma
 //
-//  Created by Yoshikazu Oda on 2015/11/01.
+//  Created by Yoshikazu Oda on 2015/11/07.
 //  Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 //
 
 import UIKit
 
-class TimeLineCell: UITableViewCell {
+class RecipeDetailCell: UITableViewCell {
 
     private struct Const {
-        static let headerHeight: CGFloat = 50
-        static let titleHeight: CGFloat = 50
-        static let footerHeight: CGFloat = 50
+        static let headerHeight: CGFloat = 64
+        static let recipeLabelHeight: CGFloat = 30
+        static let recipeIndexHeight: CGFloat = 20
+        static let buttonHeight: CGFloat = 25
         static let horizontalMargin: CGFloat = 8
         static let verticalMargin: CGFloat = 8
-        static let font: UIFont = UIFont.systemFontOfSize(12)
-        static let numberOfLines: Int = 3
-        static let horizontalTotalMargin: CGFloat = horizontalMargin * 6
-        static let wrapViewCornerRadius: CGFloat = 0
+        static let recipeTitleFont: UIFont = UIFont.systemFontOfSize(17)
+        static let descriptionFont: UIFont = UIFont.systemFontOfSize(12)
+        static let numberOfLines: Int = 0
+        static let horizontalTotalMargin: CGFloat = horizontalMargin * 4
     }
 
-    @IBOutlet weak var wrapView: DoubleLineWrapView!
     @IBOutlet weak var profileImageView: ProfileImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var createTimeLabel: UILabel!
     @IBOutlet weak var recipeTitleLabel: UILabel!
+    @IBOutlet weak var recipeTitleTextHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var wrapView: DoubleLineWrapView!
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var descriptionTextHeightConstraint: NSLayoutConstraint!
@@ -34,14 +36,19 @@ class TimeLineCell: UITableViewCell {
     @IBOutlet weak var commentButton: CommentButton!
     @IBOutlet weak var clipButton: ClipButton!
 
-    var delegate: TimeLineViewControllerDelegate?
     private var dataHandler: IngredientDataHandler!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         dataHandler = IngredientDataHandler()
-        descriptionLabel.font = Const.font
+        recipeTitleLabel.font = Const.recipeTitleFont
+        descriptionLabel.font = Const.descriptionFont
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutIfNeeded()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -53,48 +60,54 @@ class TimeLineCell: UITableViewCell {
     func configure() {
         dataHandler.setup(ingredientTableView)
 
+        let title = "心安らかブレンド"
         let description = "子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。 子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。 子供も安心して使えるブレンドです。アウトドアでの虫よけスプレーとしてもつかえます。"
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
 
         userNameLabel.text = "YUKI ODA"
         createTimeLabel.text = "11.1 12:00"
-        recipeTitleLabel.text = "心安らかブレンド"
+        recipeTitleLabel.text = title
+        recipeTitleTextHeightConstraint.constant = RecipeDetailCell.recipeTitleTextHeight(title)
 
         descriptionLabel.text = description
         profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
-        descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description)
-
-        wrapView.layer.cornerRadius = Const.wrapViewCornerRadius
-        wrapView.layer.masksToBounds = true
-        wrapView.layer.borderWidth = 2.0
-        wrapView.layer.borderColor = UIColor.darkGrayColor().CGColor
+        descriptionTextHeightConstraint.constant = RecipeDetailCell.descriptionTextHeight(description)
     }
 
-    class func height(description: String) -> CGFloat {
-        return Const.verticalMargin
-            + Const.headerHeight
-            + Const.titleHeight
+    class func height(title: String, description: String) -> CGFloat {
+        return Const.headerHeight
+            + Const.verticalMargin * 2
+            + recipeTitleTextHeight(title)
+            + Const.verticalMargin * 2
+            + Const.recipeLabelHeight
+            + Const.verticalMargin * 2
+            + Const.verticalMargin
+            + Const.recipeIndexHeight
+            + Const.verticalMargin
             + IngredientDataHandler.height()
             + Const.verticalMargin
-            + textViewHegiht(description)
-            + Const.verticalMargin
-            + Const.footerHeight
-            + Const.verticalMargin
+            + Const.verticalMargin * 2
+            + Const.buttonHeight
+            + Const.verticalMargin * 2
+            + descriptionTextHeight(description)
+            + Const.verticalMargin * 2
+            + Const.verticalMargin * 2
     }
 
-    class func textViewHegiht(string: String) -> CGFloat {
+    class func recipeTitleTextHeight(string: String) -> CGFloat {
+        return textViewHegiht(string, font: Const.recipeTitleFont)
+    }
+
+    class func descriptionTextHeight(string: String) -> CGFloat {
+        return textViewHegiht(string, font: Const.descriptionFont)
+    }
+
+    class func textViewHegiht(string: String, font: UIFont) -> CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width - Const.horizontalTotalMargin, height: 0))
         label.text = string
-        label.font = Const.font
+        label.font = font
         label.numberOfLines = Const.numberOfLines
         label.sizeToFit()
         return label.frame.height
     }
-
-    @IBAction func touchUpInsideProfileButton(sender: UIButton) {
-        delegate?.showProfileView()
-    }
-}
-
-extension TimeLineCell {
 }
