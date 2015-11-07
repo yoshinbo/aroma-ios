@@ -49,7 +49,8 @@ extension TimeLineViewController: TimeLineViewControllerDelegate {
     }
 
     func showRecipeDetailView() {
-        print("showRecipeDetailView")
+        let (_, viewController) = RecipeDetailViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
     func showRecipeCommentView() {

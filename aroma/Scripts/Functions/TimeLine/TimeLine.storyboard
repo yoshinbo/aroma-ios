@@ -31,7 +31,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-ak-N5j">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-ak-N5j" customClass="DoubleLineWrapView" customModule="aroma" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="264"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTH-o3-Zi2">
@@ -304,7 +304,7 @@
                                             <outlet property="profileImageView" destination="jk3-Qy-Lft" id="pof-yN-S9Z"/>
                                             <outlet property="recipeTitleLabel" destination="Gga-f4-0rJ" id="uSl-Y6-dng"/>
                                             <outlet property="userNameLabel" destination="6iF-Kb-t99" id="K2Z-6L-aU4"/>
-                                            <outlet property="wrapView" destination="wYb-ak-N5j" id="Ury-QJ-6Jr"/>
+                                            <outlet property="wrapView" destination="wYb-ak-N5j" id="fBq-5i-pa2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

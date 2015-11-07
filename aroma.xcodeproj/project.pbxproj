@@ -20,6 +20,10 @@
 		B84A5D3A1BEB8EC800C7D3C7 /* LikeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D391BEB8EC800C7D3C7 /* LikeButton.xib */; };
 		B84A5D3E1BEB8F6B00C7D3C7 /* ClipButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D3D1BEB8F6B00C7D3C7 /* ClipButton.xib */; };
 		B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D401BEB900900C7D3C7 /* CommentButton.xib */; };
+		B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D441BEDE79F00C7D3C7 /* RecipeDetailViewController.swift */; };
+		B84A5D471BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D461BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift */; };
+		B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4A1BEDF12900C7D3C7 /* RecipeDetailCell.swift */; };
+		B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4C1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
@@ -91,6 +95,10 @@
 		B84A5D391BEB8EC800C7D3C7 /* LikeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeButton.xib; sourceTree = "<group>"; };
 		B84A5D3D1BEB8F6B00C7D3C7 /* ClipButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClipButton.xib; sourceTree = "<group>"; };
 		B84A5D401BEB900900C7D3C7 /* CommentButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentButton.xib; sourceTree = "<group>"; };
+		B84A5D441BEDE79F00C7D3C7 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		B84A5D461BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailDataHandler.swift; sourceTree = "<group>"; };
+		B84A5D4A1BEDF12900C7D3C7 /* RecipeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailCell.swift; sourceTree = "<group>"; };
+		B84A5D4C1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleLineWrapView.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -250,6 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				B893593B1BEA34780091F295 /* RecipeDetail.storyboard */,
+				B84A5D441BEDE79F00C7D3C7 /* RecipeDetailViewController.swift */,
+				B84A5D461BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift */,
+				B84A5D4A1BEDF12900C7D3C7 /* RecipeDetailCell.swift */,
 			);
 			path = RecipeDetail;
 			sourceTree = "<group>";
@@ -263,6 +274,7 @@
 				B8D4F3B31BE5C12B000E7D3A /* ProfileImageView.swift */,
 				B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */,
 				B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */,
+				B84A5D4C1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -335,8 +347,8 @@
 		B8DF66BE1BE0F94300729DBB /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				B8DF66C11BE0FA4C00729DBB /* SearchViewController.swift */,
 				B8DF66BF1BE0FA3400729DBB /* Search.storyboard */,
+				B8DF66C11BE0FA4C00729DBB /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -597,7 +609,9 @@
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
+				B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
+				B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */,
 				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
 				B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
@@ -609,6 +623,7 @@
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
+				B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
 				B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */,
 				B809A9BB1BE61A07000D0D8A /* GlobalFunction.swift in Sources */,
@@ -616,6 +631,7 @@
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
 				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
+				B84A5D471BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

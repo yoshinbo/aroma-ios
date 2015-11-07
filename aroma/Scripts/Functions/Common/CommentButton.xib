@@ -24,7 +24,7 @@
                         <action selector="touchUpInside:" destination="-1" eventType="touchUpInside" id="U3j-H7-CXs"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment" translatesAutoresizingMaskIntoConstraints="NO" id="tKS-PT-QSa">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment" translatesAutoresizingMaskIntoConstraints="NO" id="tKS-PT-QSa">
                     <rect key="frame" x="8" y="5" width="15" height="15"/>
                     <animations/>
                     <constraints>
