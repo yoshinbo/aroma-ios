@@ -13,3 +13,9 @@
 "myPage" = "MyPage";
 "myRecipe" = "MyRecipe";
 "clip" = "Clip";
+
+// Post
+"titleAndComment" = "Title and Comment";
+"recipe" = "Recipe";
+"titlePlaceholder" = "Your Recipe Title (max 30 length).";
+"descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";

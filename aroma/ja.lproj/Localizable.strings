@@ -13,3 +13,9 @@
 "myPage" = "マイページ";
 "myRecipe" = "マイレシピ";
 "clip" = "クリップ";
+
+// Post
+"titleAndComment" = "タイトルとコメント";
+"recipe" = "レシピ";
+"titlePlaceholder" = "タイトル(必須)30文字まで";
+"descriptionPlaceholder" = "レシピの紹介文(必須)300文字まで\n目的や使用方法などかきましょう";
