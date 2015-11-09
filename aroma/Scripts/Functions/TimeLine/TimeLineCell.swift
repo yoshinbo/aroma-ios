@@ -27,6 +27,7 @@ class TimeLineCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var createTimeLabel: UILabel!
     @IBOutlet weak var recipeTitleLabel: UILabel!
+    @IBOutlet weak var recipeLabel: RecipeLabel!
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var descriptionTextHeightConstraint: NSLayoutConstraint!
@@ -59,6 +60,7 @@ class TimeLineCell: UITableViewCell {
         userNameLabel.text = "YUKI ODA"
         createTimeLabel.text = "11.1 12:00"
         recipeTitleLabel.text = "心安らかブレンド"
+        recipeLabel.configure("トリートメント", color: AppColorPerpul)
 
         descriptionLabel.text = description
         profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
@@ -68,6 +70,7 @@ class TimeLineCell: UITableViewCell {
         wrapView.layer.masksToBounds = true
         wrapView.layer.borderWidth = 2.0
         wrapView.layer.borderColor = UIColor.darkGrayColor().CGColor
+        layoutIfNeeded()
     }
 
     class func height(description: String) -> CGFloat {

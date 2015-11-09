@@ -28,6 +28,8 @@
 		B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */; };
 		B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */; };
 		B84A5D561BEF287D00C7D3C7 /* PostIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D551BEF287D00C7D3C7 /* PostIngredientCell.swift */; };
+		B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */; };
+		B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
@@ -107,6 +109,8 @@
 		B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextViewCell.swift; sourceTree = "<group>"; };
 		B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIndexCell.swift; sourceTree = "<group>"; };
 		B84A5D551BEF287D00C7D3C7 /* PostIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientCell.swift; sourceTree = "<group>"; };
+		B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeLabel.xib; sourceTree = "<group>"; };
+		B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeLabel.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -262,6 +266,15 @@
 			name = CommentButton;
 			sourceTree = "<group>";
 		};
+		B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */,
+				B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */,
+			);
+			name = RecipeLabel;
+			sourceTree = "<group>";
+		};
 		B893593A1BEA33CF0091F295 /* RecipeDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */,
 				B84A5D3B1BEB8EE000C7D3C7 /* LikeButton */,
 				B84A5D3F1BEB8FB800C7D3C7 /* CommentButton */,
 				B84A5D3C1BEB8F5600C7D3C7 /* ClipButton */,
@@ -535,6 +549,7 @@
 				B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */,
 				B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */,
 				B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */,
+				B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */,
 				B809A9C11BE61D60000D0D8A /* Localizable.strings in Resources */,
 				B893593C1BEA34780091F295 /* RecipeDetail.storyboard in Resources */,
 				B8DF66C01BE0FA3400729DBB /* Search.storyboard in Resources */,
@@ -615,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84A5D561BEF287D00C7D3C7 /* PostIngredientCell.swift in Sources */,
+				B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
