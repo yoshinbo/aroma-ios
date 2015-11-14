@@ -93,18 +93,28 @@ extension PostDataHandler {
     }
 
     func initIngredientContainer() {
-       ingredientContainer = [
-            Ingredient.init(name: "ラベンダー", amount: 10),
-            Ingredient.init(name: "ローズマリー", amount: 10),
-            Ingredient.init(name: "ペパーミント", amount: 10),
-            Ingredient.init(name: "ティートリー", amount: 10),
-            Ingredient.init(name: "サイプレス", amount: 10),
-        ]
+       //ingredientContainer = [
+       //     Ingredient.init(name: "ペパーミント", amount: 10),
+       //     Ingredient.init(name: "ティートリー", amount: 10),
+       //     Ingredient.init(name: "サイプレス", amount: 10),
+       //]
     }
 }
 
 // MARK: - UITableViewDelegate
 extension PostDataHandler: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let data = cellData(indexPath)
+        switch data["id"]! as String {
+        case "category":
+            showCategorySelector(0)
+        case "ingredientFooter":
+            showIngredientCreator("", amount: 0)
+        default:
+            break
+        }
+    }
+
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let data = cellData(indexPath)
         var height: CGFloat = 0
@@ -251,5 +261,13 @@ extension PostDataHandler: PostViewControllerDelegate {
 
     func closeKeyboard() {
         delegate?.closeKeyboard()
+    }
+
+    func showIngredientCreator(name: String, amount: Int) {
+        delegate?.showIngredientCreator(name, amount: amount)
+    }
+
+    func showCategorySelector(id: Int) {
+        delegate?.showCategorySelector(id)
     }
 }

@@ -11,6 +11,8 @@ import UIKit
 protocol PostViewControllerDelegate {
     func closeKeyboard()
     func updateKeyboardNavigation(string: String, color: UIColor)
+    func showIngredientCreator(name: String, amount: Int)
+    func showCategorySelector(id: Int)
 }
 
 class PostViewController: UIViewController {
@@ -121,5 +123,17 @@ extension PostViewController: PostViewControllerDelegate {
 
     func closeKeyboard() {
         self.view.endEditing(true)
+    }
+
+    func showIngredientCreator(name: String, amount: Int) {
+        let (_, viewController) = IngredientCreatorViewController.build()
+        viewController.configure(name, amount: amount)
+        viewController.delegate = dataHandler
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func showCategorySelector(id: Int) {
+        let viewController = CategorySelectorViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
