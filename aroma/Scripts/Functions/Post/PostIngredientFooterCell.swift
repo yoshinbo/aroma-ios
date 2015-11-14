@@ -1,21 +1,18 @@
 //
-//  PostIndexCell.swift
+//  PostIngredientAddCell.swift
 //  aroma
 //
-//  Created by Yoshikazu Oda on 2015/11/08.
+//  Created by Yoshikazu Oda on 2015/11/13.
 //  Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 //
 
 import UIKit
 
-class PostIndexCell: UITableViewCell {
+class PostIngredientFooterCell: UITableViewCell {
 
     struct Const {
         static let height: CGFloat = 44
     }
-
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var subLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

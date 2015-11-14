@@ -12,6 +12,7 @@ import UIKit
 class PostDataHandler: NSObject {
 
     struct Const {
+        static let editableSectionIndexes = [3]
         static let sections = [
             [
                 [ "id": "title", "class": "PostTextViewCell"],
@@ -19,7 +20,15 @@ class PostDataHandler: NSObject {
             ],
             [
                 [ "id": "category", "class": "PostIndexCell"],
-                [ "id": "recipe", "class": ""],
+            ],
+            [
+                [ "id": "ingredientHeader", "class": "PostIngredientHeaderCell"],
+            ],
+            [
+                [ "id": "ingredient", "class": "PostIngredientCell"],
+            ],
+            [
+                [ "id": "ingredientFooter", "class": "PostIngredientFooterCell"],
             ],
         ]
         static let sectionTitle = [
@@ -57,6 +66,9 @@ class PostDataHandler: NSObject {
 
 extension PostDataHandler {
     func cellData(indexPath: NSIndexPath) -> [String: String] {
+        if Const.editableSectionIndexes.contains(indexPath.section) {
+            return Const.sections[indexPath.section][0]
+        }
         return Const.sections[indexPath.section][indexPath.row]
     }
 }
@@ -71,8 +83,16 @@ extension PostDataHandler: UITableViewDelegate {
             height = PostTextViewCell.height("あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお") // 30文字分の高さを用意
         case "description":
             height = PostTextViewCell.height("あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお") // 150文字分の高さを用意
+        case "category":
+            height = PostIndexCell.height()
+        case "ingredientHeader":
+            height = PostIngredientHeaderCell.height()
+        case "ingredient":
+            height = PostIngredientCell.height()
+        case "ingredientFooter":
+            height = PostIngredientFooterCell.height()
         default:
-            height = 100
+            height = 0
         }
         return height
     }
@@ -81,6 +101,9 @@ extension PostDataHandler: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension PostDataHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if Const.sectionTitle.count < section + 1 {
+            return ""
+        }
         return Const.sectionTitle[section]
     }
 
@@ -89,6 +112,9 @@ extension PostDataHandler: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if Const.editableSectionIndexes.contains(section) {
+            return 5
+        }
         return Const.sections[section].count
     }
 
@@ -105,6 +131,18 @@ extension PostDataHandler: UITableViewDataSource {
             let _cell = tableView.dequeueReusableCellWithIdentifier("textViewCell") as! PostTextViewCell
             _cell.configure("", placeholder: Const.description.placeholder, maxInputLength: Const.description.maxLength)
             _cell.delegate = self
+            cell = _cell
+        case "category":
+            let _cell = tableView.dequeueReusableCellWithIdentifier("indexCell") as! PostIndexCell
+            cell = _cell
+        case "ingredientHeader":
+            let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientHeaderCell") as! PostIngredientHeaderCell
+            cell = _cell
+        case "ingredient":
+            let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientCell") as! PostIngredientCell
+            cell = _cell
+        case "ingredientFooter":
+            let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientFooterCell") as! PostIngredientFooterCell
             cell = _cell
         default:
             cell = UITableViewCell()

@@ -27,9 +27,11 @@
 		B84A5D501BEEFEE400C7D3C7 /* PostDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */; };
 		B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */; };
 		B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */; };
-		B84A5D561BEF287D00C7D3C7 /* PostIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D551BEF287D00C7D3C7 /* PostIngredientCell.swift */; };
 		B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */; };
 		B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */; };
+		B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */; };
+		B84A5D5F1BF615B600C7D3C7 /* PostIngredientFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */; };
+		B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
@@ -108,9 +110,11 @@
 		B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataHandler.swift; sourceTree = "<group>"; };
 		B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextViewCell.swift; sourceTree = "<group>"; };
 		B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIndexCell.swift; sourceTree = "<group>"; };
-		B84A5D551BEF287D00C7D3C7 /* PostIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientCell.swift; sourceTree = "<group>"; };
 		B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeLabel.xib; sourceTree = "<group>"; };
 		B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeLabel.swift; sourceTree = "<group>"; };
+		B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientCell.swift; sourceTree = "<group>"; };
+		B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientFooterCell.swift; sourceTree = "<group>"; };
+		B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientHeaderCell.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -403,7 +407,9 @@
 				B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */,
 				B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */,
 				B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */,
-				B84A5D551BEF287D00C7D3C7 /* PostIngredientCell.swift */,
+				B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */,
+				B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */,
+				B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -629,13 +635,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B84A5D561BEF287D00C7D3C7 /* PostIngredientCell.swift in Sources */,
 				B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
+				B84A5D5F1BF615B600C7D3C7 /* PostIngredientFooterCell.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */,
@@ -647,11 +653,13 @@
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
+				B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
+				B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */,
 				B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
 				B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */,
