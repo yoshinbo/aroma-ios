@@ -14,6 +14,9 @@ class PostIngredientCell: UITableViewCell {
         static let height: CGFloat = 44
     }
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +30,10 @@ class PostIngredientCell: UITableViewCell {
 
     class func height() -> CGFloat {
         return Const.height
+    }
+
+    func configure(name: String, amount: Int) {
+        nameLabel.text = name
+        amountLabel.text = String(format: localizedString("amountFormat"), amount)
     }
 }

@@ -158,7 +158,10 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="BG4-rI-8kM"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="編集"/>
+                                                    <connections>
+                                                        <action selector="touchUpInsideEditButton:" destination="C8W-IX-Nji" eventType="touchUpInside" id="tcV-Fp-vsr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -171,6 +174,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="editButton" destination="njW-9H-Jbg" id="zFk-nQ-W25"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="JOZ-QA-aLt" customClass="PostIngredientCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="600" height="44"/>
@@ -207,6 +213,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="ZW2-fZ-zX5" id="Nkx-vd-zgR"/>
+                                            <outlet property="nameLabel" destination="4Lb-lM-Lv9" id="F7R-DH-xle"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientFooterCell" id="Mwe-39-YsV" customClass="PostIngredientFooterCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="204" width="600" height="44"/>

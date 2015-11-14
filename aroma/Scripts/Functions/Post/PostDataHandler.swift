@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+protocol PostDataHandlerDelegate {
+    func insertIngredientContainer(name: String, amount: Int)
+    func tableEdit(on: Bool)
+}
+
 class PostDataHandler: NSObject {
 
     struct Const {
-        static let editableSectionIndexes = [3]
+        static let editableSectionIndex = 3
         static let sections = [
             [
                 [ "id": "title", "class": "PostTextViewCell"],
@@ -45,15 +50,30 @@ class PostDataHandler: NSObject {
         }
     }
 
+    class Ingredient {
+        var name: String!
+        var amount: Int!
+        init(name: String, amount: Int) {
+            self.name = name
+            self.amount = amount
+        }
+        func isSame(name: String) -> Bool {
+            return self.name == name
+        }
+    }
+
     var delegate: PostViewControllerDelegate?
 
     private weak var tableView: UITableView!
-    private var selectedRecipe = [String: Int]()
+    private var ingredientContainer = [Ingredient]()
+    private var ingredientHeaderCell: PostIngredientHeaderCell?
 
     func setup(tableView: UITableView) {
         self.tableView = tableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
+
+        initIngredientContainer()
     }
 
     func loadData() {
@@ -66,10 +86,20 @@ class PostDataHandler: NSObject {
 
 extension PostDataHandler {
     func cellData(indexPath: NSIndexPath) -> [String: String] {
-        if Const.editableSectionIndexes.contains(indexPath.section) {
+        if Const.editableSectionIndex == indexPath.section {
             return Const.sections[indexPath.section][0]
         }
         return Const.sections[indexPath.section][indexPath.row]
+    }
+
+    func initIngredientContainer() {
+       ingredientContainer = [
+            Ingredient.init(name: "ラベンダー", amount: 10),
+            Ingredient.init(name: "ローズマリー", amount: 10),
+            Ingredient.init(name: "ペパーミント", amount: 10),
+            Ingredient.init(name: "ティートリー", amount: 10),
+            Ingredient.init(name: "サイプレス", amount: 10),
+        ]
     }
 }
 
@@ -96,6 +126,44 @@ extension PostDataHandler: UITableViewDelegate {
         }
         return height
     }
+
+    // NOTE: - IngredientCellの編集
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return Const.editableSectionIndex == indexPath.section
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        ingredientContainer.removeAtIndex(indexPath.row)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    }
+
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return Const.editableSectionIndex == indexPath.section
+    }
+
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        let ingredient = ingredientContainer[sourceIndexPath.row]
+        ingredientContainer.removeAtIndex(sourceIndexPath.row)
+        ingredientContainer.insert(ingredient, atIndex: destinationIndexPath.row)
+    }
+
+    func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
+        if Const.editableSectionIndex == proposedDestinationIndexPath.section {
+            return proposedDestinationIndexPath
+        } else if Const.editableSectionIndex < proposedDestinationIndexPath.section {
+            return NSIndexPath(forRow: ingredientContainer.count - 1, inSection: Const.editableSectionIndex)
+        } else {
+            return NSIndexPath(forRow: 0, inSection: Const.editableSectionIndex)
+        }
+    }
+
+    // NOTE: - 編集モード以外での削除はできないようにする
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        if tableView.editing {
+            return .Delete
+        }
+        return .None
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -112,8 +180,8 @@ extension PostDataHandler: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if Const.editableSectionIndexes.contains(section) {
-            return 5
+        if Const.editableSectionIndex == section {
+            return ingredientContainer.count
         }
         return Const.sections[section].count
     }
@@ -137,9 +205,13 @@ extension PostDataHandler: UITableViewDataSource {
             cell = _cell
         case "ingredientHeader":
             let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientHeaderCell") as! PostIngredientHeaderCell
+            _cell.delegate = self
+            ingredientHeaderCell = _cell
             cell = _cell
         case "ingredient":
             let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientCell") as! PostIngredientCell
+            let ingredient = ingredientContainer[indexPath.row]
+            _cell.configure(ingredient.name, amount: ingredient.amount)
             cell = _cell
         case "ingredientFooter":
             let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientFooterCell") as! PostIngredientFooterCell
@@ -151,8 +223,33 @@ extension PostDataHandler: UITableViewDataSource {
     }
 }
 
+extension PostDataHandler: PostDataHandlerDelegate {
+    func tableEdit(on: Bool) {
+        tableView.setEditing(on, animated: true)
+        closeKeyboard()
+    }
+
+    func insertIngredientContainer(name: String, amount: Int) {
+        var hasEdit = false
+        for ingredient in ingredientContainer {
+            if ingredient.isSame(name) {
+                ingredient.amount = amount
+                hasEdit = true
+            }
+        }
+        if !hasEdit {
+            ingredientContainer.append(Ingredient.init(name: name, amount: amount))
+        }
+        tableView.reloadData()
+    }
+}
+
 extension PostDataHandler: PostViewControllerDelegate {
     func updateKeyboardNavigation(string: String, color: UIColor) {
         delegate?.updateKeyboardNavigation(string, color: color)
+    }
+
+    func closeKeyboard() {
+        delegate?.closeKeyboard()
     }
 }

@@ -14,9 +14,13 @@ class PostIngredientHeaderCell: UITableViewCell {
         static let height: CGFloat = 44
     }
 
+    @IBOutlet weak var editButton: UIButton!
+
+    var delegate: PostDataHandlerDelegate?
+    var isIngredientEditing = false
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -27,5 +31,19 @@ class PostIngredientHeaderCell: UITableViewCell {
 
     class func height() -> CGFloat {
         return Const.height
+    }
+
+    @IBAction func touchUpInsideEditButton(sender: UIButton) {
+        isIngredientEditing = !isIngredientEditing
+        delegate?.tableEdit(isIngredientEditing)
+        updateEditButtonState(editing)
+    }
+}
+
+extension PostIngredientHeaderCell {
+    func updateEditButtonState(editing: Bool) {
+        editButton.titleLabel!.text = editing
+            ? localizedString("Done")
+            : localizedString("Edit")
     }
 }

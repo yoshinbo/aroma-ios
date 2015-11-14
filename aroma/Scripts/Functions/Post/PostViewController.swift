@@ -9,6 +9,7 @@
 import UIKit
 
 protocol PostViewControllerDelegate {
+    func closeKeyboard()
     func updateKeyboardNavigation(string: String, color: UIColor)
 }
 
@@ -52,6 +53,11 @@ class PostViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        print("ok")
     }
 
     @IBAction func onTapCloseButton(sender: UIBarButtonItem) {
@@ -111,5 +117,9 @@ extension PostViewController: PostViewControllerDelegate {
     func updateKeyboardNavigation(string: String, color: UIColor) {
         keyboardNavigationLabel.textColor = color
         keyboardNavigationLabel.text = string
+    }
+
+    func closeKeyboard() {
+        self.view.endEditing(true)
     }
 }
