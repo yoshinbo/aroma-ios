@@ -69,6 +69,7 @@ class PostDataHandler: NSObject {
     private weak var tableView: UITableView!
     private var ingredientContainer = [Ingredient]()
     private var ingredientHeaderCell: PostIngredientHeaderCell?
+    private var categoryName = ""
 
     func setup(tableView: UITableView) {
         self.tableView = tableView
@@ -217,7 +218,7 @@ extension PostDataHandler: UITableViewDataSource {
             cell = _cell
         case "category":
             let _cell = tableView.dequeueReusableCellWithIdentifier("indexCell") as! PostIndexCell
-            let text = categoryName != "" ? categoryName : localizedString("category")
+            let text = categoryName != "" ? categoryName : localizedString("required")
             _cell.configure(text)
             cell = _cell
         case "ingredientHeader":
@@ -261,8 +262,8 @@ extension PostDataHandler: PostDataHandlerDelegate {
     }
 
     func setCategory(id: Int, name: String) {
-        if let _cell = tableView.cellForRowAtIndexPath(Const.categorySectionIndexPath) as? PostIndexCell {
-            _cell.configure(name)
+        if let _ = tableView.cellForRowAtIndexPath(Const.categorySectionIndexPath) as? PostIndexCell {
+            categoryName = name
             tableView.reloadRowsAtIndexPaths([Const.categorySectionIndexPath], withRowAnimation: .None)
         }
     }

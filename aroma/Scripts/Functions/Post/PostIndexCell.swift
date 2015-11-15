@@ -32,6 +32,7 @@ class PostIndexCell: UITableViewCell {
     }
 
     func configure(text: String) {
-        label.text = text
+        label.text = localizedString("category")
+        subLabel.text = text
     }
 }
