@@ -11,6 +11,7 @@ import UIKit
 
 protocol PostDataHandlerDelegate {
     func insertIngredientContainer(name: String, amount: Int)
+    func setCategory(id: Int, name: String)
     func tableEdit(on: Bool)
 }
 
@@ -18,6 +19,7 @@ class PostDataHandler: NSObject {
 
     struct Const {
         static let editableSectionIndex = 3
+        static let categorySectionIndexPath = NSIndexPath(forRow: 0, inSection: 1)
         static let sections = [
             [
                 [ "id": "title", "class": "PostTextViewCell"],
@@ -108,6 +110,9 @@ extension PostDataHandler: UITableViewDelegate {
         switch data["id"]! as String {
         case "category":
             showCategorySelector(0)
+        case "ingredient":
+            let ingredient = ingredientContainer[indexPath.row]
+            showIngredientCreator(ingredient.name, amount: ingredient.amount)
         case "ingredientFooter":
             showIngredientCreator("", amount: 0)
         default:
@@ -212,6 +217,8 @@ extension PostDataHandler: UITableViewDataSource {
             cell = _cell
         case "category":
             let _cell = tableView.dequeueReusableCellWithIdentifier("indexCell") as! PostIndexCell
+            let text = categoryName != "" ? categoryName : localizedString("category")
+            _cell.configure(text)
             cell = _cell
         case "ingredientHeader":
             let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientHeaderCell") as! PostIngredientHeaderCell
@@ -251,6 +258,13 @@ extension PostDataHandler: PostDataHandlerDelegate {
             ingredientContainer.append(Ingredient.init(name: name, amount: amount))
         }
         tableView.reloadData()
+    }
+
+    func setCategory(id: Int, name: String) {
+        if let _cell = tableView.cellForRowAtIndexPath(Const.categorySectionIndexPath) as? PostIndexCell {
+            _cell.configure(name)
+            tableView.reloadRowsAtIndexPaths([Const.categorySectionIndexPath], withRowAnimation: .None)
+        }
     }
 }
 

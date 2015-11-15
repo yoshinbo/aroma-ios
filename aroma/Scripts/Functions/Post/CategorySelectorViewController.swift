@@ -8,32 +8,44 @@
 
 import UIKit
 
+
+
 class CategorySelectorViewController: UIViewController {
 
     class func build() -> CategorySelectorViewController {
         return UIStoryboard(name: "Post", bundle: nil).instantiateViewControllerWithIdentifier("categorySelector") as! CategorySelectorViewController
     }
 
+    @IBOutlet weak var tableView: UITableView!
+
+    var dataHandler: CategorySelectorDataHandler!
+    var delegate: PostDataHandlerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataHandler = CategorySelectorDataHandler()
+        dataHandler.setup(tableView)
+        dataHandler.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension CategorySelectorViewController: PostDataHandlerDelegate {
+    func tableEdit(on: Bool) {
+        delegate?.tableEdit(on)
     }
-    */
 
+    func insertIngredientContainer(name: String, amount: Int) {
+        delegate?.insertIngredientContainer(name, amount: amount)
+    }
+
+    func setCategory(id: Int, name: String) {
+        delegate?.setCategory(id, name: name)
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
 }

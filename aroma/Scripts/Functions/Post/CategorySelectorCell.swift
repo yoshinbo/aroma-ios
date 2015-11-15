@@ -1,21 +1,23 @@
 //
-//  PostIndexCell.swift
+//  CategorySelectorCell.swift
 //  aroma
 //
-//  Created by Yoshikazu Oda on 2015/11/08.
+//  Created by Yoshikazu Oda on 2015/11/15.
 //  Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 //
 
 import UIKit
 
-class PostIndexCell: UITableViewCell {
+class CategorySelectorCell: UITableViewCell {
 
     struct Const {
         static let height: CGFloat = 44
     }
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var subLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+
+    var id: Int!
+    var name: String!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +33,9 @@ class PostIndexCell: UITableViewCell {
         return Const.height
     }
 
-    func configure(text: String) {
-        label.text = text
+    func configure(id: Int, name: String) {
+        self.id = id
+        self.name = name
+        nameLabel.text = name
     }
 }

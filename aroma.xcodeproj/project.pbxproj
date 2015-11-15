@@ -34,6 +34,8 @@
 		B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */; };
 		B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */; };
 		B84A5D671BF76EB600C7D3C7 /* IngredientCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D661BF76EB600C7D3C7 /* IngredientCreatorViewController.swift */; };
+		B84A5D6C1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */; };
+		B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
@@ -119,6 +121,8 @@
 		B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientHeaderCell.swift; sourceTree = "<group>"; };
 		B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorViewController.swift; sourceTree = "<group>"; };
 		B84A5D661BF76EB600C7D3C7 /* IngredientCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCreatorViewController.swift; sourceTree = "<group>"; };
+		B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorDataHandler.swift; sourceTree = "<group>"; };
+		B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorCell.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */,
+				B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */,
+				B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */,
 			);
 			name = CategorySelector;
 			sourceTree = "<group>";
@@ -666,9 +672,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84A5D671BF76EB600C7D3C7 /* IngredientCreatorViewController.swift in Sources */,
+				B84A5D6C1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift in Sources */,
 				B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
+				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,

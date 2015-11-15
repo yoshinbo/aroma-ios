@@ -20,6 +20,7 @@
 // Post
 "titleAndComment" = "Title and Comment";
 "recipe" = "Recipe";
+"category" = "Category";
 "titlePlaceholder" = "Your Recipe Title (max 30 length).";
 "descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";
 
