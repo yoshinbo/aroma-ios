@@ -30,11 +30,11 @@ class TabBarController: UITabBarController {
         self.noticeNavigationController = noticeNavigationController
         self.myPageNavigationController = myPageNavigationController
         
-        homeViewController.tabBarItem = UITabBarItem(title: localizedString("home"), image: UIImage(named: "home-icon"), tag: 0)
-        searchViewController.tabBarItem = UITabBarItem(title: localizedString("search"), image: UIImage(named: "search-icon"), tag: 0)
-        postViewController.tabBarItem = UITabBarItem(title: localizedString("post"), image: UIImage(named: "create-icon"), tag: 0)
-        noticeViewController.tabBarItem = UITabBarItem(title: localizedString("notice"), image: UIImage(named: "notice-icon"), tag: 0)
-        myPageViewController.tabBarItem = UITabBarItem(title: localizedString("myPage"), image: UIImage(named: "mypage-icon"), tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(title: localizedString("home"), image: UIImage(named: "home"), tag: 0)
+        searchViewController.tabBarItem = UITabBarItem(title: localizedString("search"), image: UIImage(named: "search"), tag: 0)
+        postViewController.tabBarItem = UITabBarItem(title: localizedString("post"), image: UIImage(named: "create"), tag: 0)
+        noticeViewController.tabBarItem = UITabBarItem(title: localizedString("notice"), image: UIImage(named: "notice"), tag: 0)
+        myPageViewController.tabBarItem = UITabBarItem(title: localizedString("myPage"), image: UIImage(named: "mypage"), tag: 0)
         
 
         myPageViewController.isMine = true
