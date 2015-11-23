@@ -11,12 +11,19 @@ import UIKit
 class PostIngredientFooterCell: UITableViewCell {
 
     struct Const {
-        static let height: CGFloat = 44
+        static let borderWidth: CGFloat = 1.0
+        static let height: CGFloat = 52
+        static let cornerRadius: CGFloat = 18
     }
+
+    @IBOutlet weak var wrapView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        wrapView.layer.borderColor = AppColorRed.CGColor
+        wrapView.layer.borderWidth = Const.borderWidth
+        wrapView.layer.cornerRadius = Const.cornerRadius
+        wrapView.layer.masksToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

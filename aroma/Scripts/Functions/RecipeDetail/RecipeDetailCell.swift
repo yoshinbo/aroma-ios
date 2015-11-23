@@ -72,7 +72,7 @@ class RecipeDetailCell: UITableViewCell {
         recipeLabel.configure("トリートメント", color: AppColorPerpul)
 
         descriptionLabel.text = description
-        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage"), rounded: true)
         descriptionTextHeightConstraint.constant = RecipeDetailCell.descriptionTextHeight(description)
     }
 

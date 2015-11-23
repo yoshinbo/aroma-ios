@@ -19,13 +19,15 @@ class PostDataHandler: NSObject {
 
     struct Const {
         static let editableSectionIndex = 3
-        static let categorySectionIndexPath = NSIndexPath(forRow: 0, inSection: 1)
+        static let descriptionIndexPath = NSIndexPath(forRow: 1, inSection: 1)
+        static let categorySectionIndexPath = NSIndexPath(forRow: 2, inSection: 1)
         static let sections = [
             [
-                [ "id": "title", "class": "PostTextViewCell"],
-                [ "id": "description", "class": "PostTextViewCell"],
+                [ "id": "titleHeader", "class": "UITableViewCell"],
             ],
             [
+                [ "id": "title", "class": "PostFieldViewCell"],
+                [ "id": "description", "class": "PostTextViewCell"],
                 [ "id": "category", "class": "PostIndexCell"],
             ],
             [
@@ -38,10 +40,6 @@ class PostDataHandler: NSObject {
                 [ "id": "ingredientFooter", "class": "PostIngredientFooterCell"],
             ],
         ]
-        static let sectionTitle = [
-           localizedString("titleAndComment"),
-           localizedString("recipe"),
-        ]
         struct title {
             static let placeholder = localizedString("titlePlaceholder")
             static let maxLength: Int = 30
@@ -49,6 +47,9 @@ class PostDataHandler: NSObject {
         struct description {
             static let placeholder = localizedString("descriptionPlaceholder")
             static let maxLength: Int = 300
+        }
+        struct titleHeader {
+            static let height: CGFloat = 35
         }
     }
 
@@ -69,6 +70,7 @@ class PostDataHandler: NSObject {
     private weak var tableView: UITableView!
     private var ingredientContainer = [Ingredient]()
     private var ingredientHeaderCell: PostIngredientHeaderCell?
+    private var descriptionString = ""
     private var categoryName = ""
 
     func setup(tableView: UITableView) {
@@ -84,6 +86,13 @@ class PostDataHandler: NSObject {
     }
 
     func fetchData() {
+    }
+
+    func setDescription(string: String) {
+        if let _ = tableView.cellForRowAtIndexPath(Const.descriptionIndexPath) as? PostTextViewCell {
+            descriptionString = string
+            tableView.reloadRowsAtIndexPaths([Const.descriptionIndexPath], withRowAnimation: .None)
+        }
     }
 }
 
@@ -109,6 +118,8 @@ extension PostDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let data = cellData(indexPath)
         switch data["id"]! as String {
+        case "description":
+            showInputTextView(descriptionString)
         case "category":
             showCategorySelector(0)
         case "ingredient":
@@ -125,10 +136,13 @@ extension PostDataHandler: UITableViewDelegate {
         let data = cellData(indexPath)
         var height: CGFloat = 0
         switch data["id"]! as String {
+        case "titleHeader":
+            height = Const.titleHeader.height
         case "title":
-            height = PostTextViewCell.height("あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお") // 30文字分の高さを用意
+            height = PostTextFieldCell.height()
         case "description":
-            height = PostTextViewCell.height("あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお") // 150文字分の高さを用意
+            let string = descriptionString == "" ? Const.description.placeholder : descriptionString
+            height = PostTextViewCell.height(string)
         case "category":
             height = PostIndexCell.height()
         case "ingredientHeader":
@@ -185,10 +199,7 @@ extension PostDataHandler: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension PostDataHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if Const.sectionTitle.count < section + 1 {
-            return ""
-        }
-        return Const.sectionTitle[section]
+        return ""
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -206,23 +217,30 @@ extension PostDataHandler: UITableViewDataSource {
         let data = cellData(indexPath)
         var cell: UITableViewCell
         switch data["id"]! as String {
+        case "titleHeader":
+            return tableView.dequeueReusableCellWithIdentifier("titleHeaderCell")!
         case "title":
-            let _cell = tableView.dequeueReusableCellWithIdentifier("textViewCell") as! PostTextViewCell
-            _cell.configure("", placeholder: Const.title.placeholder, maxInputLength: Const.title.maxLength)
+            let _cell = tableView.dequeueReusableCellWithIdentifier("textFieldCell") as! PostTextFieldCell
+            _cell.configure(Const.title.placeholder, max: Const.title.maxLength)
             _cell.delegate = self
+            _cell.setSeparator(indexPath.row, lastIndex: Const.sections[indexPath.section].count)
             cell = _cell
         case "description":
             let _cell = tableView.dequeueReusableCellWithIdentifier("textViewCell") as! PostTextViewCell
-            _cell.configure("", placeholder: Const.description.placeholder, maxInputLength: Const.description.maxLength)
+            let string = descriptionString == "" ? Const.description.placeholder : descriptionString
+            _cell.configure(string)
             _cell.delegate = self
+            _cell.setSeparator(indexPath.row, lastIndex: Const.sections[indexPath.section].count)
             cell = _cell
         case "category":
             let _cell = tableView.dequeueReusableCellWithIdentifier("indexCell") as! PostIndexCell
             let text = categoryName != "" ? categoryName : localizedString("required")
             _cell.configure(text)
+            _cell.setSeparator(indexPath.row, lastIndex: Const.sections[indexPath.section].count)
             cell = _cell
         case "ingredientHeader":
             let _cell = tableView.dequeueReusableCellWithIdentifier("ingredientHeaderCell") as! PostIngredientHeaderCell
+            _cell.configure(tableView.editing)
             _cell.delegate = self
             ingredientHeaderCell = _cell
             cell = _cell
@@ -280,6 +298,10 @@ extension PostDataHandler: PostViewControllerDelegate {
 
     func showIngredientCreator(name: String, amount: Int) {
         delegate?.showIngredientCreator(name, amount: amount)
+    }
+
+    func showInputTextView(string: String) {
+        delegate?.showInputTextView(string)
     }
 
     func showCategorySelector(id: Int) {

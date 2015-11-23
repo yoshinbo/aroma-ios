@@ -41,7 +41,7 @@ class NoticeCell: UITableViewCell {
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
 
         textView.text = notice
-        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage"), rounded: true)
     }
 
     class func height(description: String) -> CGFloat {

@@ -36,7 +36,7 @@ class MyPageViewController: SwitchingTabViewController {
         super.viewDidLoad()
 
         let imageURL = NSURL(string: "https://graph.facebook.com/10202450689656441/picture?width=150&height=150")
-        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage"), rounded: true)
         nameLabel.text = "YUKI ODA"
         locationLabel.text = "東京都"
         locationImageView.image = locationImage

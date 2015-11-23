@@ -32,6 +32,7 @@ class IngredientCreatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.tintColor = AppColorRed
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapUpInsideScreen:"))
 
         nameTextField.text = name

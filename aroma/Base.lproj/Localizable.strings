@@ -19,7 +19,6 @@
 "edit" = "Edit";
 
 // Post
-"titleAndComment" = "Title and Comment";
 "recipe" = "Recipe";
 "category" = "Category";
 "titlePlaceholder" = "Your Recipe Title (max 30 length).";

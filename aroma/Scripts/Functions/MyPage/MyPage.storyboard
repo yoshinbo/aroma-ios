@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nB-Sy-eUG">
                                 <rect key="frame" x="0.0" y="64" width="600" height="150"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-mY-2EA" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-mY-2EA" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="24" y="16" width="64" height="64"/>
                                         <animations/>
                                         <constraints>
@@ -36,7 +36,7 @@
                                             <constraint firstAttribute="height" constant="21" id="cOO-Uo-F7d"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z8-XY-mqE">
@@ -50,7 +50,7 @@
                                         <rect key="frame" x="121" y="49.5" width="36" height="14.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="6xf-U1-XZn">
@@ -146,6 +146,6 @@
     </scenes>
     <resources>
         <image name="location-icon" width="17" height="25"/>
-        <image name="mypage-icon" width="25" height="25"/>
+        <image name="mypage" width="18" height="18"/>
     </resources>
 </document>

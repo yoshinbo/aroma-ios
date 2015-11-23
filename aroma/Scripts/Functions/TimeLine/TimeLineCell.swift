@@ -63,7 +63,7 @@ class TimeLineCell: UITableViewCell {
         recipeLabel.configure("トリートメント", color: AppColorPerpul)
 
         descriptionLabel.text = description
-        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage"), rounded: true)
         descriptionTextHeightConstraint.constant = TimeLineCell.textViewHegiht(description)
 
         wrapView.layer.cornerRadius = Const.wrapViewCornerRadius

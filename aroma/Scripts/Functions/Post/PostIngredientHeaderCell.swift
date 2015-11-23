@@ -11,7 +11,7 @@ import UIKit
 class PostIngredientHeaderCell: UITableViewCell {
 
     struct Const {
-        static let height: CGFloat = 44
+        static let height: CGFloat = 35
     }
 
     @IBOutlet weak var editButton: UIButton!
@@ -21,6 +21,7 @@ class PostIngredientHeaderCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        tintColor = AppColorRed
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -33,17 +34,17 @@ class PostIngredientHeaderCell: UITableViewCell {
         return Const.height
     }
 
+    func configure(isEditing: Bool) {
+        //editButton.titleLabel!.text = isEditing
+        //    ? localizedString("Done")
+        //    : localizedString("Edit")
+    }
+
     @IBAction func touchUpInsideEditButton(sender: UIButton) {
         isIngredientEditing = !isIngredientEditing
         delegate?.tableEdit(isIngredientEditing)
-        updateEditButtonState(editing)
-    }
-}
-
-extension PostIngredientHeaderCell {
-    func updateEditButtonState(editing: Bool) {
-        editButton.titleLabel!.text = editing
-            ? localizedString("Done")
-            : localizedString("Edit")
+        //editButton.titleLabel!.text = isIngredientEditing
+        //    ? localizedString("Done")
+        //    : localizedString("Edit")
     }
 }

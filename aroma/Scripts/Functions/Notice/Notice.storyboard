@@ -30,7 +30,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-oC-Tpz" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-oC-Tpz" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="40" height="40"/>
                                                     <animations/>
                                                     <constraints>
@@ -118,6 +118,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mypage-icon" width="25" height="25"/>
+        <image name="mypage" width="18" height="18"/>
     </resources>
 </document>

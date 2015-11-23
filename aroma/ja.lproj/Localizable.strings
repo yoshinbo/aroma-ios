@@ -19,7 +19,6 @@
 "edit" = "編集";
 
 // Post
-"titleAndComment" = "タイトルとコメント";
 "recipe" = "レシピ";
 "category" = "カテゴリ";
 "titlePlaceholder" = "タイトル(必須)30文字まで";
