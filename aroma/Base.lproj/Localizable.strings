@@ -7,7 +7,7 @@
 */
 
 "home" = "Home";
-"required" = "Required";
+"required" = "(Required)";
 "search" = "Search";
 "post" = "Post";
 "notice" = "Notice";

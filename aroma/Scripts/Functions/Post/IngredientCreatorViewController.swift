@@ -41,7 +41,7 @@ class IngredientCreatorViewController: UIViewController {
         amountTextField.delegate = self
         amountTextField.keyboardType = .NumberPad
 
-        updateDoneButtonState()
+        updateDoneButtonState(nameTextField.text!, amount: amountTextField.text!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,9 +65,9 @@ class IngredientCreatorViewController: UIViewController {
 }
 
 extension IngredientCreatorViewController {
-    func updateDoneButtonState() {
-        if nameTextField.text != "" && amountTextField.text != "" {
-            if let _amount: Int = Int(amountTextField.text!) {
+    func updateDoneButtonState(name: String, amount: String) {
+        if name != "" && amount != "" {
+            if let _amount: Int = Int(amount) {
                 if _amount > 0 {
                     doneButton.enabled = true
                     return
@@ -89,10 +89,14 @@ extension IngredientCreatorViewController: UITextFieldDelegate {
             textField.text = trimText.substringToIndex(trimText.startIndex.advancedBy(maxInputLength))
             return false
         }
+        let newtext = NSString(string: textField.text!).stringByReplacingCharactersInRange(range, withString: string)
+        let (_name, _amount) = textField == nameTextField ? (newtext, amountTextField.text!) : (nameTextField.text!, newtext)
+        updateDoneButtonState(_name, amount: _amount)
+        navigationItem.setHidesBackButton(false, animated: true)
         return true
     }
 
     func textFieldDidEndEditing(textField: UITextField) {
-        updateDoneButtonState()
+        updateDoneButtonState(nameTextField.text!, amount: amountTextField.text!)
     }
 }

@@ -235,7 +235,8 @@ extension PostDataHandler: UITableViewDataSource {
         case "category":
             let _cell = tableView.dequeueReusableCellWithIdentifier("indexCell") as! PostIndexCell
             let text = categoryName != "" ? categoryName : localizedString("required")
-            _cell.configure(text)
+            let color = categoryName != "" ? AppColorString : AppColorStringS
+            _cell.configure(text, color: color)
             _cell.setSeparator(indexPath.row, lastIndex: Const.sections[indexPath.section].count)
             cell = _cell
         case "ingredientHeader":

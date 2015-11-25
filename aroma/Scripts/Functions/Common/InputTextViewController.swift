@@ -15,8 +15,10 @@ class InputTextViewController: UIViewController {
         static let format = "%d / %d"
     }
 
-    class func build() -> InputTextViewController {
-        return UIStoryboard(name: "InputTextView", bundle: nil).instantiateInitialViewController() as! InputTextViewController
+    class func build() -> (UINavigationController, InputTextViewController) {
+        let navigationController = UIStoryboard(name: "InputTextView", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let viewController = navigationController.topViewController as! InputTextViewController
+        return (navigationController, viewController)
     }
 
     @IBOutlet weak var placeholderLabel: UILabel!

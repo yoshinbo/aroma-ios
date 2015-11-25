@@ -11,9 +11,9 @@ import UIKit
 class PostTextFieldCell: UITableViewCell {
 
     struct Const {
-        static let height: CGFloat = 33
+        static let height: CGFloat = 44
         static let numberOfLines: Int = 0
-        static let font: UIFont = UIFont.systemFontOfSize(17)
+        static let font: UIFont = UIFont.systemFontOfSize(14)
         static let normalColor = AppColorLightGray
         static let warningColor = AppColorRed
         static let format = "%d / %d"

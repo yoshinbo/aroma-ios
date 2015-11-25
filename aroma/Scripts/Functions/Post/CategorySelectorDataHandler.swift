@@ -15,7 +15,7 @@ class CategorySelectorDataHandler: NSObject {
         static let categories = [
             "芳香浴",
             "トリートメント",
-            "パスタイム",
+            "バスタイム",
             "美容",
             "ケア",
             "そうじ",

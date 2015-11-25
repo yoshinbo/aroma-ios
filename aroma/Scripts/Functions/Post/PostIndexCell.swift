@@ -31,8 +31,9 @@ class PostIndexCell: UITableViewCell {
         return Const.height
     }
 
-    func configure(text: String) {
+    func configure(text: String, color: UIColor) {
         label.text = localizedString("category")
         subLabel.text = text
+        subLabel.textColor = color
     }
 }

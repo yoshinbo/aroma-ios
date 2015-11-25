@@ -11,10 +11,10 @@ import UIKit
 class PostTextViewCell: UITableViewCell {
 
     struct Const {
-        static let verticalMargin: CGFloat = 8
+        static let verticalMargin: CGFloat = 15
         static let horizontalTotalMargin: CGFloat = 48
         static let numberOfLines: Int = 0
-        static let font: UIFont = UIFont.systemFontOfSize(17)
+        static let font: UIFont = UIFont.systemFontOfSize(14)
     }
 
     @IBOutlet weak var label: UILabel!

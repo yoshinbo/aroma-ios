@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+let AppColorWhite = UIColor.color(0xFFFEFFFF)
 
 let AppColorString = UIColor.color(0x4F4241FF)
 let AppColorStringM = UIColor.color(0x7F777AFF)

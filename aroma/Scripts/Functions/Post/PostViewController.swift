@@ -55,6 +55,7 @@ class PostViewController: UIViewController {
     }
 
     override func viewWillDisappear(animated: Bool) {
+        self.view.endEditing(true)
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
@@ -139,7 +140,7 @@ extension PostViewController: PostViewControllerDelegate {
     }
 
     func showInputTextView(string: String) {
-        let viewController = InputTextViewController.build()
+        let (_, viewController) = InputTextViewController.build()
         viewController.configure(string, placeholder: localizedString("descriptionPlaceholder"), max: Const.maxDescriptionLength, completion: dataHandler.setDescription)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
