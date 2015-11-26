@@ -37,30 +37,17 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTH-o3-Zi2">
                                                             <rect key="frame" x="0.0" y="50" width="584" height="50"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLO-3J-vX4">
-                                                                    <rect key="frame" x="506" y="10" width="70" height="30"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トリートメント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzQ-8Q-CRm">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
-                                                                            <animations/>
-                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
-                                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLO-3J-vX4" customClass="RecipeLabel" customModule="aroma" customModuleProvider="target">
+                                                                    <rect key="frame" x="493" y="10" width="75" height="24"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="30" id="0kx-5z-xGn"/>
-                                                                        <constraint firstItem="OzQ-8Q-CRm" firstAttribute="top" secondItem="VLO-3J-vX4" secondAttribute="top" id="6LP-0U-mTy"/>
-                                                                        <constraint firstAttribute="width" constant="70" id="Aws-V8-OcI"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="OzQ-8Q-CRm" secondAttribute="bottom" id="Zi0-qj-N4n"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="OzQ-8Q-CRm" secondAttribute="trailing" id="kzN-w7-7Hj"/>
-                                                                        <constraint firstItem="OzQ-8Q-CRm" firstAttribute="leading" secondItem="VLO-3J-vX4" secondAttribute="leading" id="zyM-VJ-OQn"/>
+                                                                        <constraint firstAttribute="height" constant="24" id="0kx-5z-xGn"/>
+                                                                        <constraint firstAttribute="width" constant="75" id="Aws-V8-OcI"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ぐっすり眠れるリラックスブレンド" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gga-f4-0rJ">
-                                                                    <rect key="frame" x="16" y="10" width="486" height="20.5"/>
+                                                                    <rect key="frame" x="16" y="10" width="473" height="20.5"/>
                                                                     <animations/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,7 +58,7 @@
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="VLO-3J-vX4" firstAttribute="top" secondItem="Gga-f4-0rJ" secondAttribute="top" id="5Bx-2q-2LQ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="VLO-3J-vX4" secondAttribute="trailing" constant="8" id="LRZ-ya-yO9"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VLO-3J-vX4" secondAttribute="trailing" constant="16" id="LRZ-ya-yO9"/>
                                                                 <constraint firstItem="VLO-3J-vX4" firstAttribute="leading" secondItem="Gga-f4-0rJ" secondAttribute="trailing" constant="4" id="Xcx-fk-RhE"/>
                                                                 <constraint firstItem="Gga-f4-0rJ" firstAttribute="leading" secondItem="LTH-o3-Zi2" secondAttribute="leading" constant="16" id="iTE-lt-oto"/>
                                                                 <constraint firstItem="VLO-3J-vX4" firstAttribute="top" secondItem="LTH-o3-Zi2" secondAttribute="top" constant="10" id="iYd-ew-bZL"/>
@@ -215,7 +202,7 @@
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jk3-Qy-Lft" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage" translatesAutoresizingMaskIntoConstraints="NO" id="jk3-Qy-Lft" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
                                                                     <rect key="frame" x="16" y="9" width="32" height="32"/>
                                                                     <animations/>
                                                                     <constraints>
@@ -257,7 +244,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="lo3-9a-IDq"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -302,6 +289,7 @@
                                             <outlet property="ingredientTableView" destination="wwF-hh-Tcd" id="t9i-vH-reA"/>
                                             <outlet property="likeButton" destination="fL4-Fn-Wyk" id="Txg-rd-YzQ"/>
                                             <outlet property="profileImageView" destination="jk3-Qy-Lft" id="pof-yN-S9Z"/>
+                                            <outlet property="recipeLabel" destination="VLO-3J-vX4" id="70D-2e-OsV"/>
                                             <outlet property="recipeTitleLabel" destination="Gga-f4-0rJ" id="uSl-Y6-dng"/>
                                             <outlet property="userNameLabel" destination="6iF-Kb-t99" id="K2Z-6L-aU4"/>
                                             <outlet property="wrapView" destination="wYb-ak-N5j" id="fBq-5i-pa2"/>
@@ -331,6 +319,6 @@
     </scenes>
     <resources>
         <image name="aromabottle" width="60" height="65"/>
-        <image name="mypage-icon" width="25" height="25"/>
+        <image name="mypage" width="18" height="18"/>
     </resources>
 </document>

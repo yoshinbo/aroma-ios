@@ -24,6 +24,22 @@
 		B84A5D471BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D461BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift */; };
 		B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4A1BEDF12900C7D3C7 /* RecipeDetailCell.swift */; };
 		B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4C1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift */; };
+		B84A5D501BEEFEE400C7D3C7 /* PostDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */; };
+		B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */; };
+		B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */; };
+		B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */; };
+		B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */; };
+		B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */; };
+		B84A5D5F1BF615B600C7D3C7 /* PostIngredientFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */; };
+		B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */; };
+		B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */; };
+		B84A5D671BF76EB600C7D3C7 /* IngredientCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D661BF76EB600C7D3C7 /* IngredientCreatorViewController.swift */; };
+		B84A5D6C1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */; };
+		B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */; };
+		B84A5D701BFC9A2800C7D3C7 /* PostTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D6F1BFC9A2800C7D3C7 /* PostTextFieldCell.swift */; };
+		B84A5D741BFCB10700C7D3C7 /* InputTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D731BFCB10700C7D3C7 /* InputTextView.storyboard */; };
+		B84A5D761BFCB1FC00C7D3C7 /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A5D751BFCB1FC00C7D3C7 /* InputTextViewController.swift */; };
+		B8788B001C02CECD006BDBAE /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788AFF1C02CECD006BDBAE /* UITableViewCell+Extension.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
@@ -99,6 +115,22 @@
 		B84A5D461BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailDataHandler.swift; sourceTree = "<group>"; };
 		B84A5D4A1BEDF12900C7D3C7 /* RecipeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailCell.swift; sourceTree = "<group>"; };
 		B84A5D4C1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleLineWrapView.swift; sourceTree = "<group>"; };
+		B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataHandler.swift; sourceTree = "<group>"; };
+		B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextViewCell.swift; sourceTree = "<group>"; };
+		B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIndexCell.swift; sourceTree = "<group>"; };
+		B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeLabel.xib; sourceTree = "<group>"; };
+		B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeLabel.swift; sourceTree = "<group>"; };
+		B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientCell.swift; sourceTree = "<group>"; };
+		B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientFooterCell.swift; sourceTree = "<group>"; };
+		B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIngredientHeaderCell.swift; sourceTree = "<group>"; };
+		B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorViewController.swift; sourceTree = "<group>"; };
+		B84A5D661BF76EB600C7D3C7 /* IngredientCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCreatorViewController.swift; sourceTree = "<group>"; };
+		B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorDataHandler.swift; sourceTree = "<group>"; };
+		B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySelectorCell.swift; sourceTree = "<group>"; };
+		B84A5D6F1BFC9A2800C7D3C7 /* PostTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTextFieldCell.swift; sourceTree = "<group>"; };
+		B84A5D731BFCB10700C7D3C7 /* InputTextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputTextView.storyboard; sourceTree = "<group>"; };
+		B84A5D751BFCB1FC00C7D3C7 /* InputTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
+		B8788AFF1C02CECD006BDBAE /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -254,6 +286,57 @@
 			name = CommentButton;
 			sourceTree = "<group>";
 		};
+		B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B84A5D581BEF6D4E00C7D3C7 /* RecipeLabel.xib */,
+				B84A5D5A1BEF6D6B00C7D3C7 /* RecipeLabel.swift */,
+			);
+			name = RecipeLabel;
+			sourceTree = "<group>";
+		};
+		B84A5D681BF7709400C7D3C7 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B8DF66D01BE0FEF000729DBB /* PostViewController.swift */,
+				B84A5D4F1BEEFEE300C7D3C7 /* PostDataHandler.swift */,
+				B84A5D6F1BFC9A2800C7D3C7 /* PostTextFieldCell.swift */,
+				B84A5D511BEF274C00C7D3C7 /* PostTextViewCell.swift */,
+				B84A5D531BEF27EF00C7D3C7 /* PostIndexCell.swift */,
+				B84A5D601BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift */,
+				B84A5D5C1BF6159B00C7D3C7 /* PostIngredientCell.swift */,
+				B84A5D5E1BF615B600C7D3C7 /* PostIngredientFooterCell.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		B84A5D691BF770B200C7D3C7 /* IngredientCreator */ = {
+			isa = PBXGroup;
+			children = (
+				B84A5D661BF76EB600C7D3C7 /* IngredientCreatorViewController.swift */,
+			);
+			name = IngredientCreator;
+			sourceTree = "<group>";
+		};
+		B84A5D6A1BF770C800C7D3C7 /* CategorySelector */ = {
+			isa = PBXGroup;
+			children = (
+				B84A5D641BF76E9600C7D3C7 /* CategorySelectorViewController.swift */,
+				B84A5D6B1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift */,
+				B84A5D6D1BF88F6900C7D3C7 /* CategorySelectorCell.swift */,
+			);
+			name = CategorySelector;
+			sourceTree = "<group>";
+		};
+		B84A5D721BFCB0D700C7D3C7 /* InputTextView */ = {
+			isa = PBXGroup;
+			children = (
+				B84A5D731BFCB10700C7D3C7 /* InputTextView.storyboard */,
+				B84A5D751BFCB1FC00C7D3C7 /* InputTextViewController.swift */,
+			);
+			name = InputTextView;
+			sourceTree = "<group>";
+		};
 		B893593A1BEA33CF0091F295 /* RecipeDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +351,8 @@
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B84A5D721BFCB0D700C7D3C7 /* InputTextView */,
+				B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */,
 				B84A5D3B1BEB8EE000C7D3C7 /* LikeButton */,
 				B84A5D3F1BEB8FB800C7D3C7 /* CommentButton */,
 				B84A5D3C1BEB8F5600C7D3C7 /* ClipButton */,
@@ -376,8 +461,10 @@
 		B8DF66CD1BE0FE3400729DBB /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				B8DF66D01BE0FEF000729DBB /* PostViewController.swift */,
 				B8DF66CE1BE0FEDB00729DBB /* Post.storyboard */,
+				B84A5D681BF7709400C7D3C7 /* Post */,
+				B84A5D691BF770B200C7D3C7 /* IngredientCreator */,
+				B84A5D6A1BF770C800C7D3C7 /* CategorySelector */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -388,6 +475,7 @@
 				B8DF66D31BE1017800729DBB /* UIViewController+Extension.swift */,
 				B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */,
 				B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */,
+				B8788AFF1C02CECD006BDBAE /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -518,11 +606,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84A5D3A1BEB8EC800C7D3C7 /* LikeButton.xib in Resources */,
+				B84A5D741BFCB10700C7D3C7 /* InputTextView.storyboard in Resources */,
 				B80D48941BE0E29B009E3410 /* LaunchScreen.storyboard in Resources */,
 				B8DF66CA1BE0FB0600729DBB /* MyPage.storyboard in Resources */,
 				B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */,
 				B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */,
 				B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */,
+				B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */,
 				B809A9C11BE61D60000D0D8A /* Localizable.strings in Resources */,
 				B893593C1BEA34780091F295 /* RecipeDetail.storyboard in Resources */,
 				B8DF66C01BE0FA3400729DBB /* Search.storyboard in Resources */,
@@ -602,11 +692,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84A5D671BF76EB600C7D3C7 /* IngredientCreatorViewController.swift in Sources */,
+				B84A5D6C1BF88E1800C7D3C7 /* CategorySelectorDataHandler.swift in Sources */,
+				B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
+				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
+				B84A5D5F1BF615B600C7D3C7 /* PostIngredientFooterCell.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */,
@@ -614,21 +709,30 @@
 				B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */,
 				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
 				B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */,
+				B84A5D761BFCB1FC00C7D3C7 /* InputTextViewController.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
+				B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */,
+				B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
+				B84A5D701BFC9A2800C7D3C7 /* PostTextFieldCell.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
+				B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */,
 				B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
+				B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */,
 				B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */,
 				B809A9BB1BE61A07000D0D8A /* GlobalFunction.swift in Sources */,
 				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
+				B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */,
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
+				B8788B001C02CECD006BDBAE /* UITableViewCell+Extension.swift in Sources */,
+				B84A5D501BEEFEE400C7D3C7 /* PostDataHandler.swift in Sources */,
 				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
 				B84A5D471BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift in Sources */,

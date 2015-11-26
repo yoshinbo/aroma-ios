@@ -7,9 +7,22 @@
 */
 
 "home" = "Home";
+"required" = "(Required)";
 "search" = "Search";
 "post" = "Post";
 "notice" = "Notice";
 "myPage" = "MyPage";
 "myRecipe" = "MyRecipe";
 "clip" = "Clip";
+
+"done" = "Done";
+"edit" = "Edit";
+
+// Post
+"recipe" = "Recipe";
+"category" = "Category";
+"titlePlaceholder" = "Your Recipe Title (max 30 length).";
+"descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";
+
+// Formats
+"amountFormat" = "%d";

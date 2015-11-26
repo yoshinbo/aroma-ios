@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UINavigationBar.appearance().barStyle = .Default
+        UINavigationBar.appearance().backgroundColor = AppColorWhite
+        UINavigationBar.appearance().barTintColor = AppColorWhite
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:AppColorString]
+        UINavigationBar.appearance().tintColor = AppColorRed
+
         showViewController(TabBarController())
         return true
     }

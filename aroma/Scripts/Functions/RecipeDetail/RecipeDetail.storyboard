@@ -31,7 +31,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="375.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-aW-lVp" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mypage" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-aW-lVp" customClass="ProfileImageView" customModule="aroma" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="16" width="32" height="32"/>
                                                     <animations/>
                                                     <constraints>
@@ -43,7 +43,7 @@
                                                     <rect key="frame" x="64" y="22" width="78" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.30 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QQ-VD-U2f">
@@ -68,33 +68,20 @@
                                                         <constraint firstAttribute="height" constant="20" id="cKm-bC-Ahz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrt-gc-1LN">
-                                                    <rect key="frame" x="265" y="117" width="70" height="30"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トリートメント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-bc-8Dz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
-                                                            <animations/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrt-gc-1LN" customClass="RecipeLabel" customModule="aroma" customModuleProvider="target">
+                                                    <rect key="frame" x="262.5" y="117" width="75" height="24"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="0Gm-vL-cFj"/>
-                                                        <constraint firstAttribute="bottom" secondItem="t7a-bc-8Dz" secondAttribute="bottom" id="7H8-BI-enB"/>
-                                                        <constraint firstItem="t7a-bc-8Dz" firstAttribute="top" secondItem="nrt-gc-1LN" secondAttribute="top" id="L2T-WK-h6b"/>
-                                                        <constraint firstItem="t7a-bc-8Dz" firstAttribute="leading" secondItem="nrt-gc-1LN" secondAttribute="leading" id="MQ8-0V-6rv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="t7a-bc-8Dz" secondAttribute="trailing" id="NhR-dr-JRP"/>
-                                                        <constraint firstAttribute="height" constant="30" id="z1J-nj-P4j"/>
+                                                        <constraint firstAttribute="width" constant="75" id="0Gm-vL-cFj"/>
+                                                        <constraint firstAttribute="height" constant="24" id="z1J-nj-P4j"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qss-eU-MLt" customClass="DoubleLineWrapView" customModule="aroma" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="163" width="568" height="111"/>
+                                                    <rect key="frame" x="16" y="157" width="568" height="117"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7g-Oh-RZu">
                                                             <rect key="frame" x="255" y="8" width="57" height="20.5"/>
@@ -103,11 +90,11 @@
                                                                 <constraint firstAttribute="height" constant="20" id="jtQ-5U-CfP"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jet-tA-X5c">
-                                                            <rect key="frame" x="8" y="36" width="552" height="66.5"/>
+                                                            <rect key="frame" x="8" y="36" width="552" height="72.5"/>
                                                             <animations/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <prototypes>
@@ -210,7 +197,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="I1n-lb-B19"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -256,6 +243,7 @@
                                             <outlet property="ingredientTableView" destination="jet-tA-X5c" id="nkD-hr-Gec"/>
                                             <outlet property="likeButton" destination="Ylj-4u-MQz" id="W0p-WM-fiu"/>
                                             <outlet property="profileImageView" destination="jIa-aW-lVp" id="ea6-6p-N3a"/>
+                                            <outlet property="recipeLabel" destination="nrt-gc-1LN" id="0tz-S6-8t8"/>
                                             <outlet property="recipeTitleLabel" destination="Gxo-Od-wWx" id="5lI-pd-GXX"/>
                                             <outlet property="recipeTitleTextHeightConstraint" destination="cKm-bC-Ahz" id="O6b-xa-8bh"/>
                                             <outlet property="userNameLabel" destination="6fk-fo-bBT" id="R3C-Fs-Zs1"/>
@@ -306,6 +294,6 @@
     </scenes>
     <resources>
         <image name="aromabottle" width="60" height="65"/>
-        <image name="mypage-icon" width="25" height="25"/>
+        <image name="mypage" width="18" height="18"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@ class RecipeDetailCell: UITableViewCell {
 
     private struct Const {
         static let headerHeight: CGFloat = 64
-        static let recipeLabelHeight: CGFloat = 30
+        static let recipeLabelHeight: CGFloat = 24
         static let recipeIndexHeight: CGFloat = 20
         static let buttonHeight: CGFloat = 25
         static let horizontalMargin: CGFloat = 8
@@ -28,6 +28,7 @@ class RecipeDetailCell: UITableViewCell {
     @IBOutlet weak var createTimeLabel: UILabel!
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var recipeTitleTextHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var recipeLabel: RecipeLabel!
     @IBOutlet weak var wrapView: DoubleLineWrapView!
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -68,9 +69,10 @@ class RecipeDetailCell: UITableViewCell {
         createTimeLabel.text = "11.1 12:00"
         recipeTitleLabel.text = title
         recipeTitleTextHeightConstraint.constant = RecipeDetailCell.recipeTitleTextHeight(title)
+        recipeLabel.configure("トリートメント", color: AppColorPerpul)
 
         descriptionLabel.text = description
-        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage-icon"), rounded: true)
+        profileImageView.configure(url: imageURL, placeholderImage: UIImage(named: "mypage"), rounded: true)
         descriptionTextHeightConstraint.constant = RecipeDetailCell.descriptionTextHeight(description)
     }
 
