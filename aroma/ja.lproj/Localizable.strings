@@ -24,5 +24,9 @@
 "titlePlaceholder" = "タイトル(必須)30文字まで";
 "descriptionPlaceholder" = "レシピの紹介文(必須)300文字まで\n目的や使用方法などかきましょう\n\n\n\n\n";
 
+// Search
+"selectFromSmell" = "香りからさがす";
+"selectFromEssentialOil" = "精油からさがす";
+
 // Formats
 "amountFormat" = "%d滴";

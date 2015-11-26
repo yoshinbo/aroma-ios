@@ -24,5 +24,9 @@
 "titlePlaceholder" = "Your Recipe Title (max 30 length).";
 "descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";
 
+// Search
+"selectFromSmell" = "Select From Smell";
+"selectFromEssentialOil" = "Select From Essential Oil";
+
 // Formats
 "amountFormat" = "%d";

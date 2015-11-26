@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol SearchViewControllerDelegate {
+    func showTimeLineView()
+    func showSmellCandidateView()
+    func showEssentialOilCandidateView()
+}
+
 class SearchViewController: UIViewController {
     
     class func build() -> (UINavigationController, SearchViewController) {
@@ -16,26 +22,35 @@ class SearchViewController: UIViewController {
         return (navigationController, viewController)
     }
 
+    @IBOutlet weak var wrapView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+
+    private var dataHandler: SearchDataHandler!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataHandler = SearchDataHandler()
+        dataHandler.setup(tableView)
+        dataHandler.delegate = self
+
+        wrapView.connerLittleRound()
+        wrapView.backgroundColor = AppColorLightGray
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension SearchViewController: SearchViewControllerDelegate {
+    func showTimeLineView() {
     }
-    */
 
+    func showSmellCandidateView() {
+    }
+
+    func showEssentialOilCandidateView() {
+    }
 }
