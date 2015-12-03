@@ -13,8 +13,8 @@ class SearchDataHandler: NSObject {
 
     struct Const {
         static let cells = [
-            "selectFromSmell",
-            "selectFromEssentialOil",
+            "selectFromCategory",
+            "selectFromIngredient",
         ]
     }
 
@@ -39,6 +39,14 @@ class SearchDataHandler: NSObject {
 // MARK: - UITableViewDelegate
 extension SearchDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch Const.cells[indexPath.row] {
+        case "selectFromCategory":
+            delegate?.showCategorySelectorView()
+        case "selectFromIngredient":
+            delegate?.showIngredientSelectorView()
+        default:
+            break
+        }
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -56,20 +64,17 @@ extension SearchDataHandler: UITableViewDataSource {
         let key = Const.cells[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! SearchCandidateCell
         cell.configure(localizedString(key))
+        cell.setSeparator(indexPath.row, lastIndex: Const.cells.count)
         return cell
     }
 }
 
 extension SearchDataHandler: SearchViewControllerDelegate {
-    func showTimeLineView() {
-        delegate?.showTimeLineView()
+    func showCategorySelectorView() {
+        delegate?.showCategorySelectorView()
     }
 
-    func showSmellCandidateView() {
-        delegate?.showSmellCandidateView()
-    }
-
-    func showEssentialOilCandidateView() {
-        delegate?.showEssentialOilCandidateView()
+    func showIngredientSelectorView() {
+        delegate?.showIngredientSelectorView()
     }
 }

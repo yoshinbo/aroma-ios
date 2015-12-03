@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kXk-Ho-MQ9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kXk-Ho-MQ9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="gmf-N4-TFQ" customClass="SearchCandidateCell" customModule="aroma" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="gmf-N4-TFQ" customClass="SearchCandidateCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gmf-N4-TFQ" id="yaw-IV-INu">
@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-yD-ug8">
-                                                    <rect key="frame" x="10" y="11" width="42" height="20.5"/>
+                                                    <rect key="frame" x="16" y="11" width="42" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +41,7 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="4uL-yD-ug8" firstAttribute="centerY" secondItem="yaw-IV-INu" secondAttribute="centerY" id="PN4-6B-ag1"/>
-                                                <constraint firstItem="4uL-yD-ug8" firstAttribute="leading" secondItem="yaw-IV-INu" secondAttribute="leading" constant="10" id="Zbs-Cf-u3L"/>
+                                                <constraint firstItem="4uL-yD-ug8" firstAttribute="leading" secondItem="yaw-IV-INu" secondAttribute="leading" constant="16" id="Zbs-Cf-u3L"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -103,6 +103,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xW-9z-fbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050" y="313"/>
+        </scene>
+        <!--Ingredient Selector View Controller-->
+        <scene sceneID="vSe-D9-54h">
+            <objects>
+                <viewController storyboardIdentifier="ingredient" id="jAc-wW-e8f" customClass="IngredientSelectorViewController" customModule="aroma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FAX-Vh-lUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="9tv-76-yit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eUi-qt-Xrv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-Bu-9ol">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="zmB-On-GhE" customClass="IngredientSelectorCell" customModule="aroma" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zmB-On-GhE" id="Ybe-vf-c9z">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラベンダー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-fc-rEa">
+                                                    <rect key="frame" x="16" y="11.5" width="85" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="GIg-fc-rEa" firstAttribute="centerY" secondItem="Ybe-vf-c9z" secondAttribute="centerY" id="Bdw-S7-KBI"/>
+                                                <constraint firstItem="GIg-fc-rEa" firstAttribute="leading" secondItem="Ybe-vf-c9z" secondAttribute="leading" constant="16" id="Wa3-0R-ORk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="GIg-fc-rEa" id="pdL-Nf-U5U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9tv-76-yit" firstAttribute="top" secondItem="bBb-Bu-9ol" secondAttribute="bottom" id="0Vi-0S-C7K"/>
+                            <constraint firstItem="bBb-Bu-9ol" firstAttribute="top" secondItem="FAX-Vh-lUY" secondAttribute="bottom" id="a7s-Pl-kJX"/>
+                            <constraint firstItem="bBb-Bu-9ol" firstAttribute="leading" secondItem="eUi-qt-Xrv" secondAttribute="leading" id="uSF-By-Xxk"/>
+                            <constraint firstAttribute="trailing" secondItem="bBb-Bu-9ol" secondAttribute="trailing" id="yaq-Vo-Dpt"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="bBb-Bu-9ol" id="pFq-2I-3d9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZr-mN-NVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="974"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3aP-to-ANC">

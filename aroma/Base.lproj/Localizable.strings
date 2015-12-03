@@ -25,8 +25,8 @@
 "descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";
 
 // Search
-"selectFromSmell" = "Select From Smell";
-"selectFromEssentialOil" = "Select From Essential Oil";
+"selectFromCategory" = "Select From Smell";
+"selectFromIngredient" = "Select From Essential Oil";
 
 // Formats
 "amountFormat" = "%d";

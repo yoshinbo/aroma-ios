@@ -9,9 +9,8 @@
 import UIKit
 
 protocol SearchViewControllerDelegate {
-    func showTimeLineView()
-    func showSmellCandidateView()
-    func showEssentialOilCandidateView()
+    func showCategorySelectorView()
+    func showIngredientSelectorView()
 }
 
 class SearchViewController: UIViewController {
@@ -37,6 +36,8 @@ class SearchViewController: UIViewController {
 
         wrapView.connerLittleRound()
         wrapView.backgroundColor = AppColorLightGray
+
+        textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,13 +45,27 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(textField: UITextField) {
+        let viewController = TimeLineViewController.build()
+        viewController.title = textField.text
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
 extension SearchViewController: SearchViewControllerDelegate {
-    func showTimeLineView() {
+    func showCategorySelectorView() {
+        let viewController = CategorySelectorViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
-    func showSmellCandidateView() {
-    }
-
-    func showEssentialOilCandidateView() {
+    func showIngredientSelectorView() {
+        let viewController = IngredientSelectorViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
