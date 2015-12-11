@@ -17,6 +17,10 @@
 		B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48A91BE0E29B009E3410 /* aromaUITests.swift */; };
 		B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825997C1BE43A790054EF5E /* HomeViewController.swift */; };
 		B825997F1BE43A870054EF5E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825997E1BE43A870054EF5E /* Home.storyboard */; };
+		B84A14841C1AE11100909E1E /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84A14831C1AE11100909E1E /* Setting.storyboard */; };
+		B84A14861C1AE40900909E1E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A14851C1AE40900909E1E /* SettingViewController.swift */; };
+		B84A14881C1AE4B900909E1E /* SettingDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */; };
+		B84A148A1C1AECA100909E1E /* SettingContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A14891C1AECA100909E1E /* SettingContentCell.swift */; };
 		B84A5D3A1BEB8EC800C7D3C7 /* LikeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D391BEB8EC800C7D3C7 /* LikeButton.xib */; };
 		B84A5D3E1BEB8F6B00C7D3C7 /* ClipButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D3D1BEB8F6B00C7D3C7 /* ClipButton.xib */; };
 		B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84A5D401BEB900900C7D3C7 /* CommentButton.xib */; };
@@ -113,6 +117,10 @@
 		B80D48AB1BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B825997C1BE43A790054EF5E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B825997E1BE43A870054EF5E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B84A14831C1AE11100909E1E /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B84A14851C1AE40900909E1E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDataHandler.swift; sourceTree = "<group>"; };
+		B84A14891C1AECA100909E1E /* SettingContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingContentCell.swift; sourceTree = "<group>"; };
 		B84A5D391BEB8EC800C7D3C7 /* LikeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeButton.xib; sourceTree = "<group>"; };
 		B84A5D3D1BEB8F6B00C7D3C7 /* ClipButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClipButton.xib; sourceTree = "<group>"; };
 		B84A5D401BEB900900C7D3C7 /* CommentButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentButton.xib; sourceTree = "<group>"; };
@@ -269,6 +277,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B84A14821C1ADF4F00909E1E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B84A14831C1AE11100909E1E /* Setting.storyboard */,
+				B84A14851C1AE40900909E1E /* SettingViewController.swift */,
+				B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */,
+				B84A14891C1AECA100909E1E /* SettingContentCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		B84A5D3B1BEB8EE000C7D3C7 /* LikeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +435,7 @@
 				B8DF66CD1BE0FE3400729DBB /* Post */,
 				B8DF66C31BE0FA5700729DBB /* Notice */,
 				B8DF66C41BE0FA7700729DBB /* MyPage */,
+				B84A14821C1ADF4F00909E1E /* Setting */,
 				B893593A1BEA33CF0091F295 /* RecipeDetail */,
 				B8DF66B91BE0F4F700729DBB /* TimeLine */,
 			);
@@ -643,6 +663,7 @@
 				B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */,
 				B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */,
 				B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */,
+				B84A14841C1AE11100909E1E /* Setting.storyboard in Resources */,
 				B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */,
 				B809A9C11BE61D60000D0D8A /* Localizable.strings in Resources */,
 				B893593C1BEA34780091F295 /* RecipeDetail.storyboard in Resources */,
@@ -749,6 +770,7 @@
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
+				B84A14881C1AE4B900909E1E /* SettingDataHandler.swift in Sources */,
 				B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */,
 				B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
@@ -758,6 +780,7 @@
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
 				B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */,
+				B84A14861C1AE40900909E1E /* SettingViewController.swift in Sources */,
 				B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
 				B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */,
@@ -769,6 +792,7 @@
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
 				B8788B001C02CECD006BDBAE /* UITableViewCell+Extension.swift in Sources */,
 				B84A5D501BEEFEE400C7D3C7 /* PostDataHandler.swift in Sources */,
+				B84A148A1C1AECA100909E1E /* SettingContentCell.swift in Sources */,
 				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
 				B84A5D471BEDE81B00C7D3C7 /* RecipeDetailDataHandler.swift in Sources */,

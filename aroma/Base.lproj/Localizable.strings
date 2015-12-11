@@ -30,3 +30,10 @@
 
 // Formats
 "amountFormat" = "%d";
+
+// Setting
+"editProfile" = "Edit Profile";
+"editNotification" = "Edit Notification";
+"userPolicy" = "User Policy";
+"contact" = "Contact Support";
+"logout" = "Logout";

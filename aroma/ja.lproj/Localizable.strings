@@ -30,3 +30,10 @@
 
 // Formats
 "amountFormat" = "%d滴";
+
+// Setting
+"editProfile" = "プロフィール編集";
+"editNotification" = "お知らせ設定";
+"userPolicy" = "利用規約";
+"contact" = "お問い合わせ/バグ報告";
+"logout" = "ログアウト";
