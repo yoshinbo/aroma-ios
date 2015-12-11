@@ -147,7 +147,7 @@ extension PostViewController: PostViewControllerDelegate {
 
     func showCategorySelector(id: Int) {
         let viewController = CategorySelectorViewController.build()
-        viewController.delegate = dataHandler
+        viewController.postDelegate = dataHandler
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

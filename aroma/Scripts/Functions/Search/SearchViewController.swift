@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SearchViewControllerDelegate {
+    func showCategorySelectorView()
+    func showIngredientSelectorView()
+}
+
 class SearchViewController: UIViewController {
     
     class func build() -> (UINavigationController, SearchViewController) {
@@ -16,26 +21,51 @@ class SearchViewController: UIViewController {
         return (navigationController, viewController)
     }
 
+    @IBOutlet weak var wrapView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+
+    private var dataHandler: SearchDataHandler!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataHandler = SearchDataHandler()
+        dataHandler.setup(tableView)
+        dataHandler.delegate = self
+
+        wrapView.connerLittleRound()
+        wrapView.backgroundColor = AppColorLightGray
+
+        textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(textField: UITextField) {
+        let viewController = TimeLineViewController.build()
+        viewController.title = textField.text
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
-    */
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension SearchViewController: SearchViewControllerDelegate {
+    func showCategorySelectorView() {
+        let viewController = CategorySelectorViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func showIngredientSelectorView() {
+        let viewController = IngredientSelectorViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

@@ -1,29 +1,28 @@
 //
-//  CategorySelectorDataHandler.swift
+//  IngredientSelectorDataHandler.swift
 //  aroma
 //
-//  Created by Yoshikazu Oda on 2015/11/15.
+//  Created by Yoshikazu Oda on 2015/12/03.
 //  Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class CategorySelectorDataHandler: NSObject {
+class IngredientSelectorDataHandler: NSObject {
 
     struct Const {
-        static let categories = [
-            "芳香浴",
-            "トリートメント",
-            "バスタイム",
-            "美容",
-            "ケア",
-            "そうじ",
+        static let ingredients = [
+            "ラベンダー",
+            "ローズマリー",
+            "ペパーミント",
+            "スピカ",
+            "ベルガモット",
+            "レモンバーム",
         ]
     }
 
-    var delegate: CategorySelectorViewControllerDelegate?
-    var postDelegate: PostDataHandlerDelegate?
+    var delegate: IngredientSelectorViewControllerDelegate?
 
     private weak var tableView: UITableView!
 
@@ -35,12 +34,10 @@ class CategorySelectorDataHandler: NSObject {
 }
 
 // MARK: - UITableViewDelegate
-extension CategorySelectorDataHandler: UITableViewDelegate {
+extension IngredientSelectorDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let index = indexPath.row
-        let name = Const.categories[index]
-        postDelegate?.setCategory(index, name: name)
-        delegate?.showTimeLine(name)
+        delegate?.showTimeLine(Const.ingredients[index])
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -49,14 +46,14 @@ extension CategorySelectorDataHandler: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension CategorySelectorDataHandler: UITableViewDataSource {
+extension IngredientSelectorDataHandler: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Const.categories.count
+        return Const.ingredients.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategorySelectorCell
-        cell.configure(indexPath.row, name: Const.categories[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! IngredientSelectorCell
+        cell.configure(Const.ingredients[indexPath.row])
         return cell
     }
 }
