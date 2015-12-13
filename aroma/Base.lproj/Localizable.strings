@@ -37,3 +37,9 @@
 "userPolicy" = "User Policy";
 "contact" = "Contact Support";
 "logout" = "Logout";
+
+"name" = "name";
+"namePlaceholder" = "Your Name (max 20 length)";
+"location" = "location";
+"webURL" = "URL";
+"selfDescription" = "Your Description";

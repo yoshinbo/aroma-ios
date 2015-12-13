@@ -51,6 +51,11 @@
 		B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
+		B8871B7F1C1D2A3400D646F3 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */; };
+		B8871B811C1D307100D646F3 /* ProfileSettingDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B801C1D307100D646F3 /* ProfileSettingDataHandler.swift */; };
+		B8871B831C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */; };
+		B8871B851C1D30E100D646F3 /* ProfileSettingTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */; };
+		B8871B871C1D32D200D646F3 /* ProfileSettingLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
 		B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */; };
 		B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */; };
@@ -151,6 +156,11 @@
 		B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientSelectorCell.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		B8871B801C1D307100D646F3 /* ProfileSettingDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingDataHandler.swift; sourceTree = "<group>"; };
+		B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingTextFieldCell.swift; sourceTree = "<group>"; };
+		B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingTextViewCell.swift; sourceTree = "<group>"; };
+		B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingLabelCell.swift; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTabViewController.swift; sourceTree = "<group>"; };
 		B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTagHeaderView.swift; sourceTree = "<group>"; };
@@ -284,6 +294,7 @@
 				B84A14851C1AE40900909E1E /* SettingViewController.swift */,
 				B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */,
 				B84A14891C1AECA100909E1E /* SettingContentCell.swift */,
+				B8871B7D1C1D297800D646F3 /* ProfileSetting */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -384,6 +395,18 @@
 				B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */,
 			);
 			name = IngredientSelector;
+			sourceTree = "<group>";
+		};
+		B8871B7D1C1D297800D646F3 /* ProfileSetting */ = {
+			isa = PBXGroup;
+			children = (
+				B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */,
+				B8871B801C1D307100D646F3 /* ProfileSettingDataHandler.swift */,
+				B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */,
+				B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */,
+				B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */,
+			);
+			name = ProfileSetting;
 			sourceTree = "<group>";
 		};
 		B893593A1BEA33CF0091F295 /* RecipeDetail */ = {
@@ -761,6 +784,7 @@
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */,
+				B8871B851C1D30E100D646F3 /* ProfileSettingTextViewCell.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
 				B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */,
 				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
@@ -771,6 +795,7 @@
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
 				B84A14881C1AE4B900909E1E /* SettingDataHandler.swift in Sources */,
+				B8871B871C1D32D200D646F3 /* ProfileSettingLabelCell.swift in Sources */,
 				B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */,
 				B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
@@ -784,14 +809,17 @@
 				B84A5D451BEDE79F00C7D3C7 /* RecipeDetailViewController.swift in Sources */,
 				B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */,
 				B84A5D521BEF274C00C7D3C7 /* PostTextViewCell.swift in Sources */,
+				B8871B831C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift in Sources */,
 				B8788B021C0734A8006BDBAE /* SearchDataHandler.swift in Sources */,
 				B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */,
 				B809A9BB1BE61A07000D0D8A /* GlobalFunction.swift in Sources */,
 				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
 				B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */,
+				B8871B811C1D307100D646F3 /* ProfileSettingDataHandler.swift in Sources */,
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,
 				B8788B001C02CECD006BDBAE /* UITableViewCell+Extension.swift in Sources */,
 				B84A5D501BEEFEE400C7D3C7 /* PostDataHandler.swift in Sources */,
+				B8871B7F1C1D2A3400D646F3 /* ProfileSettingViewController.swift in Sources */,
 				B84A148A1C1AECA100909E1E /* SettingContentCell.swift in Sources */,
 				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,

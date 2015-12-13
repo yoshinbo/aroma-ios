@@ -46,9 +46,9 @@ extension SettingDataHandler: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch Const.cells[indexPath.row] {
         case "editProfile":
-            delegate?.showEditProfileView()
+            delegate?.showProfileSettingView()
         case "editNotification":
-            delegate?.showEditNotification()
+            delegate?.showNotificationSettingView()
         case "userPolicy":
             delegate?.showWebView("")
         case "contact":

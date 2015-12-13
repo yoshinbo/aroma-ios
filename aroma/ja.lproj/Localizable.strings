@@ -37,3 +37,10 @@
 "userPolicy" = "利用規約";
 "contact" = "お問い合わせ/バグ報告";
 "logout" = "ログアウト";
+
+"name" = "名前";
+"namePlaceholder" = "最大20文字以内";
+"location" = "居住地";
+"webURL" = "ウェブサイト";
+"webURLPlaceholder" = "https://";
+"selfDescription" = "自己紹介";

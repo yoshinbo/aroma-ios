@@ -9,8 +9,8 @@
 import UIKit
 
 protocol SettingViewControllerDelegate {
-    func showEditProfileView()
-    func showEditNotification()
+    func showProfileSettingView()
+    func showNotificationSettingView()
     func showMailView()
     func showWebView(url: String)
 }
@@ -26,6 +26,7 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.tintColor = AppColorRed
 
         dataHandler = SettingDataHandler()
         dataHandler.setup(tableView)
@@ -39,16 +40,17 @@ class SettingViewController: UIViewController {
 }
 
 extension SettingViewController: SettingViewControllerDelegate {
-    func showEditProfileView() {
-
+    func showProfileSettingView() {
+        let (_, viewController) = ProfileSettingViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
-    func showEditNotification() {
 
+    func showNotificationSettingView() {
     }
+
     func showMailView() {
-
     }
-    func showWebView(url: String) {
 
+    func showWebView(url: String) {
     }
 }
