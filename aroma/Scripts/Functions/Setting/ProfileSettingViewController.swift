@@ -45,6 +45,8 @@ class ProfileSettingViewController: UIViewController {
 
 extension ProfileSettingViewController: ProfileSettingViewControllerDelegate {
     func showLocationSelectorView() {
-
+        let viewController = LocationSelectorViewController.build()
+        viewController.delegate = dataHandler
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

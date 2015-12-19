@@ -10,6 +10,15 @@ import UIKit
 
 class LocationSelectorCell: UITableViewCell {
 
+    struct Const {
+        static let height: CGFloat = 44
+    }
+
+    @IBOutlet weak var nameLabel: UILabel!
+
+    var id: Int!
+    var name: String!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +30,9 @@ class LocationSelectorCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure(id: Int, name: String) {
+        self.id = id
+        self.name = name
+        nameLabel.text = name
+    }
 }

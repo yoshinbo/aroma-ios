@@ -70,6 +70,71 @@
             </objects>
             <point key="canvasLocation" x="199" y="406"/>
         </scene>
+        <!--Location Selector View Controller-->
+        <scene sceneID="Jry-UM-zvj">
+            <objects>
+                <viewController storyboardIdentifier="locationSelector" id="kkk-vo-F7f" customClass="LocationSelectorViewController" customModule="aroma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ghJ-0z-2en"/>
+                        <viewControllerLayoutGuide type="bottom" id="WCO-a9-ZRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cL4-Lh-Ygd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-Sh-L5B">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="h9h-d9-pgx" customClass="LocationSelectorCell" customModule="aroma" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h9h-d9-pgx" id="GXK-PR-wbN">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-9v-XMO">
+                                                    <rect key="frame" x="16" y="11.5" width="42" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="3hL-9v-XMO" firstAttribute="centerY" secondItem="GXK-PR-wbN" secondAttribute="centerY" id="IOm-we-SDf"/>
+                                                <constraint firstItem="3hL-9v-XMO" firstAttribute="leading" secondItem="GXK-PR-wbN" secondAttribute="leading" constant="16" id="eNr-UV-6JI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="3hL-9v-XMO" id="Zfu-Dx-3Yb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uoq-Sh-L5B" firstAttribute="leading" secondItem="cL4-Lh-Ygd" secondAttribute="leading" id="ATd-pl-fXn"/>
+                            <constraint firstItem="Uoq-Sh-L5B" firstAttribute="top" secondItem="ghJ-0z-2en" secondAttribute="bottom" id="EZE-Eb-m2K"/>
+                            <constraint firstItem="WCO-a9-ZRL" firstAttribute="top" secondItem="Uoq-Sh-L5B" secondAttribute="bottom" id="fyM-nf-51b"/>
+                            <constraint firstAttribute="trailing" secondItem="Uoq-Sh-L5B" secondAttribute="trailing" id="wyW-wd-Z5b"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Uoq-Sh-L5B" id="lUJ-gk-w1V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgS-bK-BsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="1757"/>
+        </scene>
         <!--Profile Setting View Controller-->
         <scene sceneID="oNl-WW-zhl">
             <objects>
@@ -87,7 +152,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textFieldCell" id="pn0-sA-viN" customClass="ProfileSettingTextFieldCell" customModule="aroma" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textFieldCell" id="pn0-sA-viN" customClass="ProfileSettingTextFieldCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pn0-sA-viN" id="aO2-Ad-QB7">
@@ -126,7 +191,7 @@
                                             <outlet property="textField" destination="52T-U3-2C8" id="Fqi-i5-GBD"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="labelCell" id="IWY-Ub-2nd" customClass="ProfileSettingLabelCell" customModule="aroma" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="labelCell" id="IWY-Ub-2nd" customClass="ProfileSettingLabelCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IWY-Ub-2nd" id="4pQ-lo-PcS">
@@ -166,7 +231,7 @@
                                             <outlet property="label" destination="Zpb-WE-ExA" id="oJX-Pj-wI6"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewCell" id="NoU-pJ-ypw" customClass="ProfileSettingTextViewCell" customModule="aroma" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="textViewCell" id="NoU-pJ-ypw" customClass="ProfileSettingTextViewCell" customModule="aroma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NoU-pJ-ypw" id="3GO-41-jLy">

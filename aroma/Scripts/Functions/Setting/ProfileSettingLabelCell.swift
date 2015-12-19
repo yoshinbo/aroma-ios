@@ -28,11 +28,12 @@ class ProfileSettingLabelCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configure(label: String, content: String?) {
+    func configure(label: String, content: String?, color: UIColor) {
         self.label.text = label
         if let _content = content {
             self.content.text = _content
         }
+        self.content.textColor = color
     }
 
     class func height() -> CGFloat {

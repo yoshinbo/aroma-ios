@@ -56,6 +56,9 @@
 		B8871B831C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */; };
 		B8871B851C1D30E100D646F3 /* ProfileSettingTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */; };
 		B8871B871C1D32D200D646F3 /* ProfileSettingLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */; };
+		B8871B8A1C1D532300D646F3 /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B891C1D532300D646F3 /* LocationSelectorViewController.swift */; };
+		B8871B8C1C1D539500D646F3 /* LocationSelectorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B8B1C1D539500D646F3 /* LocationSelectorDataHandler.swift */; };
+		B8871B8E1C1D549000D646F3 /* LocationSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B8D1C1D549000D646F3 /* LocationSelectorCell.swift */; };
 		B88E7B821BE8493E006BBBCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */; };
 		B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */; };
 		B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */; };
@@ -161,6 +164,9 @@
 		B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingTextFieldCell.swift; sourceTree = "<group>"; };
 		B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingTextViewCell.swift; sourceTree = "<group>"; };
 		B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingLabelCell.swift; sourceTree = "<group>"; };
+		B8871B891C1D532300D646F3 /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
+		B8871B8B1C1D539500D646F3 /* LocationSelectorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSelectorDataHandler.swift; sourceTree = "<group>"; };
+		B8871B8D1C1D549000D646F3 /* LocationSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSelectorCell.swift; sourceTree = "<group>"; };
 		B88E7B811BE8493E006BBBCC /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B88E7B831BE864B1006BBBCC /* SwitchingTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTabViewController.swift; sourceTree = "<group>"; };
 		B88E7B851BE8718C006BBBCC /* SwitchingTagHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingTagHeaderView.swift; sourceTree = "<group>"; };
@@ -405,8 +411,19 @@
 				B8871B821C1D30C000D646F3 /* ProfileSettingTextFieldCell.swift */,
 				B8871B841C1D30E100D646F3 /* ProfileSettingTextViewCell.swift */,
 				B8871B861C1D32D200D646F3 /* ProfileSettingLabelCell.swift */,
+				B8871B881C1D52FE00D646F3 /* LocationSelector */,
 			);
 			name = ProfileSetting;
+			sourceTree = "<group>";
+		};
+		B8871B881C1D52FE00D646F3 /* LocationSelector */ = {
+			isa = PBXGroup;
+			children = (
+				B8871B891C1D532300D646F3 /* LocationSelectorViewController.swift */,
+				B8871B8B1C1D539500D646F3 /* LocationSelectorDataHandler.swift */,
+				B8871B8D1C1D549000D646F3 /* LocationSelectorCell.swift */,
+			);
+			name = LocationSelector;
 			sourceTree = "<group>";
 		};
 		B893593A1BEA33CF0091F295 /* RecipeDetail */ = {
@@ -774,6 +791,7 @@
 				B8788B041C073743006BDBAE /* SearchCandidateCell.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
+				B8871B8E1C1D549000D646F3 /* LocationSelectorCell.swift in Sources */,
 				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */,
@@ -801,6 +819,7 @@
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
 				B84A5D701BFC9A2800C7D3C7 /* PostTextFieldCell.swift in Sources */,
+				B8871B8A1C1D532300D646F3 /* LocationSelectorViewController.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
@@ -814,6 +833,7 @@
 				B8B412391BE8F8920094A152 /* NoticeDataHandler.swift in Sources */,
 				B809A9BB1BE61A07000D0D8A /* GlobalFunction.swift in Sources */,
 				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
+				B8871B8C1C1D539500D646F3 /* LocationSelectorDataHandler.swift in Sources */,
 				B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */,
 				B8871B811C1D307100D646F3 /* ProfileSettingDataHandler.swift in Sources */,
 				B8D4F3B21BE5C10B000E7D3A /* CommentButton.swift in Sources */,

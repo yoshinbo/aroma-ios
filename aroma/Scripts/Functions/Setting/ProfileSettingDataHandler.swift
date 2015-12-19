@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 protocol ProfileSettingDataHandlerDelegate {
+    func setLocation(id: Int, name: String)
 }
 
 class ProfileSettingDataHandler: NSObject {
@@ -22,10 +23,12 @@ class ProfileSettingDataHandler: NSObject {
             "description"
         ]
         static let nameMaxInputLength: Int = 20
+        static let locationSectionIndexPath = NSIndexPath(forRow: 1, inSection: 0)
     }
 
     var delegate: ProfileSettingViewControllerDelegate?
 
+    private var locationName = ""
     private weak var tableView: UITableView!
 
     func setup(tableView: UITableView) {
@@ -87,7 +90,9 @@ extension ProfileSettingDataHandler: UITableViewDataSource {
             cell = _cell
         case "location":
             let _cell = tableView.dequeueReusableCellWithIdentifier("labelCell") as! ProfileSettingLabelCell
-            _cell.configure(localizedString("location"), content: "東京")
+            let content = locationName != "" ? locationName : "東京"
+            let color = locationName != "" ? AppColorString : AppColorStringS
+            _cell.configure(localizedString("location"), content: content, color: color)
             _cell.setSeparator(indexPath.row, lastIndex: Const.cells.count)
             cell = _cell
         case "webURL":
@@ -109,4 +114,10 @@ extension ProfileSettingDataHandler: UITableViewDataSource {
 }
 
 extension ProfileSettingDataHandler: ProfileSettingDataHandlerDelegate {
+    func setLocation(id: Int, name: String) {
+        if let _ = tableView.cellForRowAtIndexPath(Const.locationSectionIndexPath) as? ProfileSettingLabelCell {
+            locationName = name
+            tableView.reloadRowsAtIndexPaths([Const.locationSectionIndexPath], withRowAnimation: .None)
+        }
+    }
 }
