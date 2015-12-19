@@ -38,4 +38,6 @@ extension LocationSelectorViewController: ProfileSettingDataHandlerDelegate {
         delegate?.setLocation(id, name: name)
         self.navigationController?.popViewControllerAnimated(true)
     }
+
+    func refreshCellHeight() {}
 }

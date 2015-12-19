@@ -11,6 +11,7 @@ import UIKit
 
 protocol ProfileSettingDataHandlerDelegate {
     func setLocation(id: Int, name: String)
+    func refreshCellHeight()
 }
 
 class ProfileSettingDataHandler: NSObject {
@@ -35,6 +36,9 @@ class ProfileSettingDataHandler: NSObject {
         self.tableView = tableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
+
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 10000
     }
 
     func loadData() {
@@ -54,22 +58,6 @@ extension ProfileSettingDataHandler: UITableViewDelegate {
         default:
             break
         }
-    }
-
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch Const.cells[indexPath.row] {
-        case "name":
-            return ProfileSettingTextFieldCell.height()
-        case "location":
-            return ProfileSettingLabelCell.height()
-        case "webURL":
-            return ProfileSettingTextFieldCell.height()
-        case "description":
-            return ProfileSettingTextViewCell.height("ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ")
-        default:
-            break
-        }
-        return 0;
     }
 }
 
@@ -119,5 +107,10 @@ extension ProfileSettingDataHandler: ProfileSettingDataHandlerDelegate {
             locationName = name
             tableView.reloadRowsAtIndexPaths([Const.locationSectionIndexPath], withRowAnimation: .None)
         }
+    }
+
+    func refreshCellHeight() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }

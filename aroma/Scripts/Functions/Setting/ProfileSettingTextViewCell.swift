@@ -17,12 +17,18 @@ class ProfileSettingTextViewCell: UITableViewCell {
         static let numberOfLines: Int = 0
         static let font: UIFont = UIFont.systemFontOfSize(14)
         static let maxInputLength: Int = 300
+        static let format = "%d / %d"
     }
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var keyboardNavigationLabel: UILabel!
+
+    var max: Int = 0
     var delegate: ProfileSettingDataHandlerDelegate?
     var maxInputLength = Const.maxInputLength
+    var keyboardHeight: CGFloat = 0
+    var screenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,10 +47,22 @@ class ProfileSettingTextViewCell: UITableViewCell {
         return textViewHeight > Const.height ? textViewHeight : Const.height
     }
 
-    func configure(label: String, content: String?) {
+    func configure(label: String, content: String?, max: Int = Const.maxInputLength) {
         self.label.text = label
         if let _content = content {
             self.textView.text = _content
+        }
+        self.max = max
+
+        keyboardNavigationLabel.text = String(format: Const.format, textView.text.characters.count, self.max)
+        keyboardNavigationLabel.textColor = AppColorStringS
+    }
+
+    func willShowKeyboard(notification: NSNotification) {
+        if let userInfo = notification.userInfo{
+            if let keyboard = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue{
+                keyboardHeight = keyboard.CGRectValue().size.height
+            }
         }
     }
 }
@@ -60,18 +78,43 @@ extension ProfileSettingTextViewCell {
 }
 
 extension ProfileSettingTextViewCell: UITextViewDelegate {
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "willShowKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
+        return true
+    }
+
     func textViewDidChange(textView: UITextView) {
+        delegate?.refreshCellHeight()
+        if keyboardHeight > 0 && screenHeight - keyboardHeight < UIView.absPoint(textView).y + textView.frame.height {
+            textView.scrollEnabled = true
+        } else {
+            textView.scrollEnabled = false
+        }
     }
 
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        var trimText = (textView.text! as NSString).stringByReplacingCharactersInRange(range, withString: text)
-        let textCount = trimText.characters.count
-        trimText = trimText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-
-        if textCount > maxInputLength {
-            textView.text = trimText.substringToIndex(trimText.startIndex.advancedBy(maxInputLength))
-            return false
+        let count = (textView.text.characters.count - range.length) + text.characters.count
+        if 0 < count && count <= max {
+            keyboardNavigationLabel.textColor = AppColorStringS
+        } else {
+            keyboardNavigationLabel.textColor = AppColorRed
         }
+        keyboardNavigationLabel.text = String(format: Const.format, count, max)
+
+        var trimText = (textView.text! as NSString).stringByReplacingCharactersInRange(range, withString: text)
+        trimText = trimText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        if trimText.characters.count > max {
+            textView.text = trimText.substringToIndex(trimText.startIndex.advancedBy(max))
+        }
+        return true
+    }
+
+    func textViewDidBeginEditing(textView: UITextView) {
+        keyboardNavigationLabel.text = String(format: Const.format, textView.text.characters.count, max)
+    }
+
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         return true
     }
 }
