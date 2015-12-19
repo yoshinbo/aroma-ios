@@ -44,3 +44,7 @@
 "webURL" = "ウェブサイト";
 "webURLPlaceholder" = "https://";
 "selfDescription" = "自己紹介";
+
+"notificationSettingComment" = "コメント";
+"notificationSettingLike" = "いいね！";
+"notificationSettingClip" = "クリップ";

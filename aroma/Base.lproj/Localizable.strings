@@ -43,3 +43,7 @@
 "location" = "location";
 "webURL" = "URL";
 "selfDescription" = "Your Description";
+
+"notificationSettingComment" = "Comment";
+"notificationSettingLike" = "LIKE";
+"notificationSettingClip" = "Clip";

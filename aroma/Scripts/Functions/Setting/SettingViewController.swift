@@ -46,6 +46,8 @@ extension SettingViewController: SettingViewControllerDelegate {
     }
 
     func showNotificationSettingView() {
+        let (_, viewController) = NotificationSettingViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
     func showMailView() {

@@ -17,6 +17,9 @@
 		B80D48AA1BE0E29B009E3410 /* aromaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D48A91BE0E29B009E3410 /* aromaUITests.swift */; };
 		B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B825997C1BE43A790054EF5E /* HomeViewController.swift */; };
 		B825997F1BE43A870054EF5E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B825997E1BE43A870054EF5E /* Home.storyboard */; };
+		B82F54951C255BFE0048EA0C /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F54941C255BFE0048EA0C /* NotificationSettingViewController.swift */; };
+		B82F54971C255D9E0048EA0C /* NotificationSettingDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F54961C255D9E0048EA0C /* NotificationSettingDataHandler.swift */; };
+		B82F54991C255EDD0048EA0C /* NotificationSettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F54981C255EDD0048EA0C /* NotificationSettingSwitchCell.swift */; };
 		B84A14841C1AE11100909E1E /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84A14831C1AE11100909E1E /* Setting.storyboard */; };
 		B84A14861C1AE40900909E1E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A14851C1AE40900909E1E /* SettingViewController.swift */; };
 		B84A14881C1AE4B900909E1E /* SettingDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */; };
@@ -125,6 +128,9 @@
 		B80D48AB1BE0E29B009E3410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B825997C1BE43A790054EF5E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B825997E1BE43A870054EF5E /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B82F54941C255BFE0048EA0C /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
+		B82F54961C255D9E0048EA0C /* NotificationSettingDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingDataHandler.swift; sourceTree = "<group>"; };
+		B82F54981C255EDD0048EA0C /* NotificationSettingSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingSwitchCell.swift; sourceTree = "<group>"; };
 		B84A14831C1AE11100909E1E /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B84A14851C1AE40900909E1E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDataHandler.swift; sourceTree = "<group>"; };
@@ -293,6 +299,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B82F54931C255BD50048EA0C /* NotificationSetting */ = {
+			isa = PBXGroup;
+			children = (
+				B82F54941C255BFE0048EA0C /* NotificationSettingViewController.swift */,
+				B82F54961C255D9E0048EA0C /* NotificationSettingDataHandler.swift */,
+				B82F54981C255EDD0048EA0C /* NotificationSettingSwitchCell.swift */,
+			);
+			name = NotificationSetting;
+			sourceTree = "<group>";
+		};
 		B84A14821C1ADF4F00909E1E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +317,7 @@
 				B84A14871C1AE4B900909E1E /* SettingDataHandler.swift */,
 				B84A14891C1AECA100909E1E /* SettingContentCell.swift */,
 				B8871B7D1C1D297800D646F3 /* ProfileSetting */,
+				B82F54931C255BD50048EA0C /* NotificationSetting */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -794,6 +811,7 @@
 				B8871B8E1C1D549000D646F3 /* LocationSelectorCell.swift in Sources */,
 				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
+				B82F54971C255D9E0048EA0C /* NotificationSettingDataHandler.swift in Sources */,
 				B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
@@ -805,8 +823,10 @@
 				B8871B851C1D30E100D646F3 /* ProfileSettingTextViewCell.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
 				B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */,
+				B82F54951C255BFE0048EA0C /* NotificationSettingViewController.swift in Sources */,
 				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
 				B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */,
+				B82F54991C255EDD0048EA0C /* NotificationSettingSwitchCell.swift in Sources */,
 				B84A5D761BFCB1FC00C7D3C7 /* InputTextViewController.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
