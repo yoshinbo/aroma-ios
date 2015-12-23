@@ -6,44 +6,65 @@
   Copyright © 2015年 Yoshikazu Oda. All rights reserved.
 */
 
-"home" = "Home";
-"required" = "(Required)";
-"search" = "Search";
-"post" = "Post";
-"notice" = "Notice";
-"myPage" = "MyPage";
-"myRecipe" = "MyRecipe";
-"clip" = "Clip";
+"home" = "ホーム";
+"required" = "(必須)";
+"search" = "検索";
+"post" = "投稿";
+"notice" = "お知らせ";
+"myPage" = "マイページ";
+"myRecipe" = "マイレシピ";
+"clip" = "クリップ";
 
-"done" = "Done";
-"edit" = "Edit";
+"done" = "完了";
+"edit" = "編集";
 
 // Post
-"recipe" = "Recipe";
-"category" = "Category";
-"titlePlaceholder" = "Your Recipe Title (max 30 length).";
-"descriptionPlaceholder" = "Your Recipe Comment (max 300 length).";
+"recipe" = "レシピ";
+"category" = "カテゴリー";
+"titlePlaceholder" = "タイトル(必須)30文字まで";
+"descriptionPlaceholder" = "レシピの紹介文(必須)300文字まで\n目的や使用方法などかきましょう\n\n\n\n\n";
 
 // Search
-"selectFromCategory" = "Select From Smell";
-"selectFromIngredient" = "Select From Essential Oil";
+"selectFromCategory" = "カテゴリからさがす";
+"selectFromIngredient" = "精油からさがす";
 
 // Formats
-"amountFormat" = "%d";
+"amountFormat" = "%d滴";
 
 // Setting
-"editProfile" = "Edit Profile";
-"editNotification" = "Edit Notification";
-"userPolicy" = "User Policy";
-"contact" = "Contact Support";
-"logout" = "Logout";
+"editProfile" = "プロフィール編集";
+"editNotification" = "お知らせ設定";
+"userPolicy" = "利用規約";
+"contact" = "お問い合わせ/バグ報告";
+"logout" = "ログアウト";
 
-"name" = "name";
-"namePlaceholder" = "Your Name (max 20 length)";
-"location" = "location";
-"webURL" = "URL";
-"selfDescription" = "Your Description";
+"name" = "名前";
+"namePlaceholder" = "最大20文字以内";
+"location" = "居住地";
+"webURL" = "ウェブサイト";
+"webURLPlaceholder" = "https://";
+"selfDescription" = "自己紹介";
 
-"notificationSettingComment" = "Comment";
-"notificationSettingLike" = "LIKE";
-"notificationSettingClip" = "Clip";
+"notificationSettingComment" = "コメント";
+"notificationSettingLike" = "いいね！";
+"notificationSettingClip" = "クリップ";
+
+"supportMailSubject" = "【AromaRecipe】ご意見・お問い合わせ";
+"supportMailBody" = "AromaRecipeをご利用頂きありがとうございます
+こちらにお問い合わせ内容をご記入ください
+
+
+
+******************************
+下記の内容はご利用端末の情報です。
+お問い合わせ対応の際に使用させていただくため、内容を修正せずに送信してください。
+
+ごの情報はお問い合わせ対応のみに使用し、対応後は破棄させていただきます。
+UID) %@
+UUID) %@
+OS) iOS
+OS Version) %@
+Device) %@
+App Version) %@
+Locale) %@
+";

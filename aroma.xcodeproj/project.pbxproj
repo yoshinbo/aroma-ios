@@ -54,6 +54,9 @@
 		B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */; };
 		B8797B2A1C2A3A5500605C1A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8797B291C2A3A5500605C1A /* WebViewController.swift */; };
 		B8797B2C1C2A3A8400605C1A /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8797B2B1C2A3A8400605C1A /* WebView.storyboard */; };
+		B8797B301C2A3EDD00605C1A /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8797B2F1C2A3EDD00605C1A /* MailViewController.swift */; };
+		B8797B321C2A3FAF00605C1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8797B311C2A3FAF00605C1A /* MessageUI.framework */; };
+		B8797B341C2A440000605C1A /* GeneralInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8797B331C2A440000605C1A /* GeneralInfo.swift */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B8871B7F1C1D2A3400D646F3 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */; };
@@ -167,6 +170,9 @@
 		B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientSelectorCell.swift; sourceTree = "<group>"; };
 		B8797B291C2A3A5500605C1A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B8797B2B1C2A3A8400605C1A /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		B8797B2F1C2A3EDD00605C1A /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
+		B8797B311C2A3FAF00605C1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B8797B331C2A440000605C1A /* GeneralInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfo.swift; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8797B321C2A3FAF00605C1A /* MessageUI.framework in Frameworks */,
 				61F82B98A3FE7E1778A5F5BC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +245,7 @@
 			children = (
 				B809A9BA1BE61A07000D0D8A /* GlobalFunction.swift */,
 				B87CFA611BE7AE1500D6C43B /* AppColor.swift */,
+				B8797B331C2A440000605C1A /* GeneralInfo.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -424,6 +432,14 @@
 			name = IngredientSelector;
 			sourceTree = "<group>";
 		};
+		B8797B2E1C2A3EA300605C1A /* MailView */ = {
+			isa = PBXGroup;
+			children = (
+				B8797B2F1C2A3EDD00605C1A /* MailViewController.swift */,
+			);
+			name = MailView;
+			sourceTree = "<group>";
+		};
 		B8871B7D1C1D297800D646F3 /* ProfileSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +477,7 @@
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B8797B2E1C2A3EA300605C1A /* MailView */,
 				B8FA6D901C2A37EF00F9FDFA /* WebView */,
 				B84A5D721BFCB0D700C7D3C7 /* InputTextView */,
 				B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */,
@@ -614,6 +631,7 @@
 		D2A5DCD61A3845D24163A3D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8797B311C2A3FAF00605C1A /* MessageUI.framework */,
 				B92482ED2373F38F63131476 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -825,6 +843,7 @@
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
 				B8871B8E1C1D549000D646F3 /* LocationSelectorCell.swift in Sources */,
 				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
+				B8797B301C2A3EDD00605C1A /* MailViewController.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B82F54971C255D9E0048EA0C /* NotificationSettingDataHandler.swift in Sources */,
 				B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */,
@@ -848,6 +867,7 @@
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
+				B8797B341C2A440000605C1A /* GeneralInfo.swift in Sources */,
 				B84A14881C1AE4B900909E1E /* SettingDataHandler.swift in Sources */,
 				B8871B871C1D32D200D646F3 /* ProfileSettingLabelCell.swift in Sources */,
 				B84A5D651BF76E9600C7D3C7 /* CategorySelectorViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 protocol SettingViewControllerDelegate {
     func showProfileSettingView()
@@ -51,10 +52,21 @@ extension SettingViewController: SettingViewControllerDelegate {
     }
 
     func showMailView() {
+        if MFMailComposeViewController.canSendMail() {
+            let mailViewController = MailViewController.buildForSupport()
+            mailViewController.mailComposeDelegate = self
+            self.presentViewController(mailViewController, animated: true, completion: nil)
+        }
     }
 
     func showWebView(url: String) {
         let viewController = WebViewController.build("http://yahoo.co.jp")
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension SettingViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

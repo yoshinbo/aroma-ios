@@ -30,17 +30,20 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - TAKUUID (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
   - Bolts (~> 1.1.4)
   - ISAlternativeRefreshControl
   - SDWebImage
+  - TAKUUID
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
   ISAlternativeRefreshControl: 4f1b470bffe951e0b616d5302e866a76d462fcca
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  TAKUUID: f852c1386a2b6bca0b678b69f9d0860f2c8ac4b0
 
 COCOAPODS: 0.39.0
