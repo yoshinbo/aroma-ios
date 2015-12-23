@@ -52,6 +52,8 @@
 		B8788B081C103B2E006BDBAE /* IngredientSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B071C103B2E006BDBAE /* IngredientSelectorViewController.swift */; };
 		B8788B0A1C103BC8006BDBAE /* IngredientSelectorDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B091C103BC8006BDBAE /* IngredientSelectorDataHandler.swift */; };
 		B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */; };
+		B8797B2A1C2A3A5500605C1A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8797B291C2A3A5500605C1A /* WebViewController.swift */; };
+		B8797B2C1C2A3A8400605C1A /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8797B2B1C2A3A8400605C1A /* WebView.storyboard */; };
 		B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA611BE7AE1500D6C43B /* AppColor.swift */; };
 		B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */; };
 		B8871B7F1C1D2A3400D646F3 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */; };
@@ -163,6 +165,8 @@
 		B8788B071C103B2E006BDBAE /* IngredientSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientSelectorViewController.swift; sourceTree = "<group>"; };
 		B8788B091C103BC8006BDBAE /* IngredientSelectorDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientSelectorDataHandler.swift; sourceTree = "<group>"; };
 		B8788B0B1C103BF0006BDBAE /* IngredientSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientSelectorCell.swift; sourceTree = "<group>"; };
+		B8797B291C2A3A5500605C1A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B8797B2B1C2A3A8400605C1A /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		B87CFA611BE7AE1500D6C43B /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		B87CFA631BE7AE3A00D6C43B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B8871B7E1C1D2A3400D646F3 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B8FA6D901C2A37EF00F9FDFA /* WebView */,
 				B84A5D721BFCB0D700C7D3C7 /* InputTextView */,
 				B84A5D571BEF6D3400C7D3C7 /* RecipeLabel */,
 				B84A5D3B1BEB8EE000C7D3C7 /* LikeButton */,
@@ -586,6 +591,15 @@
 				B8788AFF1C02CECD006BDBAE /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B8FA6D901C2A37EF00F9FDFA /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B8797B2B1C2A3A8400605C1A /* WebView.storyboard */,
+				B8797B291C2A3A5500605C1A /* WebViewController.swift */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		C09A4D4EB7036850968A1807 /* Pods */ = {
@@ -720,6 +734,7 @@
 				B84A5D411BEB900900C7D3C7 /* CommentButton.xib in Resources */,
 				B8DF66BD1BE0F59700729DBB /* TimeLine.storyboard in Resources */,
 				B8DF66C81BE0FADD00729DBB /* Notice.storyboard in Resources */,
+				B8797B2C1C2A3A8400605C1A /* WebView.storyboard in Resources */,
 				B84A14841C1AE11100909E1E /* Setting.storyboard in Resources */,
 				B84A5D591BEF6D4E00C7D3C7 /* RecipeLabel.xib in Resources */,
 				B809A9C11BE61D60000D0D8A /* Localizable.strings in Resources */,
@@ -816,6 +831,7 @@
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B88E7B841BE864B1006BBBCC /* SwitchingTabViewController.swift in Sources */,
 				B84A5D5F1BF615B600C7D3C7 /* PostIngredientFooterCell.swift in Sources */,
+				B8797B2A1C2A3A5500605C1A /* WebViewController.swift in Sources */,
 				B8788B081C103B2E006BDBAE /* IngredientSelectorViewController.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,

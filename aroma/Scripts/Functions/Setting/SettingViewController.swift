@@ -54,5 +54,7 @@ extension SettingViewController: SettingViewControllerDelegate {
     }
 
     func showWebView(url: String) {
+        let viewController = WebViewController.build("http://yahoo.co.jp")
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
