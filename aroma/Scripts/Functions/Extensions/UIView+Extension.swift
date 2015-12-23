@@ -19,4 +19,13 @@ extension UIView {
         layer.cornerRadius = 3
         layer.masksToBounds = true
     }
+
+    class func absPoint(view: UIView) -> CGPoint {
+        var ret: CGPoint = CGPointMake(view.frame.origin.x, view.frame.origin.y)
+        if view.superview != nil {
+            let addPoint = absPoint(view.superview!)
+            ret = CGPointMake(ret.x + addPoint.x, ret.y + addPoint.y)
+        }
+        return ret
+    }
 }

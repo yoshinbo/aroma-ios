@@ -21,6 +21,7 @@ class MyPageViewController: SwitchingTabViewController {
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
 
     var isMine = false
     private var timeLineViewControllerCache = [Int: TimeLineViewController]()
@@ -58,6 +59,10 @@ class MyPageViewController: SwitchingTabViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onTapEditButton(sender: UIBarButtonItem) {
+        let viewController = SettingViewController.build()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension MyPageViewController {
