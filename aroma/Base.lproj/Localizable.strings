@@ -16,6 +16,7 @@
 "clip" = "クリップ";
 
 "done" = "完了";
+"cancel" = "キャンセル";
 "edit" = "編集";
 
 // Post
@@ -37,6 +38,7 @@
 "userPolicy" = "利用規約";
 "contact" = "お問い合わせ/バグ報告";
 "logout" = "ログアウト";
+"logoutMessage" = "ログアウトしてよろしいですか？";
 
 "name" = "名前";
 "namePlaceholder" = "最大20文字以内";

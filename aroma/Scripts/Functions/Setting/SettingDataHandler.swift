@@ -53,6 +53,8 @@ extension SettingDataHandler: UITableViewDelegate {
             delegate?.showWebView("")
         case "contact":
             delegate?.showMailView()
+        case "logout":
+            delegate?.logout()
         default:
             break
         }

@@ -14,6 +14,7 @@ protocol SettingViewControllerDelegate {
     func showNotificationSettingView()
     func showMailView()
     func showWebView(url: String)
+    func logout()
 }
 
 class SettingViewController: UIViewController {
@@ -27,7 +28,6 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.tintColor = AppColorRed
 
         dataHandler = SettingDataHandler()
         dataHandler.setup(tableView)
@@ -62,6 +62,15 @@ extension SettingViewController: SettingViewControllerDelegate {
     func showWebView(url: String) {
         let viewController = WebViewController.build("http://yahoo.co.jp")
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func logout() {
+        let alert = UIAlertController(title: localizedString("logout"), message: localizedString("logoutMessage"), preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: localizedString("cancel"), style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: localizedString("logout"), style: .Destructive, handler: {
+            (action:UIAlertAction!) -> Void in
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 
