@@ -164,7 +164,7 @@ extension _RecipeDto {
     func removeCommentsObject(value: RecipeCommentDto!) {
         let mutable = self.comments.mutableCopy() as! NSMutableOrderedSet
         mutable.removeObject(value)
-        self.comments = mutable.copy()as! NSOrderedSet
+        self.comments = mutable.copy() as! NSOrderedSet
     }
 
 }
@@ -186,7 +186,7 @@ extension _RecipeDto {
     func addIngredientsObject(value: RecipeIngredientDto!) {
         let mutable = self.ingredients.mutableCopy() as! NSMutableSet
         mutable.addObject(value)
-        self.ingredients = mutable.copy()as! NSSet
+        self.ingredients = mutable.copy() as! NSSet
     }
 
     func removeIngredientsObject(value: RecipeIngredientDto!) {

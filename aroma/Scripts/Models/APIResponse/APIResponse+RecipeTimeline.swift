@@ -12,15 +12,17 @@ import Mantle
 extension APIResponse {
     class RecipeTimeline: MTLModel, MTLJSONSerializing {
         var recipeId: NSNumber!
-        var type: NSNumber!
+        var typeValue: NSNumber!
         var sortValue: NSNumber!
 
-        var timelineType: TimelineType {
-            return TimelineType.build(type.integerValue)
+        var type: TimelineType {
+            return TimelineType.build(typeValue.integerValue)
         }
 
         class func JSONKeyPathsByPropertyKey() -> [NSObject: AnyObject]! {
-            return [:]
+            return [
+                "typeValue": "type"
+            ]
         }
     }
 }

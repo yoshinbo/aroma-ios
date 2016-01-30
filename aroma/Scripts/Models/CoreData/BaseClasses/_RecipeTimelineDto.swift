@@ -8,7 +8,7 @@ enum RecipeTimelineDtoAttributes: String {
     case layoutVersion = "layoutVersion"
     case recipeId = "recipeId"
     case sortValue = "sortValue"
-    case type = "type"
+    case typeValue = "typeValue"
 }
 
 enum RecipeTimelineDtoRelationships: String {
@@ -62,9 +62,9 @@ class _RecipeTimelineDto: NSManagedObject {
     // func validateSortValue(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
-    var type: NSNumber?
+    var typeValue: NSNumber?
 
-    // func validateType(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
+    // func validateTypeValue(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     // MARK: - Relationships
 
