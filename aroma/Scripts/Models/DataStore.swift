@@ -27,6 +27,12 @@ final class DataStore: NSObject {
         }
     }
 
+    func saveRecipe(recipe: APIResponse.Recipe) -> BFTask {
+        return save { (context, willUpdate) -> Void in
+            return
+        }
+    }
+
     func deleteAll() -> BFTask {
         return save {
             (context, willUpdate) -> Void in
@@ -58,6 +64,13 @@ extension DataStore {
         let userDto: UserDto = UserDto.firstOrInitializeById(user.id, context: context)
         userDto.fill(user)
         return userDto
+    }
+
+    // NOTE: - Related Recipes
+    private func saveRecipe(recipe: APIResponse.Recipe, context: NSManagedObjectContext) -> RecipeDto {
+        let recipeDto: RecipeDto = RecipeDto.firstOrInitializeById(recipe.id, context: context)
+        recipeDto.fill(recipe)
+        return recipeDto
     }
 
     // NOTE: - キャッシュが全部消えるので気をつけてね。

@@ -14,6 +14,9 @@ extension APIResponse {
         var title: String!
         var recipeDescription: String!
         var statusValue: NSNumber!
+        var categoryId: NSNumber!
+        var hasCliped: Bool!
+        var hasLiked: Bool!
         var likedNum: NSNumber!
         var commentedNum: NSNumber!
         var clipedNum: NSNumber!

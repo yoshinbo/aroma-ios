@@ -4,7 +4,6 @@
 import CoreData
 
 enum RecipeDtoAttributes: String {
-    case category = "category"
     case categoryId = "categoryId"
     case clipedNum = "clipedNum"
     case commentedNum = "commentedNum"
@@ -52,11 +51,6 @@ class _RecipeDto: NSManagedObject {
     }
 
     // MARK: - Properties
-
-    @NSManaged
-    var category: String?
-
-    // func validateCategory(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
     var categoryId: NSNumber?

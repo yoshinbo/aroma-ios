@@ -96,6 +96,12 @@
 		B8D4D2711C5DACAC0003D84E /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2701C5DACAC0003D84E /* QueueManager.swift */; };
 		B8D4D2731C5DACEA0003D84E /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2721C5DACEA0003D84E /* GCD.swift */; };
 		B8D4D2751C5DAF1C0003D84E /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2741C5DAF1C0003D84E /* UserStatus.swift */; };
+		B8D4D2791C5DB63C0003D84E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2781C5DB63C0003D84E /* APIManager.swift */; };
+		B8D4D27B1C5DB7EF0003D84E /* APIManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D27A1C5DB7EF0003D84E /* APIManager+User.swift */; };
+		B8D4D27D1C5DB88F0003D84E /* BFTask+APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D27C1C5DB88F0003D84E /* BFTask+APIManager.swift */; };
+		B8D4D27F1C5DB9C20003D84E /* APIManager+Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D27E1C5DB9C20003D84E /* APIManager+Me.swift */; };
+		B8D4D2811C5DB9D50003D84E /* APIManager+RecipeTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2801C5DB9D50003D84E /* APIManager+RecipeTimeline.swift */; };
+		B8D4D2831C5DB9FF0003D84E /* APIManager+Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2821C5DB9FF0003D84E /* APIManager+Recipe.swift */; };
 		B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */; };
 		B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */; };
 		B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */; };
@@ -258,6 +264,12 @@
 		B8D4D2701C5DACAC0003D84E /* QueueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		B8D4D2721C5DACEA0003D84E /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		B8D4D2741C5DAF1C0003D84E /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
+		B8D4D2781C5DB63C0003D84E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B8D4D27A1C5DB7EF0003D84E /* APIManager+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+User.swift"; sourceTree = "<group>"; };
+		B8D4D27C1C5DB88F0003D84E /* BFTask+APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFTask+APIManager.swift"; sourceTree = "<group>"; };
+		B8D4D27E1C5DB9C20003D84E /* APIManager+Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+Me.swift"; sourceTree = "<group>"; };
+		B8D4D2801C5DB9D50003D84E /* APIManager+RecipeTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+RecipeTimeline.swift"; sourceTree = "<group>"; };
+		B8D4D2821C5DB9FF0003D84E /* APIManager+Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIManager+Recipe.swift"; sourceTree = "<group>"; };
 		B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineDataHandler.swift; sourceTree = "<group>"; };
 		B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientDataHandler.swift; sourceTree = "<group>"; };
@@ -588,8 +600,9 @@
 		B8D4D26D1C5DA8AC0003D84E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				B8D4D26F1C5DAC8F0003D84E /* GCD */,
+				B8D4D2771C5DB5E80003D84E /* APIManager */,
 				B8D4D26E1C5DABD10003D84E /* Facebook */,
+				B8D4D26F1C5DAC8F0003D84E /* GCD */,
 				B8D4D2631C5D84B60003D84E /* Tracker.swift */,
 			);
 			path = Libraries;
@@ -621,6 +634,19 @@
 				B8D4D25D1C5CE0290003D84E /* TimelineType.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		B8D4D2771C5DB5E80003D84E /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4D2781C5DB63C0003D84E /* APIManager.swift */,
+				B8D4D27A1C5DB7EF0003D84E /* APIManager+User.swift */,
+				B8D4D27E1C5DB9C20003D84E /* APIManager+Me.swift */,
+				B8D4D2801C5DB9D50003D84E /* APIManager+RecipeTimeline.swift */,
+				B8D4D2821C5DB9FF0003D84E /* APIManager+Recipe.swift */,
+				B8D4D27C1C5DB88F0003D84E /* BFTask+APIManager.swift */,
+			);
+			name = APIManager;
 			sourceTree = "<group>";
 		};
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
@@ -1038,6 +1064,7 @@
 				B84A5D5B1BEF6D6B00C7D3C7 /* RecipeLabel.swift in Sources */,
 				B8D4D2521C5CD5790003D84E /* APIResponse+Ingredient.swift in Sources */,
 				B8D4D2501C5CD56C0003D84E /* APIResponse+Category.swift in Sources */,
+				B8D4D27B1C5DB7EF0003D84E /* APIManager+User.swift in Sources */,
 				B8788B041C073743006BDBAE /* SearchCandidateCell.swift in Sources */,
 				B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */,
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
@@ -1062,14 +1089,17 @@
 				B8788B081C103B2E006BDBAE /* IngredientSelectorViewController.swift in Sources */,
 				B8D4D2541C5CD5850003D84E /* APIResponse+RecipeComment.swift in Sources */,
 				B8DF66C21BE0FA4C00729DBB /* SearchViewController.swift in Sources */,
+				B8D4D27D1C5DB88F0003D84E /* BFTask+APIManager.swift in Sources */,
 				B8DF66B81BE0F29600729DBB /* TabBarController.swift in Sources */,
 				B8E7440E1C5C4A5000D910E8 /* RecipeTimelineDto.swift in Sources */,
 				B84A5D4D1BEE3BD500C7D3C7 /* DoubleLineWrapView.swift in Sources */,
 				B8871B851C1D30E100D646F3 /* ProfileSettingTextViewCell.swift in Sources */,
 				B8DF66CC1BE0FB1500729DBB /* MyPageViewController.swift in Sources */,
 				B84A5D4B1BEDF12900C7D3C7 /* RecipeDetailCell.swift in Sources */,
+				B8D4D2811C5DB9D50003D84E /* APIManager+RecipeTimeline.swift in Sources */,
 				B82F54951C255BFE0048EA0C /* NotificationSettingViewController.swift in Sources */,
 				B8D4F3AD1BE5B76E000E7D3A /* IngredientCell.swift in Sources */,
+				B8D4D2831C5DB9FF0003D84E /* APIManager+Recipe.swift in Sources */,
 				B88E7B861BE8718C006BBBCC /* SwitchingTagHeaderView.swift in Sources */,
 				B8D4D25A1C5CD5AA0003D84E /* APIResponse+RecipeTimeline.swift in Sources */,
 				B82F54991C255EDD0048EA0C /* NotificationSettingSwitchCell.swift in Sources */,
@@ -1079,6 +1109,7 @@
 				B8D4D2671C5D857E0003D84E /* FacebookManager.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
+				B8D4D27F1C5DB9C20003D84E /* APIManager+Me.swift in Sources */,
 				B8E743F81C5C4A3300D910E8 /* _RecipeTimelineDto.swift in Sources */,
 				B8B4123B1BE8F8A70094A152 /* NoticeCell.swift in Sources */,
 				B825997D1BE43A790054EF5E /* HomeViewController.swift in Sources */,
@@ -1100,6 +1131,7 @@
 				B8871B8A1C1D532300D646F3 /* LocationSelectorViewController.swift in Sources */,
 				B8E743FA1C5C4A3300D910E8 /* _UserAttributeDto.swift in Sources */,
 				B8DF66B11BE0F13900729DBB /* aroma.xcdatamodeld in Sources */,
+				B8D4D2791C5DB63C0003D84E /* APIManager.swift in Sources */,
 				B8DF66C61BE0FAD000729DBB /* NoticeViewController.swift in Sources */,
 				B87CFA641BE7AE3A00D6C43B /* UIColor+Extension.swift in Sources */,
 				B84A5D5D1BF6159B00C7D3C7 /* PostIngredientCell.swift in Sources */,
