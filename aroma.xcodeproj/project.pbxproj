@@ -87,6 +87,15 @@
 		B8D4D25A1C5CD5AA0003D84E /* APIResponse+RecipeTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2591C5CD5AA0003D84E /* APIResponse+RecipeTimeline.swift */; };
 		B8D4D25C1C5CD5B70003D84E /* APIResponse+Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D25B1C5CD5B70003D84E /* APIResponse+Region.swift */; };
 		B8D4D25E1C5CE0290003D84E /* TimelineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D25D1C5CE0290003D84E /* TimelineType.swift */; };
+		B8D4D2601C5D7C970003D84E /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D25F1C5D7C970003D84E /* GlobalData.swift */; };
+		B8D4D2621C5D81C40003D84E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2611C5D81C40003D84E /* Account.swift */; };
+		B8D4D2641C5D84B60003D84E /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2631C5D84B60003D84E /* Tracker.swift */; };
+		B8D4D2671C5D857E0003D84E /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2661C5D857E0003D84E /* FacebookManager.swift */; };
+		B8D4D2691C5D868C0003D84E /* BFTask+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2681C5D868B0003D84E /* BFTask+Facebook.swift */; };
+		B8D4D26B1C5D88D40003D84E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D26A1C5D88D40003D84E /* DataStore.swift */; };
+		B8D4D2711C5DACAC0003D84E /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2701C5DACAC0003D84E /* QueueManager.swift */; };
+		B8D4D2731C5DACEA0003D84E /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2721C5DACEA0003D84E /* GCD.swift */; };
+		B8D4D2751C5DAF1C0003D84E /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4D2741C5DAF1C0003D84E /* UserStatus.swift */; };
 		B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */; };
 		B8D4F3A71BE5B364000E7D3A /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */; };
 		B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */; };
@@ -240,6 +249,15 @@
 		B8D4D2591C5CD5AA0003D84E /* APIResponse+RecipeTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIResponse+RecipeTimeline.swift"; sourceTree = "<group>"; };
 		B8D4D25B1C5CD5B70003D84E /* APIResponse+Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIResponse+Region.swift"; sourceTree = "<group>"; };
 		B8D4D25D1C5CE0290003D84E /* TimelineType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineType.swift; sourceTree = "<group>"; };
+		B8D4D25F1C5D7C970003D84E /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		B8D4D2611C5D81C40003D84E /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B8D4D2631C5D84B60003D84E /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		B8D4D2661C5D857E0003D84E /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
+		B8D4D2681C5D868B0003D84E /* BFTask+Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BFTask+Facebook.swift"; sourceTree = "<group>"; };
+		B8D4D26A1C5D88D40003D84E /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		B8D4D2701C5DACAC0003D84E /* QueueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
+		B8D4D2721C5DACEA0003D84E /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		B8D4D2741C5DAF1C0003D84E /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		B8D4F3A41BE5B120000E7D3A /* TimeLineDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineDataHandler.swift; sourceTree = "<group>"; };
 		B8D4F3A61BE5B364000E7D3A /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		B8D4F3A81BE5B6A8000E7D3A /* IngredientDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientDataHandler.swift; sourceTree = "<group>"; };
@@ -567,6 +585,44 @@
 			path = APIResponse;
 			sourceTree = "<group>";
 		};
+		B8D4D26D1C5DA8AC0003D84E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4D26F1C5DAC8F0003D84E /* GCD */,
+				B8D4D26E1C5DABD10003D84E /* Facebook */,
+				B8D4D2631C5D84B60003D84E /* Tracker.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		B8D4D26E1C5DABD10003D84E /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4D2661C5D857E0003D84E /* FacebookManager.swift */,
+				B8D4D2681C5D868B0003D84E /* BFTask+Facebook.swift */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		B8D4D26F1C5DAC8F0003D84E /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4D2701C5DACAC0003D84E /* QueueManager.swift */,
+				B8D4D2721C5DACEA0003D84E /* GCD.swift */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
+		B8D4D2761C5DAF880003D84E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4D2741C5DAF1C0003D84E /* UserStatus.swift */,
+				B8D4D2491C5CD1FC0003D84E /* NoticeType.swift */,
+				B8D4D25D1C5CE0290003D84E /* TimelineType.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		B8D4F3AE1BE5C056000E7D3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,12 +646,13 @@
 			children = (
 				B80D48861BE0E29B009E3410 /* AppDelegate.swift */,
 				B8DF66AD1BE0F0E000729DBB /* Models */,
-				B8DF66AC1BE0F0D100729DBB /* Functions */,
+				B8D4D26D1C5DA8AC0003D84E /* Libraries */,
+				B8DF66AC1BE0F0D100729DBB /* Controllers */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
 		};
-		B8DF66AC1BE0F0D100729DBB /* Functions */ = {
+		B8DF66AC1BE0F0D100729DBB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B8DF66D21BE1014D00729DBB /* Extensions */,
@@ -611,16 +668,19 @@
 				B893593A1BEA33CF0091F295 /* RecipeDetail */,
 				B8DF66B91BE0F4F700729DBB /* TimeLine */,
 			);
+			name = Controllers;
 			path = Functions;
 			sourceTree = "<group>";
 		};
 		B8DF66AD1BE0F0E000729DBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B8D4D26A1C5D88D40003D84E /* DataStore.swift */,
+				B8D4D25F1C5D7C970003D84E /* GlobalData.swift */,
+				B8D4D2611C5D81C40003D84E /* Account.swift */,
 				B8D4D2421C5CC8750003D84E /* APIResponse */,
 				B8DF66AE1BE0F0F800729DBB /* CoreData */,
-				B8D4D2491C5CD1FC0003D84E /* NoticeType.swift */,
-				B8D4D25D1C5CE0290003D84E /* TimelineType.swift */,
+				B8D4D2761C5DAF880003D84E /* Constants */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -628,8 +688,6 @@
 		B8DF66AE1BE0F0F800729DBB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				B8E744141C5C4E0200D910E8 /* Extensions */,
-				B8E743E71C5C49E400D910E8 /* BaseClasses */,
 				B8DF66AF1BE0F13900729DBB /* aroma.xcdatamodeld */,
 				B8E743FE1C5C4A5000D910E8 /* CategoryDto.swift */,
 				B8E743FF1C5C4A5000D910E8 /* IngredientDto.swift */,
@@ -642,6 +700,8 @@
 				B8E744061C5C4A5000D910E8 /* UserDto.swift */,
 				B8E744071C5C4A5000D910E8 /* UserNoticeDto.swift */,
 				B8E744081C5C4A5000D910E8 /* UserSettingDto.swift */,
+				B8E743E71C5C49E400D910E8 /* BaseClasses */,
+				B8E744141C5C4E0200D910E8 /* Extensions */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -983,12 +1043,16 @@
 				B8D4F3B41BE5C12B000E7D3A /* ProfileImageView.swift in Sources */,
 				B8871B8E1C1D549000D646F3 /* LocationSelectorCell.swift in Sources */,
 				B84A5D6E1BF88F6900C7D3C7 /* CategorySelectorCell.swift in Sources */,
+				B8D4D2751C5DAF1C0003D84E /* UserStatus.swift in Sources */,
 				B8D4D2481C5CD0D30003D84E /* APIResponse+UserNotice.swift in Sources */,
+				B8D4D2731C5DACEA0003D84E /* GCD.swift in Sources */,
 				B8797B301C2A3EDD00605C1A /* MailViewController.swift in Sources */,
+				B8D4D2691C5D868C0003D84E /* BFTask+Facebook.swift in Sources */,
 				B8E7440A1C5C4A5000D910E8 /* IngredientDto.swift in Sources */,
 				B8E744111C5C4A5000D910E8 /* UserDto.swift in Sources */,
 				B8DF66D41BE1017800729DBB /* UIViewController+Extension.swift in Sources */,
 				B82F54971C255D9E0048EA0C /* NotificationSettingDataHandler.swift in Sources */,
+				B8D4D2621C5D81C40003D84E /* Account.swift in Sources */,
 				B8788B0C1C103BF0006BDBAE /* IngredientSelectorCell.swift in Sources */,
 				B8DF66D11BE0FEF000729DBB /* PostViewController.swift in Sources */,
 				B8E744131C5C4A5000D910E8 /* UserSettingDto.swift in Sources */,
@@ -1012,6 +1076,7 @@
 				B84A5D761BFCB1FC00C7D3C7 /* InputTextViewController.swift in Sources */,
 				B8D4D24C1C5CD3980003D84E /* APIResponse+UserAttribute.swift in Sources */,
 				B8D4D24A1C5CD1FC0003D84E /* NoticeType.swift in Sources */,
+				B8D4D2671C5D857E0003D84E /* FacebookManager.swift in Sources */,
 				B87CFA621BE7AE1500D6C43B /* AppColor.swift in Sources */,
 				B8D4F3A91BE5B6A8000E7D3A /* IngredientDataHandler.swift in Sources */,
 				B8E743F81C5C4A3300D910E8 /* _RecipeTimelineDto.swift in Sources */,
@@ -1026,6 +1091,7 @@
 				B84A5D611BF6CBEB00C7D3C7 /* PostIngredientHeaderCell.swift in Sources */,
 				B8E743F41C5C4A3300D910E8 /* _IngredientDto.swift in Sources */,
 				B8E743F61C5C4A3300D910E8 /* _RecipeDto.swift in Sources */,
+				B8D4D26B1C5D88D40003D84E /* DataStore.swift in Sources */,
 				B8DF66BB1BE0F54D00729DBB /* TimeLineViewController.swift in Sources */,
 				B8D4F3B61BE5C1E4000E7D3A /* ClipButton.swift in Sources */,
 				B84A5D701BFC9A2800C7D3C7 /* PostTextFieldCell.swift in Sources */,
@@ -1055,6 +1121,8 @@
 				B8E743F51C5C4A3300D910E8 /* _RecipeCommentDto.swift in Sources */,
 				B8D4F3A51BE5B120000E7D3A /* TimeLineDataHandler.swift in Sources */,
 				B8E7440B1C5C4A5000D910E8 /* RecipeCommentDto.swift in Sources */,
+				B8D4D2601C5D7C970003D84E /* GlobalData.swift in Sources */,
+				B8D4D2641C5D84B60003D84E /* Tracker.swift in Sources */,
 				B8871B8C1C1D539500D646F3 /* LocationSelectorDataHandler.swift in Sources */,
 				B84A5D541BEF27EF00C7D3C7 /* PostIndexCell.swift in Sources */,
 				B8871B811C1D307100D646F3 /* ProfileSettingDataHandler.swift in Sources */,
@@ -1068,6 +1136,7 @@
 				B8E744091C5C4A5000D910E8 /* CategoryDto.swift in Sources */,
 				B84A148A1C1AECA100909E1E /* SettingContentCell.swift in Sources */,
 				B8E7440D1C5C4A5000D910E8 /* RecipeIngredientDto.swift in Sources */,
+				B8D4D2711C5DACAC0003D84E /* QueueManager.swift in Sources */,
 				B8D4F3B01BE5C0B7000E7D3A /* LikeButton.swift in Sources */,
 				B8D4D2561C5CD5900003D84E /* APIResponse+Recipe.swift in Sources */,
 				B80D48871BE0E29B009E3410 /* AppDelegate.swift in Sources */,
