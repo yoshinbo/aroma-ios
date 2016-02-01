@@ -4,7 +4,7 @@ import Foundation
 class RecipeDto: _RecipeDto {
 
     override var description: String {
-        return "id:\(id), userId:\(userId), status:\(status), title:\(title), recipeDescription:\(recipeDescription), categoryId:\(categoryId), hasCliped:\(hasCliped), hasLiked:\(hasLiked), likedNum:\(likedNum), commentedNum:\(commentedNum), clipedNum:\(clipedNum) , updatedAt:\(updatedAt), createdAt:\(createdAt))"
+        return "id:\(id), userId:\(userId), status:\(status), title:\(title), recipeDescription:\(recipeDescription), categoryId:\(categoryId), hasCliped:\(hasCliped), hasLiked:\(hasLiked), likedNum:\(likedNum), commentedNum:\(commentedNum), clipedNum:\(clipedNum), updatedAt:\(updatedAt), createdAt:\(createdAt)"
     }
 
     var status: UserStatus = .Active {

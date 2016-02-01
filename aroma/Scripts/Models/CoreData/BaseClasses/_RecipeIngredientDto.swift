@@ -8,13 +8,13 @@ enum RecipeIngredientDtoAttributes: String {
     case createdAt = "createdAt"
     case id = "id"
     case ingredientId = "ingredientId"
-    case name = "name"
     case order = "order"
     case recipeId = "recipeId"
     case updatedAt = "updatedAt"
 }
 
 enum RecipeIngredientDtoRelationships: String {
+    case ingredient = "ingredient"
     case recipe = "recipe"
 }
 
@@ -65,17 +65,12 @@ class _RecipeIngredientDto: NSManagedObject {
     // func validateIngredientId(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
-    var name: String?
-
-    // func validateName(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
-
-    @NSManaged
     var order: NSNumber?
 
     // func validateOrder(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
-    var recipeId: String?
+    var recipeId: NSNumber?
 
     // func validateRecipeId(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
@@ -85,6 +80,11 @@ class _RecipeIngredientDto: NSManagedObject {
     // func validateUpdatedAt(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     // MARK: - Relationships
+
+    @NSManaged
+    var ingredient: IngredientDto?
+
+    // func validateIngredient(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
     var recipe: RecipeDto?

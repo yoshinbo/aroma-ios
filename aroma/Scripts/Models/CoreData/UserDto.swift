@@ -31,6 +31,7 @@ class UserDto: _UserDto {
         id = user.id
         facebookId = user.facebookId
         name = user.name
+        statusValue = user.statusValue
         createdAt = user.createdAt
         updatedAt = user.updatedAt
     }

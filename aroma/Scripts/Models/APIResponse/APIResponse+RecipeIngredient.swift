@@ -14,5 +14,10 @@ extension APIResponse {
         var ingredientId: NSNumber!
         var amount: NSNumber!
         var order: NSNumber!
+        var ingredient: Ingredient!
+
+        class func ingredientJSONTransformer() -> NSValueTransformer {
+            return APIResponse.modelClassJSONTransformer(Ingredient.self)
+        }
     }
 }

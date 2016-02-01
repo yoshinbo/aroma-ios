@@ -12,5 +12,12 @@ extension APIResponse {
     class User: Base {
         var facebookId: String!
         var name: String!
+        var statusValue: NSNumber!
+
+        override class func JSONKeyPathsByPropertyKey() -> [NSObject: AnyObject]! {
+            return [
+                "statusValue": "status"
+            ]
+        }
     }
 }

@@ -26,6 +26,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" syncable="YES"/>
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="RecipeComment" inverseName="recipe" inverseEntity="RecipeComment" syncable="YES"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RecipeIngredient" inverseName="recipe" inverseEntity="RecipeIngredient" syncable="YES"/>
         <relationship name="recipeTimeline" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RecipeTimeline" inverseName="recipe" inverseEntity="RecipeTimeline" syncable="YES"/>
@@ -59,10 +60,10 @@
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="ingredientId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="recipeId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recipeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="ingredient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ingredient" syncable="YES"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe" syncable="YES"/>
         <compoundIndexes>
             <compoundIndex>
@@ -126,7 +127,7 @@
     <elements>
         <element name="Category" positionX="0" positionY="144" width="128" height="90"/>
         <element name="Ingredient" positionX="18" positionY="180" width="128" height="120"/>
-        <element name="Recipe" positionX="0" positionY="135" width="128" height="300"/>
+        <element name="Recipe" positionX="0" positionY="135" width="128" height="315"/>
         <element name="RecipeComment" positionX="-9" positionY="135" width="128" height="180"/>
         <element name="RecipeIngredient" positionX="36" positionY="189" width="128" height="180"/>
         <element name="RecipeTimeline" positionX="18" positionY="162" width="128" height="135"/>

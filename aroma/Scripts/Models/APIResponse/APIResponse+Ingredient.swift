@@ -10,12 +10,14 @@ import Foundation
 import Mantle
 
 extension APIResponse {
-    class Ingredient: MTLModel, MTLJSONSerializing {
-        var id: NSNumber!
+    class Ingredient: Base {
         var name: String!
+        var statusValue: NSNumber!
 
-        class func JSONKeyPathsByPropertyKey() -> [NSObject: AnyObject]! {
-            return [:]
+        override class func JSONKeyPathsByPropertyKey() -> [NSObject: AnyObject]! {
+            return [
+                "statusValue": "status"
+            ]
         }
     }
 }

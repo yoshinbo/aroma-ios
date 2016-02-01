@@ -20,6 +20,7 @@ enum RecipeDtoAttributes: String {
 }
 
 enum RecipeDtoRelationships: String {
+    case category = "category"
     case comments = "comments"
     case ingredients = "ingredients"
     case recipeTimeline = "recipeTimeline"
@@ -118,6 +119,11 @@ class _RecipeDto: NSManagedObject {
     // func validateUserId(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     // MARK: - Relationships
+
+    @NSManaged
+    var category: CategoryDto?
+
+    // func validateCategory(value: AutoreleasingUnsafePointer<AnyObject>, error: NSErrorPointer) {}
 
     @NSManaged
     var comments: NSOrderedSet
