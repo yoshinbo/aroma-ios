@@ -116,9 +116,27 @@ extension DataStore {
         return categoryDto
     }
 
+    private func saveRecipeTimeLines(timelines: [APIResponse.RecipeTimeline], context: NSManagedObjectContext) -> [RecipeTimelineDto] {
+        return timelines.map { self.saveRecipeTimeLine($0, context: context) }
+    }
+
+    private func saveRecipeTimeLine(timeline: APIResponse.RecipeTimeline, context: NSManagedObjectContext) -> RecipeTimelineDto {
+        let recipeDto = saveRecipe(timeline.recipe, context: context)
+        let timelineDto: RecipeTimelineDto = RecipeTimelineDto.findFirstNormalWithRecipeId(recipeDto.id!, context: context)
+        timelineDto.fill(timeline)
+        timelineDto.recipe = recipeDto
+        return timelineDto
+    }
+
 
     // NOTE: - キャッシュが全部消えるので気をつけてね。
     private func truncateAll(context: NSManagedObjectContext) {
+        RecipeTimelineDto.MR_truncateAllInContext(context)
+        RecipeDto.MR_truncateAllInContext(context)
+        RecipeIngredientDto.MR_truncateAllInContext(context)
+        RecipeCommentDto.MR_truncateAllInContext(context)
+        IngredientDto.MR_truncateAllInContext(context)
+
         UserDto.MR_truncateAllInContext(context)
     }
 }
