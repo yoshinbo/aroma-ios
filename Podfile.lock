@@ -26,24 +26,48 @@ PODS:
   - Bolts/AppLinks (1.1.5):
     - Bolts/Tasks
   - Bolts/Tasks (1.1.5)
+  - Facebook-iOS-SDK (3.23.2):
+    - Bolts (~> 1.0)
   - ISAlternativeRefreshControl (0.0.2)
+  - MagicalRecord (2.3.0-beta.6)
+  - Mantle (1.5.6):
+    - Mantle/extobjc (= 1.5.6)
+  - Mantle/extobjc (1.5.6)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - SSKeychain (1.3.1)
   - TAKUUID (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
   - Bolts (~> 1.1.4)
+  - Facebook-iOS-SDK (~> 3.23)
   - ISAlternativeRefreshControl
+  - MagicalRecord (from `https://github.com/shiruco/MagicalRecord.git`)
+  - Mantle (~> 1.5.4)
   - SDWebImage
+  - SSKeychain
   - TAKUUID
+
+EXTERNAL SOURCES:
+  MagicalRecord:
+    :git: https://github.com/shiruco/MagicalRecord.git
+
+CHECKOUT OPTIONS:
+  MagicalRecord:
+    :commit: 929e3ab2fd406d83c767b42494543a6262e220b0
+    :git: https://github.com/shiruco/MagicalRecord.git
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   ISAlternativeRefreshControl: 4f1b470bffe951e0b616d5302e866a76d462fcca
+  MagicalRecord: f2c814de49edb0a1df87d503bb10c765d4bd3f28
+  Mantle: a197db93e0f1e36194b1fdbc078219a8492eaef2
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SSKeychain: 04c4ec40f4c3deda524e269bc76e5f30e638a174
   TAKUUID: f852c1386a2b6bca0b678b69f9d0860f2c8ac4b0
 
 COCOAPODS: 0.39.0
