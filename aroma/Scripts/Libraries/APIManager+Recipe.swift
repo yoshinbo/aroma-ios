@@ -63,21 +63,21 @@ extension APIManager {
 // NOTE: - Recipe Like
 extension APIManager {
     func likeRecipe(recipeId: Int) -> BFTask {
-        return request(.PUT, path: "/v1/like_recipe/\(recipeId)", parameters: nil)
+        return request(.PUT, path: "/v1/like_recipe/\(recipeId)", parameters: nil).APIErrorHandler()
     }
 
     func unlikeRecipe(recipeId: Int) -> BFTask {
-        return request(.DELETE, path: "/v1/like_recipe/\(recipeId)", parameters: nil)
+        return request(.DELETE, path: "/v1/like_recipe/\(recipeId)", parameters: nil).APIErrorHandler()
     }
 }
 
 // NOTE: - Recipe Clip
 extension APIManager {
     func clipRecipe(recipeId: Int) -> BFTask {
-        return request(.PUT, path: "/v1/clip_recipe/\(recipeId)", parameters: nil)
+        return request(.PUT, path: "/v1/clip_recipe/\(recipeId)", parameters: nil).APIErrorHandler()
     }
 
     func unclipRecipe(recipeId: Int) -> BFTask {
-        return request(.DELETE, path: "/v1/clip_recipe/\(recipeId)", parameters: nil)
+        return request(.DELETE, path: "/v1/clip_recipe/\(recipeId)", parameters: nil).APIErrorHandler()
     }
 }
